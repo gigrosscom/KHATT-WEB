@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khatt Capital — Sharia-compliant financing for Hajj &amp; Umrah operators</title>
+<meta name="description" content="Khatt Capital pays your hotels and transport today — you pay us back after your pilgrims pay you. 100% sharia-compliant, fixed transparent cost, no cash loans.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<!--
+  No external network dependencies on purpose: no Google Fonts / icon CDN,
+  no analytics beacons. Font stack falls back to system fonts (see styles.css
+  header comment + engineer's report) because no local Inter/IBM Plex webfont
+  binaries were available to self-host for this pass.
+-->
+</head>
+<body>
+
+<a class="skip-link" href="#main">
+  <span data-lang="en">Skip to main content</span>
+  <span data-lang="ru" hidden>Перейти к основному содержанию</span>
+</a>
+
+<!-- =========================== HEADER =========================== -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#hero">
+      <img class="brand-mark" src="assets/favicon.svg" alt="" width="32" height="32">
+      <span data-lang="en">KHATT CAPITAL</span>
+      <span data-lang="ru" hidden>ХАТТ КАПИТАЛ</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#hero" data-nav>
+        <span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span>
+      </a>
+      <a href="#how-it-works" data-nav>
+        <span data-lang="en">How it works</span><span data-lang="ru" hidden>Как это работает</span>
+      </a>
+      <a href="#pricing" data-nav>
+        <span data-lang="en">Pricing example</span><span data-lang="ru" hidden>Пример стоимости</span>
+      </a>
+      <a href="#eligibility" data-nav>
+        <span data-lang="en">Eligibility</span><span data-lang="ru" hidden>Кому подходит</span>
+      </a>
+      <a href="#sharia" data-nav>
+        <span data-lang="en">Sharia compliance</span><span data-lang="ru" hidden>Шариат-комплаенс</span>
+      </a>
+      <a href="#team" data-nav>
+        <span data-lang="en">Team</span><span data-lang="ru" hidden>Команда</span>
+      </a>
+      <a href="#contact" data-nav>
+        <span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span>
+      </a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language / Язык">
+        <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      </div>
+      <button type="button" class="btn btn--primary btn--sm" data-open-dialog>
+        <span data-lang="en">Join the waitlist</span>
+        <span data-lang="ru" hidden>Записаться в лист ожидания</span>
+      </button>
+      <button type="button" class="hamburger" id="hamburger-btn" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <span class="visually-hidden" data-lang="en">Open menu</span>
+        <span class="visually-hidden" data-lang="ru" hidden>Открыть меню</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile full-screen nav overlay -->
+<div class="mobile-nav" id="mobile-nav" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mobile-nav-top">
+    <a class="brand" href="#hero">
+      <img class="brand-mark" src="assets/favicon.svg" alt="" width="32" height="32">
+      <span data-lang="en">KHATT CAPITAL</span>
+      <span data-lang="ru" hidden>ХАТТ КАПИТАЛ</span>
+    </a>
+    <button type="button" class="mobile-nav-close" id="mobile-nav-close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span class="visually-hidden" data-lang="en">Close menu</span>
+      <span class="visually-hidden" data-lang="ru" hidden>Закрыть меню</span>
+    </button>
+  </div>
+  <ul class="mobile-nav-list">
+    <li><a href="#hero" data-nav data-mobile-link><span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span></a></li>
+    <li><a href="#how-it-works" data-nav data-mobile-link><span data-lang="en">How it works</span><span data-lang="ru" hidden>Как это работает</span></a></li>
+    <li><a href="#pricing" data-nav data-mobile-link><span data-lang="en">Pricing example</span><span data-lang="ru" hidden>Пример стоимости</span></a></li>
+    <li><a href="#eligibility" data-nav data-mobile-link><span data-lang="en">Eligibility</span><span data-lang="ru" hidden>Кому подходит</span></a></li>
+    <li><a href="#sharia" data-nav data-mobile-link><span data-lang="en">Sharia compliance</span><span data-lang="ru" hidden>Шариат-комплаенс</span></a></li>
+    <li><a href="#team" data-nav data-mobile-link><span data-lang="en">Team</span><span data-lang="ru" hidden>Команда</span></a></li>
+    <li><a href="#contact" data-nav data-mobile-link><span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span></a></li>
+  </ul>
+  <div class="mobile-nav-cta">
+    <button type="button" class="btn btn--primary" data-open-dialog data-mobile-link>
+      <span data-lang="en">Join the waitlist</span>
+      <span data-lang="ru" hidden>Записаться в лист ожидания</span>
+    </button>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- =========================== HERO =========================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 500" preserveAspectRatio="none">
+        <path class="hero-line" d="M-50 400 C 250 200, 450 460, 700 250 S 1150 120, 1300 60" stroke="#B08D57" stroke-width="2" fill="none" opacity="0.6"/>
+        <path class="hero-line" d="M-50 480 C 300 320, 500 500, 780 340 S 1100 240, 1300 200" stroke="#10243E" stroke-width="1.5" fill="none" opacity="0.25"/>
+      </svg>
+    </div>
+    <div class="container hero-inner">
+      <span class="section-kicker">
+        <span data-lang="en">خط — "a single line of capital between an operator and the season."</span>
+        <span data-lang="ru" hidden>خط (хатт) — «линия» на арабском. Одна линия капитала между оператором и сезоном.</span>
+      </span>
+      <h1>
+        <span data-lang="en">Fund your season. Serve more pilgrims.</span>
+        <span data-lang="ru" hidden>Профинансируйте свой сезон. Обслужите больше паломников.</span>
+      </h1>
+      <p class="subhead">
+        <span data-lang="en">Khatt Capital pays your hotels and transport today — you pay us back after your pilgrims pay you.</span>
+        <span data-lang="ru" hidden>Khatt Capital оплачивает ваши отели и транспорт сегодня — вы возвращаете средства после того, как паломники расплатятся с вами.</span>
+      </p>
+
+      <ul class="trust-pills">
+        <li><span data-lang="en">100% sharia-compliant</span><span data-lang="ru" hidden>100% шариат-комплаенс</span></li>
+        <li><span data-lang="en">Fixed transparent cost</span><span data-lang="ru" hidden>Фиксированная прозрачная стоимость</span></li>
+        <li><span data-lang="en">No cash loans, ever.</span><span data-lang="ru" hidden>Никогда — денежные кредиты</span></li>
+      </ul>
+
+      <div class="hero-ctas">
+        <button type="button" class="btn btn--primary" data-open-dialog>
+          <span data-lang="en">Join the waitlist</span>
+          <span data-lang="ru" hidden>Записаться в лист ожидания</span>
+        </button>
+        <a class="btn btn--ghost" href="#how-it-works">
+          <span data-lang="en">See how it works</span>
+          <span data-lang="ru" hidden>Как это работает</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== PROBLEM =========================== -->
+  <section class="section" id="problem">
+    <div class="container">
+      <h2>
+        <span data-lang="en">Your season needs capital before your pilgrims arrive</span>
+        <span data-lang="ru" hidden>Ваш сезон требует капитала до прибытия паломников</span>
+      </h2>
+
+      <div class="card-grid" data-lang="en">
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="28" height="20" rx="2"/><path d="M4 16h28M11 10V6M25 10V6"/></svg>
+          <p>Licensed Hajj/Umrah operators must prepay hotels, transport and catering 3–9 months before the season — typically 20–50% upfront.</p>
+        </div>
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 26c6-14 18-14 24 0" /><path d="M6 26h24"/><circle cx="18" cy="14" r="4"/></svg>
+          <p>Pilgrim payments arrive only during the season itself, creating a structural cash-flow gap.</p>
+        </div>
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="6" width="24" height="24" rx="3"/><path d="M13 22l5-6 4 4 5-8"/></svg>
+          <p>Banks are largely closed to operators: real-estate collateral is required, and decisions take 4–8 weeks.</p>
+        </div>
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v7l5 3"/></svg>
+          <p>Informal capital fills the gap — but costs 12–20% per cycle (in some cases quoted at 30–50% annualized), is opaque and unreliable.</p>
+        </div>
+      </div>
+
+      <div class="card-grid" data-lang="ru" hidden>
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="28" height="20" rx="2"/><path d="M4 16h28M11 10V6M25 10V6"/></svg>
+          <p>Лицензированные операторы Хаджа/Умры обязаны предоплачивать отели, транспорт и кейтеринг за 3–9 месяцев до начала сезона — как правило, 20–50% суммы вперёд.</p>
+        </div>
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 26c6-14 18-14 24 0" /><path d="M6 26h24"/><circle cx="18" cy="14" r="4"/></svg>
+          <p>Платежи от паломников поступают только во время самого сезона — это создаёт структурный разрыв в денежном потоке.</p>
+        </div>
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="6" width="24" height="24" rx="3"/><path d="M13 22l5-6 4 4 5-8"/></svg>
+          <p>Банки в большинстве случаев закрыты для операторов: требуется залог недвижимости, а решение занимает 4–8 недель.</p>
+        </div>
+        <div class="problem-card">
+          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v7l5 3"/></svg>
+          <p>Разрыв закрывается неформальным капиталом — но он стоит 12–20% за цикл (по отдельным данным — 30–50% годовых), непрозрачен и ненадёжен.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== SOLUTION / HOW IT WORKS =========================== -->
+  <section class="section section--sand100" id="how-it-works">
+    <div class="container">
+      <h2>
+        <span data-lang="en">One line of capital. Five simple steps.</span>
+        <span data-lang="ru" hidden>Одна линия капитала. Пять простых шагов.</span>
+      </h2>
+      <p class="section-lead">
+        <span data-lang="en">A hybrid sharia-compliant structure — murabaha for goods, ijara mawsufa fi al-dhimma (forward lease) for hotel nights and transport, wa'd mulzim (binding promise) and wakala (operator as purchasing agent). Tawarruq is fully excluded.</span>
+        <span data-lang="ru" hidden>Гибридная шариатская структура: мурабаха — для товарной части, иджара мавсуфа фи-з-зимма (форвардная аренда) — для гостиничных ночей и перевозки, ва'д мульзим (обязывающее обещание) и вакала (оператор как закупочный агент). Таваррук полностью исключён.</span>
+      </p>
+
+      <ol class="stepper" data-lang="en">
+        <li><span class="step-badge" aria-hidden="true">1</span><h3>Talk</h3><p>A 20-minute call: license, Nusuk accreditation, your season plan.</p></li>
+        <li><span class="step-badge" aria-hidden="true">2</span><h3>Verify</h3><p>We verify your confirmed bookings (BRN) — this is the collateral, not real estate.</p></li>
+        <li><span class="step-badge" aria-hidden="true">3</span><h3>Agree</h3><p>One framework agreement, price known upfront, contracts structured to AAOIFI standards, pending sharia certification.</p></li>
+        <li><span class="step-badge" aria-hidden="true">4</span><h3>We pay</h3><p>Direct payment to suppliers on your schedule.</p></li>
+        <li><span class="step-badge" aria-hidden="true">5</span><h3>You repay</h3><p>One payment after the season; limit renewal for the next season in 48 hours.</p></li>
+      </ol>
+      <ol class="stepper" data-lang="ru" hidden>
+        <li><span class="step-badge" aria-hidden="true">1</span><h3>Разговор</h3><p>20-минутный звонок: лицензия, аккредитация на Nusuk, план сезона.</p></li>
+        <li><span class="step-badge" aria-hidden="true">2</span><h3>Верификация</h3><p>Проверка подтверждённых бронирований (BRN) — именно они выступают залогом, а не недвижимость.</p></li>
+        <li><span class="step-badge" aria-hidden="true">3</span><h3>Согласование</h3><p>Одно рамочное соглашение, цена известна заранее, контракты структурированы по стандартам AAOIFI, сертификация в процессе.</p></li>
+        <li><span class="step-badge" aria-hidden="true">4</span><h3>Мы платим</h3><p>Прямая оплата поставщикам по графику, который задаёт оператор.</p></li>
+        <li><span class="step-badge" aria-hidden="true">5</span><h3>Вы возвращаете</h3><p>Один платёж после сезона; продление лимита на следующий сезон занимает 48 часов.</p></li>
+      </ol>
+
+      <p class="stepper-summary" data-lang="en">From first call to funding: 7 days.</p>
+      <p class="stepper-summary" data-lang="ru" hidden>От первого звонка до финансирования — 7 дней.</p>
+    </div>
+  </section>
+
+  <!-- =========================== COST EXAMPLE =========================== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2>
+        <span data-lang="en">A fixed, transparent cost — known before you sign</span>
+        <span data-lang="ru" hidden>Фиксированная и прозрачная стоимость — известна заранее</span>
+      </h2>
+
+      <div class="cost-card">
+        <span class="badge-illustrative" data-lang="en">Illustrative example</span>
+        <span class="badge-illustrative" data-lang="ru" hidden>Иллюстративный пример</span>
+
+        <table class="cost-table tabular-nums" data-lang="en">
+          <caption class="visually-hidden">Illustrative cost example for a SAR 2,000,000 facility</caption>
+          <thead>
+            <tr><th scope="col">Line item</th><th scope="col">Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Line item">Facility</td><td data-label="Amount">SAR 2,000,000</td></tr>
+            <tr><td data-label="Line item">Arrangement fee</td><td data-label="Amount">SAR 50,000</td></tr>
+            <tr><td data-label="Line item">Fixed markup (4-month cycle)</td><td data-label="Amount">SAR 100,000</td></tr>
+            <tr class="total-row"><td data-label="Total cost"><strong>Total cost</strong></td><td data-label="Total cost"><strong>SAR 150,000</strong></td></tr>
+          </tbody>
+        </table>
+        <table class="cost-table tabular-nums" data-lang="ru" hidden>
+          <caption class="visually-hidden">Иллюстративный пример стоимости для facility SAR 2 000 000</caption>
+          <thead>
+            <tr><th scope="col">Строка</th><th scope="col">Сумма</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Строка">Facility</td><td data-label="Сумма">SAR 2&nbsp;000&nbsp;000</td></tr>
+            <tr><td data-label="Строка">Arrangement fee</td><td data-label="Сумма">SAR 50&nbsp;000</td></tr>
+            <tr><td data-label="Строка">Fixed markup (4-month cycle)</td><td data-label="Сумма">SAR 100&nbsp;000</td></tr>
+            <tr class="total-row"><td data-label="Итого"><strong>Total cost</strong></td><td data-label="Итого"><strong>SAR 150&nbsp;000</strong></td></tr>
+          </tbody>
+        </table>
+
+        <p class="cost-note" data-lang="en">For comparison: informal capital costs 12–20% per season with no contract. Bank murabaha can be cheaper on paper, but requires real-estate collateral and 4–8 weeks — and most operators are declined.</p>
+        <p class="cost-note" data-lang="ru" hidden>Для сравнения: неформальный капитал стоит 12–20% за сезон без контракта. Банковская мурабаха может быть дешевле на бумаге, но требует залога недвижимости и 4–8 недель на решение — большинству операторов отказывают.</p>
+
+        <div class="disclaimer">
+          <p data-lang="en">Financing is subject to eligibility, verification of bookings and final sharia-certified documentation.</p>
+          <p data-lang="ru" hidden>Финансирование предоставляется на условиях соответствия критериям отбора, верификации бронирований и подготовки итоговой шариат-сертифицированной документации; предоставление финансирования не гарантируется до завершения всех проверок.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== ELIGIBILITY =========================== -->
+  <section class="section section--sand100" id="eligibility">
+    <div class="container">
+      <h2>
+        <span data-lang="en">Is Khatt Capital right for your operation?</span>
+        <span data-lang="ru" hidden>Подходит ли Khatt Capital вашей компании?</span>
+      </h2>
+
+      <div class="eligibility-card">
+        <ul class="eligibility-list" data-lang="en">
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Licensed Hajj/Umrah operator, accredited on Nusuk/Maqam</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Minimum 2 completed seasons of operation</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Confirmed bookings (BRN) for the season you want to finance</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Facility from SAR 500,000 per season</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Willingness to route supplier payments through Khatt (we pay suppliers directly)</span></li>
+        </ul>
+        <ul class="eligibility-list" data-lang="ru" hidden>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Лицензированный оператор Хаджа/Умры, аккредитован на Nusuk/Maqam</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Минимум 2 завершённых сезона работы</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Подтверждённые бронирования (BRN) на сезон, который нужно профинансировать</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Facility от SAR 500&nbsp;000 за сезон</span></li>
+          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Готовность проводить оплату поставщикам через Khatt (мы платим поставщикам напрямую)</span></li>
+        </ul>
+
+        <!-- Draft copy, marked in DESIGN_SPEC.md section 1.2 / 4.3 as requiring marketer/founder approval before publication; implemented as-is per spec, not authored here. -->
+        <p class="soft-gate-note" data-lang="en">Don't meet every point? Get in touch — terms are discussed individually.</p>
+        <p class="soft-gate-note" data-lang="ru" hidden>Не соответствуете всем пунктам? Свяжитесь с нами — условия обсуждаются индивидуально.</p>
+
+        <div class="levels" data-lang="en">
+          <div class="level-badge" tabindex="0">
+            <strong>Standard</strong>
+            <span class="level-desc">first season</span>
+            <span class="tooltip" role="tooltip">Available from your first financed season with Khatt.</span>
+          </div>
+          <div class="level-badge" tabindex="0">
+            <strong>Preferred</strong>
+            <span class="level-desc">2 clean cycles: better rate, higher limit</span>
+            <span class="tooltip" role="tooltip">Unlocked after 2 consecutive on-time repayment cycles.</span>
+          </div>
+          <div class="level-badge" tabindex="0">
+            <strong>Strategic</strong>
+            <span class="level-desc">4+ cycles: priority capital at Hajj peak</span>
+            <span class="tooltip" role="tooltip">Unlocked after 4+ cycles; priority access during peak Hajj demand.</span>
+          </div>
+        </div>
+        <div class="levels" data-lang="ru" hidden>
+          <div class="level-badge" tabindex="0">
+            <strong>Standard</strong>
+            <span class="level-desc">первый сезон</span>
+            <span class="tooltip" role="tooltip">Доступен уже с первого профинансированного сезона с Khatt.</span>
+          </div>
+          <div class="level-badge" tabindex="0">
+            <strong>Preferred</strong>
+            <span class="level-desc">2 чистых цикла: более выгодная ставка, выше лимит</span>
+            <span class="tooltip" role="tooltip">Открывается после 2 подряд циклов без просрочек.</span>
+          </div>
+          <div class="level-badge" tabindex="0">
+            <strong>Strategic</strong>
+            <span class="level-desc">4+ цикла: приоритетный капитал в пик Хаджа</span>
+            <span class="tooltip" role="tooltip">Открывается после 4+ циклов; приоритетный доступ к капиталу в пик сезона Хаджа.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== SHARIA COMPLIANCE =========================== -->
+  <section class="section section--dark" id="sharia">
+    <div class="container">
+      <h2>
+        <span data-lang="en">Halal by design — not by disclaimer</span>
+        <span data-lang="ru" hidden>Halal by design — не по формальной оговорке</span>
+      </h2>
+
+      <div class="sharia-grid">
+        <div>
+          <p class="section-lead" data-lang="en">Khatt Capital is built on real trade, not disguised lending. Every contract is approved by an independent sharia supervisory board under AAOIFI standards, with an annual audit. Funds are paid only to suppliers against real, verified bookings. A late payment triggers a charitable contribution — never interest or penalty charges.</p>
+          <p class="section-lead" data-lang="ru" hidden>Khatt Capital построена на реальной торговле, а не на замаскированном кредитовании. Каждый контракт утверждён независимым шариатским наблюдательным советом по стандартам AAOIFI, ежегодно проходит аудит. Средства направляются только поставщикам под реальные, верифицированные бронирования. Просрочка платежа влечёт благотворительный взнос — никогда не начисление процентов или штрафов.</p>
+
+          <div class="disclaimer">
+            <p data-lang="en">These materials are for informational and analytical purposes only. They do not constitute a legal or sharia opinion, an investment recommendation, or an offer, and are subject to review by licensed legal counsel in the relevant jurisdictions and by an authorized sharia board.</p>
+            <p data-lang="ru" hidden>Настоящие материалы носят информационно-аналитический характер, не являются юридическим или шариатским заключением, инвестиционной рекомендацией либо офертой и подлежат проверке лицензированными юридическими консультантами в соответствующих юрисдикциях и уполномоченным шариатским советом.</p>
+          </div>
+        </div>
+
+        <div class="sharia-diagram" role="group" aria-label="Structure diagram: Operator to Khatt to Suppliers">
+          <div class="sharia-flow">
+            <div class="sharia-node">Operator</div>
+            <svg class="sharia-arrow" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h26M22 4l6 6-6 6"/></svg>
+            <div class="sharia-node">Khatt</div>
+            <svg class="sharia-arrow" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h26M22 4l6 6-6 6"/></svg>
+            <div class="sharia-node">Suppliers</div>
+          </div>
+          <div class="sharia-tags">
+            <span class="sharia-tag">murabaha</span>
+            <span class="sharia-tag">ijara mawsufa fi al-dhimma</span>
+            <span class="sharia-tag">wa'd mulzim</span>
+            <span class="sharia-tag">wakala</span>
+          </div>
+          <p class="sharia-caption" data-lang="en">Hybrid structure: murabaha + ijara mawsufa fi al-dhimma + wa'd mulzim + wakala. Tawarruq is fully excluded.</p>
+          <p class="sharia-caption" data-lang="ru" hidden>Гибридная структура: мурабаха + иджара мавсуфа фи-з-зимма + ва'д мульзим + вакала. Таваррук полностью исключён.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== TEAM STUB =========================== -->
+  <section class="section" id="team">
+    <div class="container text-center">
+      <h2><span data-lang="en">Team</span><span data-lang="ru" hidden>Команда</span></h2>
+      <div class="team-card">
+        <p class="mt-0" data-lang="en">Team page coming soon.</p>
+        <p class="mt-0" data-lang="ru" hidden>Команда формируется.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== CONTACT =========================== -->
+  <section class="section section--sand100" id="contact">
+    <div class="container">
+      <h2><span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span></h2>
+
+      <div class="contact-grid">
+        <div>
+          <ul class="contact-list">
+            <li>
+              <a href="https://khattcapital.com">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+                <span>khattcapital.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@khattcapital.com">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <span>info@khattcapital.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+97431097714">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 1-1 2-2 2C10 22 2 14 2 6c0-1 1-2 2-2z"/></svg>
+                <span>+974 3109 7714</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="contact-cta">
+            <button type="button" class="btn btn--primary" data-open-dialog>
+              <span data-lang="en">Join the waitlist</span>
+              <span data-lang="ru" hidden>Записаться в лист ожидания</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <!-- Social URLs built from the @khattcapital handle per each platform's standard profile URL pattern. Brand name confirmed final by founder; profiles activated. -->
+          <div class="social-row">
+            <a class="social-item" href="https://linkedin.com/company/khattcapital" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5c0-1.5 1.2-2.5 2.5-2.5s2.5 1 2.5 2.5V17"/></svg>
+              <span class="visually-hidden">LinkedIn</span>
+              <span class="handle" aria-hidden="true">@khattcapital</span>
+            </a>
+            <a class="social-item" href="https://x.com/khattcapital" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+              <span class="visually-hidden">X (Twitter)</span>
+              <span class="handle" aria-hidden="true">@khattcapital</span>
+            </a>
+            <a class="social-item" href="https://instagram.com/khattcapital" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+              <span class="visually-hidden">Instagram</span>
+              <span class="handle" aria-hidden="true">@khattcapital</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================== FOOTER =========================== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 data-lang="en">Sitemap</h4>
+      <h4 data-lang="ru" hidden>Карта сайта</h4>
+      <ul>
+        <li><a href="#hero" data-nav><span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span></a></li>
+        <li><a href="#how-it-works" data-nav><span data-lang="en">How it works</span><span data-lang="ru" hidden>Как это работает</span></a></li>
+        <li><a href="#pricing" data-nav><span data-lang="en">Pricing example</span><span data-lang="ru" hidden>Пример стоимости</span></a></li>
+        <li><a href="#eligibility" data-nav><span data-lang="en">Eligibility</span><span data-lang="ru" hidden>Кому подходит</span></a></li>
+        <li><a href="#sharia" data-nav><span data-lang="en">Sharia compliance</span><span data-lang="ru" hidden>Шариат-комплаенс</span></a></li>
+        <li><a href="#team" data-nav><span data-lang="en">Team</span><span data-lang="ru" hidden>Команда</span></a></li>
+        <li><a href="#contact" data-nav><span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-lang="en">Contact</h4>
+      <h4 data-lang="ru" hidden>Контакты</h4>
+      <ul>
+        <li><a href="mailto:info@khattcapital.com">info@khattcapital.com</a></li>
+        <li><a href="tel:+97431097714">+974 3109 7714</a></li>
+        <li><a href="https://khattcapital.com">khattcapital.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-lang="en">Language</h4>
+      <h4 data-lang="ru" hidden>Язык</h4>
+      <div class="lang-toggle" role="group" aria-label="Language / Язык">
+        <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-lang="en">Join the waitlist</h4>
+      <h4 data-lang="ru" hidden>Лист ожидания</h4>
+      <button type="button" class="btn btn--ghost btn--sm" data-open-dialog>
+        <span data-lang="en">Join the waitlist</span>
+        <span data-lang="ru" hidden>Записаться в лист ожидания</span>
+      </button>
+    </div>
+
+    <div class="footer-legal">
+      <p data-lang="en">These materials are for informational and analytical purposes only. They do not constitute a legal or sharia opinion, an investment recommendation, or an offer, and are subject to review by licensed legal counsel in the relevant jurisdictions and by an authorized sharia board.</p>
+      <p data-lang="ru" hidden>Настоящие материалы носят информационно-аналитический характер, не являются юридическим или шариатским заключением, инвестиционной рекомендацией либо офертой и подлежат проверке лицензированными юридическими консультантами в соответствующих юрисдикциях и уполномоченным шариатским советом.</p>
+
+      <p data-lang="en">Sharia-compliance and legal-structure conclusions on this site require confirmation by a licensed sharia board and legal counsel.</p>
+      <p data-lang="ru" hidden>Выводы о шариат-комплаенсе и юридической структуре, представленные на сайте, требуют подтверждения лицензированным шариатским советом и юристом.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-lang="en">© 2026 Khatt Capital. All rights reserved.</span>
+      <span data-lang="ru" hidden>© 2026 Khatt Capital. Все права защищены.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================== BOOK A CALL DIALOG =========================== -->
+<!-- No form backend yet: submit opens a pre-filled mailto: to info@khattcapital.com — replace with a real POST handler (e.g. Formspree/HubSpot) once a backend exists. -->
+<dialog id="book-call-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-inner">
+    <div class="dialog-head">
+      <h2 id="dialog-title" style="margin:0;">
+        <span data-lang="en">Join the waitlist</span>
+        <span data-lang="ru" hidden>Записаться в лист ожидания</span>
+      </h2>
+      <button type="button" class="dialog-close" id="dialog-close-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        <span class="visually-hidden" data-lang="en">Close</span>
+        <span class="visually-hidden" data-lang="ru" hidden>Закрыть</span>
+      </button>
+    </div>
+
+    <p data-lang="en" style="color:var(--ink-500); margin-top:-8px;">Pre-launch — join the waitlist and we'll reach out for a 20-minute call: license, Nusuk accreditation, your season plan.</p>
+    <p data-lang="ru" hidden style="color:var(--ink-500); margin-top:-8px;">Мы на этапе pre-launch — оставьте заявку в лист ожидания, и мы свяжемся с вами для 20-минутного звонка: лицензия, аккредитация на Nusuk, план сезона.</p>
+
+    <form id="book-call-form" novalidate>
+      <div class="form-grid two-col">
+
+        <div class="form-field span-2" data-field="company">
+          <label for="f-company">
+            <span data-lang="en">Operator company name *</span>
+            <span data-lang="ru" hidden>Название компании-оператора *</span>
+          </label>
+          <input type="text" id="f-company" name="company" required autocomplete="organization">
+          <span class="error-msg" data-error-for="company"></span>
+        </div>
+
+        <!-- Founder decision: collect the license number on the public form (kept as originally specified). -->
+        <div class="form-field" data-field="license">
+          <label for="f-license">
+            <span data-lang="en">License number *</span>
+            <span data-lang="ru" hidden>Номер лицензии *</span>
+          </label>
+          <input type="text" id="f-license" name="license" required>
+          <span class="error-msg" data-error-for="license"></span>
+        </div>
+
+        <div class="form-field" data-field="nusuk">
+          <label for="f-nusuk">
+            <span data-lang="en">Nusuk / Maqam accreditation</span>
+            <span data-lang="ru" hidden>Аккредитация Nusuk/Maqam</span>
+          </label>
+          <input type="text" id="f-nusuk" name="nusuk" placeholder="Yes / ID / —">
+          <span class="hint" data-lang="en">Yes/no or ID, optional</span>
+          <span class="hint" data-lang="ru" hidden>Да/нет или ID, опционально</span>
+        </div>
+
+        <div class="form-field" data-field="contactPerson">
+          <label for="f-contact-person">
+            <span data-lang="en">Contact person *</span>
+            <span data-lang="ru" hidden>Контактное лицо *</span>
+          </label>
+          <input type="text" id="f-contact-person" name="contactPerson" required autocomplete="name">
+          <span class="error-msg" data-error-for="contactPerson"></span>
+        </div>
+
+        <div class="form-field" data-field="email">
+          <label for="f-email">
+            <span data-lang="en">Email *</span>
+            <span data-lang="ru" hidden>Email *</span>
+          </label>
+          <input type="email" id="f-email" name="email" required autocomplete="email">
+          <span class="error-msg" data-error-for="email"></span>
+        </div>
+
+        <div class="form-field" data-field="phone">
+          <label for="f-phone">
+            <span data-lang="en">Phone *</span>
+            <span data-lang="ru" hidden>Телефон *</span>
+          </label>
+          <input type="tel" id="f-phone" name="phone" required autocomplete="tel">
+          <span class="error-msg" data-error-for="phone"></span>
+        </div>
+
+        <div class="form-field" data-field="preferredLanguage">
+          <label>
+            <span data-lang="en">Preferred language of contact</span>
+            <span data-lang="ru" hidden>Предпочитаемый язык связи</span>
+          </label>
+          <div class="radio-group">
+            <label><input type="radio" name="preferredLanguage" value="EN" checked> EN</label>
+            <label><input type="radio" name="preferredLanguage" value="RU"> RU</label>
+          </div>
+        </div>
+
+        <div class="form-field" data-field="facilitySize">
+          <label for="f-facility-size">
+            <span data-lang="en">Estimated facility size</span>
+            <span data-lang="ru" hidden>Ориентировочный размер facility</span>
+          </label>
+          <!--
+            Range bucket wording beyond "from SAR 500,000" is an engineering assumption
+            (spec gives only the first option), not a financial/product commitment — see report.
+          -->
+          <!-- Single option set; JS swaps each option's label text on language switch
+               (a <select> cannot contain nested per-language elements like the rest
+               of the page, so this one field is handled as JS-updated microcopy —
+               see script.js applyLanguageToForm). Defaults to English text with no JS. -->
+          <select id="f-facility-size" name="facilitySize">
+            <option value="" data-en="Prefer not to say" data-ru="Предпочитаю не указывать" selected>Prefer not to say</option>
+            <option value="500k-1m" data-en="From SAR 500,000" data-ru="От SAR 500&nbsp;000">From SAR 500,000</option>
+            <option value="1m-2m" data-en="SAR 1,000,000 – 2,000,000" data-ru="SAR 1&nbsp;000&nbsp;000 – 2&nbsp;000&nbsp;000">SAR 1,000,000 – 2,000,000</option>
+            <option value="2m-5m" data-en="SAR 2,000,000 – 5,000,000" data-ru="SAR 2&nbsp;000&nbsp;000 – 5&nbsp;000&nbsp;000">SAR 2,000,000 – 5,000,000</option>
+            <option value="5m-plus" data-en="SAR 5,000,000+" data-ru="SAR 5&nbsp;000&nbsp;000+">SAR 5,000,000+</option>
+          </select>
+        </div>
+
+        <div class="form-field span-2" data-field="message">
+          <label for="f-message">
+            <span data-lang="en">Message</span>
+            <span data-lang="ru" hidden>Сообщение</span>
+          </label>
+          <textarea id="f-message" name="message" rows="3"></textarea>
+          <span class="hint" data-lang="en">Optional</span>
+          <span class="hint" data-lang="ru" hidden>Опционально</span>
+        </div>
+      </div>
+
+      <p class="hint" style="margin-top: var(--space-2);" data-lang="en">This form has no server yet — submitting will open your email app with a message pre-filled to info@khattcapital.com. Please review and hit send there to join the waitlist.</p>
+      <p class="hint" style="margin-top: var(--space-2);" data-lang="ru" hidden>У этой формы пока нет сервера — при отправке откроется ваше почтовое приложение с предзаполненным письмом на info@khattcapital.com. Проверьте и нажмите «отправить» в приложении, чтобы записаться в лист ожидания.</p>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn--primary" id="book-call-submit">
+          <span class="btn-label">
+            <span data-lang="en">Join the waitlist</span>
+            <span data-lang="ru" hidden>Записаться в лист ожидания</span>
+          </span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn--text" data-close-dialog>
+          <span data-lang="en">Cancel</span>
+          <span data-lang="ru" hidden>Отмена</span>
+        </button>
+      </div>
+
+      <div class="form-status" id="form-status" role="status" hidden></div>
+    </form>
+  </div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
