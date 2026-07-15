@@ -493,6 +493,39 @@ button { font-family: inherit; }
 }
 .problem-card p { margin: 0; color: var(--ink-500); }
 
+/* ------------------------------- Market stats ------------------------------- */
+
+.market-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+@media (min-width: 700px) {
+  .market-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.market-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.market-number {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--ink-900);
+}
+.market-card span { color: var(--ink-500); }
+.market-source {
+  font-size: var(--fs-small);
+  color: var(--bronze-700);
+  margin-top: 4px;
+}
+
 /* ------------------------------- Stepper ------------------------------- */
 
 .stepper {
@@ -559,6 +592,38 @@ button { font-family: inherit; }
   font-weight: 600;
   font-size: 20px;
   text-align: center;
+}
+
+/* ------------------------------- Product grid (halal-travel segments) ------------------------------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+@media (min-width: 760px) {
+  .product-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.product-card {
+  background: var(--white);
+  border: 1px solid rgba(16,36,62,0.08);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+}
+.product-card strong {
+  display: block;
+  font-family: var(--font-head);
+  color: var(--ink-900);
+  margin-bottom: 4px;
+  font-size: var(--fs-body);
+}
+.product-card span { font-size: var(--fs-small); color: var(--ink-500); }
+
+.product-evidence {
+  margin-top: var(--space-3);
+  font-size: var(--fs-small);
+  color: var(--ink-500);
 }
 
 /* ------------------------------- Cost card ------------------------------- */
@@ -802,6 +867,36 @@ table.cost-table {
   font-size: var(--fs-small);
   color: var(--sand-100);
 }
+
+/* ------------------------------- Tech / risk architecture (within Sharia section) ------------------------------- */
+
+.tech-section {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+@media (min-width: 700px) {
+  .tech-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.tech-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--bronze-500);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+}
+.tech-card strong {
+  display: block;
+  font-family: var(--font-head);
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.tech-card span { font-size: var(--fs-small); color: var(--sand-100); }
 
 /* ------------------------------- Team stub ------------------------------- */
 
