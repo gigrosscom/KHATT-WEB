@@ -48,7 +48,7 @@
     opts = opts || {};
     if (lang !== "en" && lang !== "ru") lang = "en";
 
-    document.querySelectorAll("[data-lang]").forEach(function (el) {
+    document.querySelectorAll("[data-lang]:not(html)").forEach(function (el) {
       el.hidden = el.getAttribute("data-lang") !== lang;
     });
 
@@ -57,7 +57,6 @@
     });
 
     html.setAttribute("lang", lang);
-    html.setAttribute("data-lang", lang);
     applyLanguageToForm(lang);
     if (!opts.skipStore) storeLang(lang);
   }
