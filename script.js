@@ -4,6 +4,10 @@
   var LANG_KEY = "khatt-lang";
   var html = document.documentElement;
 
+  function currentLang() {
+    return html.getAttribute("data-lang") === "ru" ? "ru" : "en";
+  }
+
   /* ------------------------------------------------------------------
    * Language switching
    * All translatable blocks are plain DOM elements marked with
@@ -36,11 +40,11 @@
   }
 
   function applyLanguageToForm(lang) {
-    var select = document.getElementById("f-facility-size");
-    if (!select) return;
-    Array.prototype.forEach.call(select.options, function (opt) {
-      var text = lang === "ru" ? opt.dataset.ru : opt.dataset.en;
-      if (text) opt.textContent = text;
+    document.querySelectorAll("select").forEach(function (select) {
+      Array.prototype.forEach.call(select.options, function (opt) {
+        var text = lang === "ru" ? opt.dataset.ru : opt.dataset.en;
+        if (text) opt.textContent = text;
+      });
     });
   }
 
@@ -81,12 +85,14 @@
    * Sticky header shrink-on-scroll
    * ------------------------------------------------------------------ */
   var header = document.getElementById("site-header");
-  function onScroll() {
-    if (window.scrollY > 12) header.classList.add("is-scrolled");
-    else header.classList.remove("is-scrolled");
+  if (header) {
+    var onScroll = function () {
+      if (window.scrollY > 12) header.classList.add("is-scrolled");
+      else header.classList.remove("is-scrolled");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
 
   /* ------------------------------------------------------------------
    * Active section highlighting in nav
@@ -125,31 +131,37 @@
   var mobileNav = document.getElementById("mobile-nav");
   var mobileNavClose = document.getElementById("mobile-nav-close");
 
-  function openMobileNav() {
-    mobileNav.hidden = false;
-    hamburgerBtn.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden";
-    mobileNavClose.focus();
-  }
   function closeMobileNav() {
+    if (!mobileNav) return;
     mobileNav.hidden = true;
-    hamburgerBtn.setAttribute("aria-expanded", "false");
+    if (hamburgerBtn) hamburgerBtn.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
-    hamburgerBtn.focus();
+    if (hamburgerBtn) hamburgerBtn.focus();
   }
-  hamburgerBtn.addEventListener("click", openMobileNav);
-  mobileNavClose.addEventListener("click", closeMobileNav);
-  mobileNav.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeMobileNav();
-  });
+
+  if (hamburgerBtn && mobileNav && mobileNavClose) {
+    function openMobileNav() {
+      mobileNav.hidden = false;
+      hamburgerBtn.setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+      mobileNavClose.focus();
+    }
+    hamburgerBtn.addEventListener("click", openMobileNav);
+    mobileNavClose.addEventListener("click", closeMobileNav);
+    mobileNav.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMobileNav();
+    });
+  }
   document.querySelectorAll("[data-mobile-link]").forEach(function (el) {
     el.addEventListener("click", closeMobileNav);
   });
 
   /* ------------------------------------------------------------------
-   * "Join the waitlist" dialog
+   * "Apply now" dialog (present on index.html only; other pages link
+   * back to it, so every step below is guarded on `dialog` existing).
    * ------------------------------------------------------------------ */
   var dialog = document.getElementById("book-call-dialog");
+  if (dialog) {
   var dialogCloseBtn = document.getElementById("dialog-close-btn");
   var lastTrigger = null;
 
@@ -193,7 +205,7 @@
   });
 
   /* ------------------------------------------------------------------
-   * "Join the waitlist" form: client-side validation + mailto submit.
+   * "Apply now" form: client-side validation + mailto submit.
    *
    * There is no form backend (no Formspree/API key etc.) — see HTML
    * comment above the dialog markup. Building the mailto: link and
@@ -212,10 +224,6 @@
     { name: "email", labelEn: "Email", labelRu: "Email" },
     { name: "phone", labelEn: "Phone", labelRu: "Телефон" }
   ];
-
-  function currentLang() {
-    return html.getAttribute("data-lang") === "ru" ? "ru" : "en";
-  }
 
   function fieldWrapper(name) {
     return form.querySelector('[data-field="' + cssEscape(name) + '"]');
@@ -283,8 +291,8 @@
   function buildMailtoUrl(data, lang) {
     var subject =
       lang === "ru"
-        ? "Заявка в лист ожидания — " + data.company
-        : "Waitlist request — " + data.company;
+        ? "Заявка на финансирование — " + data.company
+        : "Application — " + data.company;
 
     var lines =
       lang === "ru"
@@ -389,4 +397,126 @@
       if (msgEl) msgEl.textContent = "";
     }
   });
+  } // end if (dialog)
+
+  /* ------------------------------------------------------------------
+   * "For Investors" interest form (investors.html only).
+   * ------------------------------------------------------------------ */
+  var investorForm = document.getElementById("investor-form");
+  if (investorForm) {
+    var investorStatusBox = document.getElementById("investor-form-status");
+    var investorSubmitBtn = document.getElementById("investor-form-submit");
+    var investorRequiredFields = [
+      { name: "name", labelEn: "Name", labelRu: "Имя" },
+      { name: "organization", labelEn: "Organization / fund", labelRu: "Организация / фонд" },
+      { name: "email", labelEn: "Email", labelRu: "Email" }
+    ];
+    var investorSubmitLock = false;
+
+    function investorFieldWrapper(name) {
+      return investorForm.querySelector('[data-field="' + name.replace(/([^a-zA-Z0-9_-])/g, "\\$1") + '"]');
+    }
+    function investorClearErrors() {
+      investorForm.querySelectorAll(".form-field.has-error").forEach(function (el) {
+        el.classList.remove("has-error");
+      });
+      investorForm.querySelectorAll(".error-msg").forEach(function (el) {
+        el.textContent = "";
+      });
+    }
+    function investorSetError(name, message) {
+      var wrapper = investorFieldWrapper(name);
+      if (!wrapper) return;
+      wrapper.classList.add("has-error");
+      var msgEl = wrapper.querySelector(".error-msg");
+      if (msgEl) msgEl.textContent = message;
+    }
+    function investorValidate() {
+      investorClearErrors();
+      var lang = currentLang();
+      var firstInvalid = null;
+      var ok = true;
+      investorRequiredFields.forEach(function (field) {
+        var input = investorForm.elements[field.name];
+        var value = (input.value || "").trim();
+        var label = lang === "ru" ? field.labelRu : field.labelEn;
+        if (!value) {
+          ok = false;
+          investorSetError(field.name, lang === "ru" ? label + " — обязательное поле." : label + " is required.");
+          if (!firstInvalid) firstInvalid = input;
+          return;
+        }
+        if (field.name === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          ok = false;
+          investorSetError(field.name, lang === "ru" ? "Введите корректный email-адрес." : "Enter a valid email address.");
+          if (!firstInvalid) firstInvalid = input;
+        }
+      });
+      if (firstInvalid) firstInvalid.focus();
+      return ok;
+    }
+    function investorShowStatus(type, message) {
+      investorStatusBox.hidden = false;
+      investorStatusBox.className = "form-status " + type;
+      investorStatusBox.textContent = message;
+    }
+
+    investorForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (investorSubmitLock) return;
+      investorStatusBox.hidden = true;
+      if (!investorValidate()) return;
+
+      investorSubmitLock = true;
+      investorSubmitBtn.disabled = true;
+
+      var lang = currentLang();
+      var name = investorForm.elements["name"].value.trim();
+      var organization = investorForm.elements["organization"].value.trim();
+      var email = investorForm.elements["email"].value.trim();
+      var investorType = investorForm.elements["investorType"] ? investorForm.elements["investorType"].value : "";
+      var ticketSize = investorForm.elements["ticketSize"] ? investorForm.elements["ticketSize"].value.trim() : "";
+      var message = investorForm.elements["message"] ? investorForm.elements["message"].value.trim() : "";
+
+      var subject = lang === "ru" ? "Интерес инвестора — " + organization : "Investor interest — " + organization;
+      var lines =
+        lang === "ru"
+          ? [
+              "Имя: " + name,
+              "Организация / фонд: " + organization,
+              "Email: " + email,
+              "Тип инвестора: " + (investorType || "—"),
+              "Ориентировочный чек: " + (ticketSize || "—"),
+              "Сообщение: " + (message || "—")
+            ]
+          : [
+              "Name: " + name,
+              "Organization / fund: " + organization,
+              "Email: " + email,
+              "Investor type: " + (investorType || "—"),
+              "Indicative ticket size: " + (ticketSize || "—"),
+              "Message: " + (message || "—")
+            ];
+
+      window.setTimeout(function () {
+        window.location.href =
+          "mailto:info@khattcapital.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+        investorSubmitBtn.disabled = false;
+        investorSubmitLock = false;
+        investorShowStatus(
+          "success",
+          lang === "ru" ? "Спасибо, мы свяжемся с вами в ближайшее время." : "Thank you — we'll be in touch soon."
+        );
+      }, 500);
+    });
+
+    investorForm.addEventListener("input", function (e) {
+      var wrapper = e.target.closest(".form-field.has-error");
+      if (wrapper) {
+        wrapper.classList.remove("has-error");
+        var msgEl = wrapper.querySelector(".error-msg");
+        if (msgEl) msgEl.textContent = "";
+      }
+    });
+  }
 })();
