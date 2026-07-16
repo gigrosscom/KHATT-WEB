@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Khatt Ecosystem — Khatt Capital</title>
-<meta name="description" content="One product architecture for halal tourism finance — the facilities live today, and the roadmap of future Khatt Capital products.">
+<title>Khatt Ecosystem — KHATT OS | Khatt Capital</title>
+<meta name="description" content="KHATT OS — the financial operating system for halal tourism: one platform, twelve services, from verified booking to supplier payment, takaful and capital.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page-dark">
 
 <a class="skip-link" href="#main">
   <span data-lang="en">Skip to main content</span>
@@ -63,7 +63,6 @@
   </div>
 </header>
 
-<!-- Mobile full-screen nav overlay -->
 <div class="mobile-nav" id="mobile-nav" hidden role="dialog" aria-modal="true" aria-label="Menu">
   <div class="mobile-nav-top">
     <a class="brand" href="index.html#hero">
@@ -95,99 +94,849 @@
 
 <main id="main">
 
-  <!-- =========================== ECOSYSTEM HERO =========================== -->
+  <!-- =========================== HERO =========================== -->
   <section class="section" id="ecosystem-hero">
     <div class="container text-center">
       <span class="section-kicker">
-        <span data-lang="en">KHATT ECOSYSTEM</span>
-        <span data-lang="ru" hidden>ЭКОСИСТЕМА KHATT</span>
+        <span data-lang="en">KHATT OS</span>
+        <span data-lang="ru" hidden>KHATT OS</span>
       </span>
-      <h1 style="font-size: var(--text-4xl, 2.25rem);">
-        <span data-lang="en">One product architecture. A growing set of facilities.</span>
-        <span data-lang="ru" hidden>Одна продуктовая архитектура. Растущий набор финансовых продуктов.</span>
+      <h1 style="font-size: var(--fs-h1); max-width: 880px; margin-left:auto; margin-right:auto;">
+        <span data-lang="en">One platform. Twelve services. A single trust layer for halal travel.</span>
+        <span data-lang="ru" hidden>Одна платформа. Двенадцать сервисов. Единый слой доверия для халяльного туризма.</span>
       </h1>
       <p class="section-lead" style="margin-left:auto; margin-right:auto;">
-        <span data-lang="en">Khatt Capital starts with Hajj and Umrah as its beachhead. Every facility below shares the same evidence-based structure — verified bookings as collateral, murabaha/ijara/wakala contracts, AI-driven risk scoring — so new facilities extend the same trust layer rather than starting over.</span>
-        <span data-lang="ru" hidden>Khatt Capital начинает с Хаджа и Умры как с плацдарма. Все продукты ниже построены на одной и той же доказательной структуре — верифицированные бронирования как залог, контракты мурабаха/иджара/вакала, ИИ-скоринг риска — поэтому каждый новый продукт расширяет один и тот же слой доверия, а не строится с нуля.</span>
+        <span data-lang="en">We don't hand out money. We connect a real, verified trip to capital — verify the travel asset, pay the supplier directly, protect the deal, and carry the record into the next cycle.</span>
+        <span data-lang="ru" hidden>Мы не выдаём деньги. Мы соединяем реальную, проверенную поездку с капиталом — проверяем туристический актив, платим поставщику напрямую, защищаем сделку и переносим историю в следующий цикл.</span>
+      </p>
+
+      <div class="card-grid" data-lang="en" style="max-width:900px; margin-left:auto; margin-right:auto;">
+        <div class="problem-card" style="flex-direction:column;">
+          <strong style="font-family:var(--font-head); color:var(--acc-blue);">Verify</strong>
+          <p>The agency, the booking, the supplier.</p>
+        </div>
+        <div class="problem-card" style="flex-direction:column;">
+          <strong style="font-family:var(--font-head); color:var(--bronze-500);">Pay</strong>
+          <p>The supplier directly, on the agreed schedule.</p>
+        </div>
+        <div class="problem-card" style="flex-direction:column;">
+          <strong style="font-family:var(--font-head); color:var(--acc-teal);">Protect</strong>
+          <p>The deal, the client, the capital and the reputation.</p>
+        </div>
+      </div>
+      <div class="card-grid" data-lang="ru" hidden style="max-width:900px; margin-left:auto; margin-right:auto;">
+        <div class="problem-card" style="flex-direction:column;">
+          <strong style="font-family:var(--font-head); color:var(--acc-blue);">Проверить</strong>
+          <p>Агентство, бронирование, поставщика.</p>
+        </div>
+        <div class="problem-card" style="flex-direction:column;">
+          <strong style="font-family:var(--font-head); color:var(--bronze-500);">Оплатить</strong>
+          <p>Поставщику напрямую, по согласованному графику.</p>
+        </div>
+        <div class="problem-card" style="flex-direction:column;">
+          <strong style="font-family:var(--font-head); color:var(--acc-teal);">Защитить</strong>
+          <p>Сделку, клиента, капитал и репутацию.</p>
+        </div>
+      </div>
+
+      <p class="cost-note text-center" style="margin-top: var(--space-4);">
+        <span data-lang="en">From a single financing product to market infrastructure.</span>
+        <span data-lang="ru" hidden>От продукта финансирования — к инфраструктуре рынка.</span>
       </p>
     </div>
   </section>
 
-  <!-- =========================== LIVE FACILITIES =========================== -->
-  <section class="section section--sand100" id="live-facilities">
+  <!-- =========================== HUB WHEEL =========================== -->
+  <section class="section section-alt" id="khatt-os">
     <div class="container">
-      <h2>
-        <span data-lang="en">Live today — seven facilities, one framework</span>
-        <span data-lang="ru" hidden>Уже сегодня — семь видов финансирования, одна рамка</span>
+      <h2 class="text-center">
+        <span data-lang="en">KHATT OS: one platform, twelve services</span>
+        <span data-lang="ru" hidden>KHATT OS: одна платформа — двенадцать сервисов</span>
       </h2>
-      <p class="section-lead">
-        <span data-lang="en">See <a href="index.html#how-it-works">How it works</a> for the full mechanics and an illustrative cost example.</span>
-        <span data-lang="ru" hidden>Полная механика и иллюстративный пример стоимости — на странице <a href="index.html#how-it-works">Как это работает</a>.</span>
+      <p class="section-lead text-center" style="margin-left:auto; margin-right:auto;">
+        <span data-lang="en">Every module strengthens the others: more data, lower risk, cheaper capital, higher retention.</span>
+        <span data-lang="ru" hidden>Каждый модуль усиливает остальные: больше данных, ниже риск, дешевле капитал, выше удержание клиентов.</span>
       </p>
 
-      <div class="product-grid" data-lang="en">
-        <div class="product-card"><strong>Umrah Rolling Facility</strong><span>a standing limit for regular Umrah bookings, renewed year-round</span></div>
-        <div class="product-card"><strong>Hajj Peak Facility</strong><span>a large limit for the high annual Hajj peak</span></div>
-        <div class="product-card"><strong>Halal Travel Supplier Pay</strong><span>payment to hotels, transport, DMCs and halal-leisure suppliers</span></div>
-        <div class="product-card"><strong>Hotel Allotment Finance</strong><span>financing for room-block deposits</span></div>
-        <div class="product-card"><strong>Air Block Finance</strong><span>financing for airline seat blocks and group PNRs</span></div>
-        <div class="product-card"><strong>Ramadan / Eid Facility</strong><span>a short-term limit for holiday peaks</span></div>
-        <div class="product-card"><strong>MICE &amp; Group Travel Finance</strong><span>financing for corporate and group travel</span></div>
+      <div class="hub-wheel" aria-hidden="false">
+        <div class="hub-center">
+          <strong>KHATT OS</strong>
+          <span>Travel · Finance · Trust</span>
+        </div>
+        <div class="hub-item" style="--i:0;"><div class="hub-chip" style="--chip-c: var(--acc-blue);"><strong data-lang="en">Payments</strong><strong data-lang="ru" hidden>Платежи</strong></div></div>
+        <div class="hub-item" style="--i:1;"><div class="hub-chip" style="--chip-c: var(--acc-teal);"><strong data-lang="en">Wallet</strong><strong data-lang="ru" hidden>Кошелёк</strong></div></div>
+        <div class="hub-item" style="--i:2;"><div class="hub-chip" style="--chip-c: var(--acc-green);"><strong data-lang="en">Takaful</strong><strong data-lang="ru" hidden>Такафул</strong></div></div>
+        <div class="hub-item" style="--i:3;"><div class="hub-chip" style="--chip-c: var(--acc-orange);"><strong data-lang="en">Marketplace</strong><strong data-lang="ru" hidden>Маркетплейс</strong></div></div>
+        <div class="hub-item" style="--i:4;"><div class="hub-chip" style="--chip-c: var(--acc-purple);"><strong data-lang="en">Travel Score</strong><strong data-lang="ru" hidden>Travel Score</strong></div></div>
+        <div class="hub-item" style="--i:5;"><div class="hub-chip" style="--chip-c: var(--acc-pink);"><strong data-lang="en">Risk graph</strong><strong data-lang="ru" hidden>Граф риска</strong></div></div>
+        <div class="hub-item" style="--i:6;"><div class="hub-chip" style="--chip-c: var(--acc-cyan);"><strong data-lang="en">Analytics</strong><strong data-lang="ru" hidden>Аналитика</strong></div></div>
+        <div class="hub-item" style="--i:7;"><div class="hub-chip" style="--chip-c: var(--acc-teal);"><strong data-lang="en">AI assistant</strong><strong data-lang="ru" hidden>ИИ-помощник</strong></div></div>
+        <div class="hub-item" style="--i:8;"><div class="hub-chip" style="--chip-c: var(--bronze-500);"><strong data-lang="en">Sharia module</strong><strong data-lang="ru" hidden>Шариат-модуль</strong></div></div>
+        <div class="hub-item" style="--i:9;"><div class="hub-chip" style="--chip-c: var(--acc-green);"><strong data-lang="en">Capital markets</strong><strong data-lang="ru" hidden>Рынок капитала</strong></div></div>
+        <div class="hub-item" style="--i:10;"><div class="hub-chip" style="--chip-c: var(--bronze-500);"><strong data-lang="en">Financing</strong><strong data-lang="ru" hidden>Финансирование</strong></div></div>
+        <div class="hub-item" style="--i:11;"><div class="hub-chip" style="--chip-c: var(--acc-blue);"><strong data-lang="en">Escrow</strong><strong data-lang="ru" hidden>Эскроу</strong></div></div>
       </div>
-      <div class="product-grid" data-lang="ru" hidden>
-        <div class="product-card"><strong>Umrah Rolling Facility</strong><span>постоянный лимит под регулярные бронирования Умры, круглый год</span></div>
-        <div class="product-card"><strong>Hajj Peak Facility</strong><span>крупный лимит под высокий ежегодный пик Хаджа</span></div>
-        <div class="product-card"><strong>Halal Travel Supplier Pay</strong><span>оплата отелей, транспорта, DMC и поставщиков halal leisure</span></div>
-        <div class="product-card"><strong>Hotel Allotment Finance</strong><span>финансирование депозитов за блоки номеров</span></div>
-        <div class="product-card"><strong>Air Block Finance</strong><span>финансирование авиаблоков и групповых PNR</span></div>
-        <div class="product-card"><strong>Ramadan / Eid Facility</strong><span>краткосрочный лимит под праздничные пики</span></div>
-        <div class="product-card"><strong>MICE &amp; Group Travel Finance</strong><span>финансирование корпоративных и групповых поездок</span></div>
+
+      <div class="card-grid" style="max-width:900px; margin-left:auto; margin-right:auto; margin-top: var(--space-5);">
+        <div class="problem-card" style="justify-content:center;">
+          <p data-lang="en" style="margin:0; text-align:center;"><strong style="color:var(--white);">Agencies · Suppliers</strong></p>
+        </div>
+        <div class="problem-card" style="justify-content:center;">
+          <p data-lang="en" style="margin:0; text-align:center;"><strong style="color:var(--white);">Banks · Takaful · Investors</strong></p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- =========================== ROADMAP =========================== -->
-  <section class="section section--dark" id="roadmap">
+  <!-- =========================== FIVE LAYERS =========================== -->
+  <section class="section" id="five-layers">
     <div class="container">
       <h2>
-        <span data-lang="en">On the roadmap</span>
-        <span data-lang="ru" hidden>В дорожной карте</span>
+        <span data-lang="en">Five layers of the platform</span>
+        <span data-lang="ru" hidden>Пять слоёв платформы</span>
       </h2>
       <p class="section-lead">
-        <span data-lang="en">The same evidence base — verified bookings, repayment history, supplier data — is designed to extend into adjacent products as the halal-travel data set deepens.</span>
-        <span data-lang="ru" hidden>Та же доказательная база — верифицированные бронирования, история погашений, данные поставщиков — рассчитана на расширение в смежные продукты по мере накопления данных халяльного туризма.</span>
+        <span data-lang="en">KHATT connects customer experience, money flows, risk, sharia and capital in a single architecture.</span>
+        <span data-lang="ru" hidden>KHATT соединяет пользовательский опыт, денежные потоки, риск, шариат и капитал в единой архитектуре.</span>
       </p>
 
-      <div class="tech-grid" data-lang="en">
-        <div class="tech-card"><strong>Khatt Marketplace</strong><span>Connects financed agencies directly with verified hotels, DMCs and transport suppliers — reducing the prepayment need at the source.</span></div>
-        <div class="tech-card"><strong>Khatt Pay</strong><span>Direct-to-supplier settlement rails so financed payments move without ever touching agency cash accounts.</span></div>
-        <div class="tech-card"><strong>Diaspora Corridor Finance</strong><span>Pre-approved facilities for diaspora travel agencies on Europe/US → Gulf/Asia routes.</span></div>
-        <div class="tech-card"><strong>Khatt Data</strong><span>An opt-in credit file for the halal-travel sector, built from repayment history, portable across financing cycles.</span></div>
-        <div class="tech-card"><strong>Khatt Working Capital for Suppliers</strong><span>Extends the same evidence-based model to hotels, DMCs and transport providers financing their own capacity ahead of season.</span></div>
-        <div class="tech-card"><strong>Sharia-Compliant Travel Protection</strong><span>A takaful-based protection layer for financed bookings, explored jointly with takaful providers — subject to sharia board approval.</span></div>
+      <div class="layer-row" style="--layer-c: var(--acc-blue);">
+        <div class="layer-label"><span class="layer-dot">1</span><span data-lang="en">Customer experience</span><span data-lang="ru" hidden>Опыт клиента</span></div>
+        <div class="layer-pills">
+          <span class="layer-pill" data-lang="en">Agency portal</span><span class="layer-pill" data-lang="ru" hidden>Кабинет агентства</span>
+          <span class="layer-pill" data-lang="en">Supplier portal</span><span class="layer-pill" data-lang="ru" hidden>Кабинет поставщика</span>
+          <span class="layer-pill" data-lang="en">AI assistant</span><span class="layer-pill" data-lang="ru" hidden>ИИ-помощник</span>
+          <span class="layer-pill" data-lang="en">Marketplace</span><span class="layer-pill" data-lang="ru" hidden>Маркетплейс</span>
+        </div>
       </div>
-      <div class="tech-grid" data-lang="ru" hidden>
-        <div class="tech-card"><strong>Khatt Marketplace</strong><span>Напрямую соединяет профинансированные агентства с верифицированными отелями, DMC и транспортными поставщиками — снижая потребность в предоплате у источника.</span></div>
-        <div class="tech-card"><strong>Khatt Pay</strong><span>Расчётные рельсы напрямую поставщику — профинансированные платежи проходят, не затрагивая кассовые счета агентства.</span></div>
-        <div class="tech-card"><strong>Diaspora Corridor Finance</strong><span>Предодобренные лимиты для агентств диаспоры на маршрутах Европа/США → Залив/Азия.</span></div>
-        <div class="tech-card"><strong>Khatt Data</strong><span>Опциональное кредитное досье для сектора халяльного туризма на основе истории погашений, переносимое между циклами финансирования.</span></div>
-        <div class="tech-card"><strong>Khatt Working Capital for Suppliers</strong><span>Распространяет ту же доказательную модель на отели, DMC и транспортные компании, финансирующие собственные мощности перед сезоном.</span></div>
-        <div class="tech-card"><strong>Sharia-Compliant Travel Protection</strong><span>Слой защиты на основе такафул для профинансированных бронирований, прорабатывается совместно с провайдерами такафул — при условии одобрения шариатским советом.</span></div>
+      <div class="layer-row" style="--layer-c: var(--acc-teal);">
+        <div class="layer-label"><span class="layer-dot">2</span><span data-lang="en">Transactions</span><span data-lang="ru" hidden>Транзакции</span></div>
+        <div class="layer-pills">
+          <span class="layer-pill" data-lang="en">Financing</span><span class="layer-pill" data-lang="ru" hidden>Финансирование</span>
+          <span class="layer-pill" data-lang="en">Escrow</span><span class="layer-pill" data-lang="ru" hidden>Эскроу</span>
+          <span class="layer-pill" data-lang="en">Payments</span><span class="layer-pill" data-lang="ru" hidden>Платежи</span>
+          <span class="layer-pill" data-lang="en">Wallet</span><span class="layer-pill" data-lang="ru" hidden>Кошелёк</span>
+        </div>
+      </div>
+      <div class="layer-row" style="--layer-c: var(--acc-purple);">
+        <div class="layer-label"><span class="layer-dot">3</span><span data-lang="en">Risk &amp; data</span><span data-lang="ru" hidden>Риск и данные</span></div>
+        <div class="layer-pills">
+          <span class="layer-pill">Travel Score</span>
+          <span class="layer-pill" data-lang="en">Connections graph</span><span class="layer-pill" data-lang="ru" hidden>Граф связей</span>
+          <span class="layer-pill" data-lang="en">Cash-flow forecast</span><span class="layer-pill" data-lang="ru" hidden>Прогноз cash-flow</span>
+          <span class="layer-pill" data-lang="en">Monitoring</span><span class="layer-pill" data-lang="ru" hidden>Мониторинг</span>
+        </div>
+      </div>
+      <div class="layer-row" style="--layer-c: var(--bronze-500);">
+        <div class="layer-label"><span class="layer-dot">4</span><span data-lang="en">Trust</span><span data-lang="ru" hidden>Доверие</span></div>
+        <div class="layer-pills">
+          <span class="layer-pill" data-lang="en">Sharia module</span><span class="layer-pill" data-lang="ru" hidden>Шариат-модуль</span>
+          <span class="layer-pill" data-lang="en">Legal rules</span><span class="layer-pill" data-lang="ru" hidden>Юридические правила</span>
+          <span class="layer-pill">AML / KYB</span>
+          <span class="layer-pill" data-lang="en">Takaful</span><span class="layer-pill" data-lang="ru" hidden>Такафул</span>
+        </div>
+      </div>
+      <div class="layer-row" style="--layer-c: var(--acc-green);">
+        <div class="layer-label"><span class="layer-dot">5</span><span data-lang="en">Capital</span><span data-lang="ru" hidden>Капитал</span></div>
+        <div class="layer-pills">
+          <span class="layer-pill" data-lang="en">Own equity</span><span class="layer-pill" data-lang="ru" hidden>Собственный капитал</span>
+          <span class="layer-pill" data-lang="en">Bank lines</span><span class="layer-pill" data-lang="ru" hidden>Банковские линии</span>
+          <span class="layer-pill" data-lang="en">Islamic funds</span><span class="layer-pill" data-lang="ru" hidden>Исламские фонды</span>
+          <span class="layer-pill" data-lang="en">Deal pools</span><span class="layer-pill" data-lang="ru" hidden>Пулы сделок</span>
+        </div>
       </div>
 
-      <div class="disclaimer">
-        <p data-lang="en">This is an indicative product roadmap, not a commitment or a timeline. Each item is subject to further validation, sharia board review and licensed legal counsel before launch.</p>
-        <p data-lang="ru" hidden>Это индикативная продуктовая дорожная карта, а не обязательство или график запуска. Каждый пункт подлежит дальнейшей проверке, рассмотрению шариатским советом и лицензированным юридическим консультантом перед запуском.</p>
+      <p class="cost-note text-center" style="margin-top: var(--space-4); font-weight:700; color:var(--bronze-500);">
+        <span data-lang="en">One transaction ID runs through all five layers.</span>
+        <span data-lang="ru" hidden>Один идентификатор сделки проходит через все пять слоёв.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================== CUSTOMER JOURNEY =========================== -->
+  <section class="section section-alt" id="journey">
+    <div class="container">
+      <h2>
+        <span data-lang="en">Customer journey: from onboarding to a new limit in minutes</span>
+        <span data-lang="ru" hidden>Путь клиента: от регистрации до нового лимита за минуты</span>
+      </h2>
+      <p class="section-lead">
+        <span data-lang="en">The repeat deal gets faster, because the operating history becomes an industry credit profile.</span>
+        <span data-lang="ru" hidden>Повторная сделка становится быстрее, потому что история работы формирует отраслевой кредитный профиль.</span>
+      </p>
+
+      <ol class="journey" data-lang="en">
+        <li><span class="step-num">01</span><strong>Onboarding</strong><span class="desc">licence · UBOs · banks</span></li>
+        <li><span class="step-num">02</span><strong>Application</strong><span class="desc">booking · invoice · supplier</span></li>
+        <li><span class="step-num">03</span><strong>Verification</strong><span class="desc">documents · API · confirmation</span></li>
+        <li><span class="step-num">04</span><strong>Risk</strong><span class="desc">price · limit · term</span></li>
+        <li><span class="step-num">05</span><strong>Structure</strong><span class="desc">contract · sharia · promise</span></li>
+        <li><span class="step-num">06</span><strong>Payment</strong><span class="desc">direct to supplier</span></li>
+        <li><span class="step-num">07</span><strong>Monitoring</strong><span class="desc">cancellations · refunds · collection</span></li>
+        <li><span class="step-num">08</span><strong>New limit</strong><span class="desc">faster · higher · cheaper</span></li>
+      </ol>
+      <ol class="journey" data-lang="ru" hidden>
+        <li><span class="step-num">01</span><strong>Подключение</strong><span class="desc">лицензия · владельцы · банки</span></li>
+        <li><span class="step-num">02</span><strong>Заявка</strong><span class="desc">бронь · счёт · поставщик</span></li>
+        <li><span class="step-num">03</span><strong>Проверка</strong><span class="desc">документы · API · подтверждение</span></li>
+        <li><span class="step-num">04</span><strong>Риск</strong><span class="desc">цена · лимит · срок</span></li>
+        <li><span class="step-num">05</span><strong>Структура</strong><span class="desc">договор · шариат · обещание</span></li>
+        <li><span class="step-num">06</span><strong>Оплата</strong><span class="desc">поставщику напрямую</span></li>
+        <li><span class="step-num">07</span><strong>Мониторинг</strong><span class="desc">отмена · возврат · сбор</span></li>
+        <li><span class="step-num">08</span><strong>Новый лимит</strong><span class="desc">быстрее · выше · дешевле</span></li>
+      </ol>
+
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        <p data-lang="en">For a new client, a decision can take days. For a proven agency, a repeat limit is minutes or hours.</p>
+        <p data-lang="ru" hidden>Для нового клиента решение может занимать дни. Для проверенного агентства повторный лимит — минуты или часы.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== UNIFIED CYCLE =========================== -->
+  <section class="section" id="unified-cycle">
+    <div class="container">
+      <h2 class="text-center">
+        <span data-lang="en">The services run as a single cycle</span>
+        <span data-lang="ru" hidden>Сервисы работают как единый цикл</span>
+      </h2>
+      <p class="section-lead text-center" style="margin-left:auto; margin-right:auto;">
+        <span data-lang="en">One trip creates data, payments, protection and an investable asset — with no re-entry of information.</span>
+        <span data-lang="ru" hidden>Одна поездка создаёт данные, платежи, защиту и инвестиционный актив — без повторного ввода информации.</span>
+      </p>
+
+      <div class="card-grid" style="grid-template-columns: 1fr; max-width:960px; margin-left:auto; margin-right:auto;">
+        <div class="flow-row" style="--svc-c: var(--bronze-500); justify-content:center;">
+          <div class="flow-node" style="--svc-c: var(--acc-blue);"><strong data-lang="en">Booking</strong><strong data-lang="ru" hidden>Бронирование</strong><span data-lang="en">real asset</span><span data-lang="ru" hidden>реальный актив</span></div>
+          <svg class="flow-arrow" style="--svc-c: var(--acc-blue);" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+          <div class="flow-node" style="--svc-c: var(--acc-purple);"><strong data-lang="en">Risk scoring</strong><strong data-lang="ru" hidden>Оценка риска</strong><span data-lang="en">price &amp; limit</span><span data-lang="ru" hidden>цена и лимит</span></div>
+          <svg class="flow-arrow" style="--svc-c: var(--acc-purple);" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+          <div class="flow-node" style="--svc-c: var(--bronze-500);"><strong data-lang="en">Sharia</strong><strong data-lang="ru" hidden>Шариат</strong><span data-lang="en">deal structure</span><span data-lang="ru" hidden>структура сделки</span></div>
+          <svg class="flow-arrow" style="--svc-c: var(--bronze-500);" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+          <div class="flow-node" style="--svc-c: var(--acc-teal);"><strong data-lang="en">Payment</strong><strong data-lang="ru" hidden>Оплата</strong><span data-lang="en">to supplier</span><span data-lang="ru" hidden>поставщику</span></div>
+        </div>
+        <div class="flow-row" style="justify-content:center;">
+          <div class="flow-node" style="--svc-c: var(--acc-green);"><strong data-lang="en">Repayment</strong><strong data-lang="ru" hidden>Погашение</strong><span data-lang="en">limit renewed</span><span data-lang="ru" hidden>лимит обновлён</span></div>
+          <svg class="flow-arrow" style="--svc-c: var(--acc-green); transform:scaleX(-1);" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+          <div class="flow-node" style="--svc-c: var(--acc-cyan);"><strong data-lang="en">Capital</strong><strong data-lang="ru" hidden>Капитал</strong><span data-lang="en">investor portfolio</span><span data-lang="ru" hidden>портфель инвестора</span></div>
+          <svg class="flow-arrow" style="--svc-c: var(--acc-cyan); transform:scaleX(-1);" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+          <div class="flow-node" style="--svc-c: var(--acc-orange);"><strong data-lang="en">Protection</strong><strong data-lang="ru" hidden>Защита</strong><span data-lang="en">takaful &amp; control</span><span data-lang="ru" hidden>такафул и контроль</span></div>
+          <svg class="flow-arrow" style="--svc-c: var(--acc-orange); transform:scaleX(-1);" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+          <div class="flow-node" style="--svc-c: var(--acc-pink);"><strong data-lang="en">Collection</strong><strong data-lang="ru" hidden>Сбор денег</strong><span data-lang="en">escrow &amp; payments</span><span data-lang="ru" hidden>эскроу и платежи</span></div>
+        </div>
+      </div>
+
+      <p class="cost-note text-center" style="margin-top: var(--space-4); font-weight:700; color:var(--bronze-500);">
+        <span data-lang="en">One asset ID · one audit trail · one history — Travel Asset ID.</span>
+        <span data-lang="ru" hidden>Один ID · один аудит · одна история — Travel Asset ID.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================== SERVICES =========================== -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <h2 class="text-center">
+        <span data-lang="en">The fourteen services</span>
+        <span data-lang="ru" hidden>Четырнадцать сервисов</span>
+      </h2>
+      <p class="section-lead text-center" style="margin-left:auto; margin-right:auto;">
+        <span data-lang="en">Each one is useful on its own. Together, they compound into one operating system.</span>
+        <span data-lang="ru" hidden>Каждый полезен сам по себе. Вместе они складываются в единую операционную систему.</span>
+      </p>
+
+      <!-- 01 · Finance -->
+      <div class="service-block" style="--svc-c: var(--bronze-500);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 01</span><span class="service-tag" data-lang="ru" hidden>Сервис 01</span><h3 style="margin:0;">KHATT Finance</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Renewable financing against verified bookings and supplier obligations — the core product, detailed on <a href="index.html#how-it-works">How it works</a>.</p>
+        <p class="section-lead" data-lang="ru" hidden>Возобновляемое финансирование под проверенные бронирования и обязательства поставщикам — основной продукт, подробно на странице <a href="index.html#how-it-works">Как это работает</a>.</p>
+      </div>
+
+      <!-- 02 · Escrow -->
+      <div class="service-block" style="--svc-c: var(--acc-blue);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 02</span><span class="service-tag" data-lang="ru" hidden>Сервис 02</span><h3 style="margin:0;">KHATT Escrow</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Escrow custody and automatic split of client money through a licensed partner.</p>
+        <p class="section-lead" data-lang="ru" hidden>Условное хранение и автоматическое распределение клиентских денег через лицензированного партнёра.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="flow-row">
+              <div class="flow-node"><strong data-lang="en">Client</strong><strong data-lang="ru" hidden>Клиент</strong><span>SAR 8,000</span></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong data-lang="en">Escrow</strong><strong data-lang="ru" hidden>Эскроу</strong><span data-lang="en">auto-split</span><span data-lang="ru" hidden>авто-разделение</span></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong data-lang="en">Hotel 55%</strong><strong data-lang="ru" hidden>Отель 55%</strong></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Khatt sees actual client receipts.</li>
+              <li data-lang="ru" hidden>Khatt видит фактические клиентские поступления.</li>
+              <li data-lang="en">Supplier gets its share with no manual reconciliation.</li>
+              <li data-lang="ru" hidden>Поставщик получает свою долю без ручной сверки.</li>
+              <li data-lang="en">Financing repayment is reserved automatically.</li>
+              <li data-lang="ru" hidden>Погашение финансирования резервируется автоматически.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">the client deposits SAR 8,000; the system routes 55% to the hotel, 18% to the carrier, reserves the Khatt repayment and transfers the margin to the agency.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>клиент вносит SAR 8 000; система направляет 55% отелю, 18% перевозчику, резервирует погашение KHATT и переводит маржу агентству.</span>
+        </div>
+      </div>
+
+      <!-- 03 · Payments -->
+      <div class="service-block" style="--svc-c: var(--acc-cyan);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 03</span><span class="service-tag" data-lang="ru" hidden>Сервис 03</span><h3 style="margin:0;">KHATT Payments</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Routing, reconciliation and settlement between client, agency and suppliers.</p>
+        <p class="section-lead" data-lang="ru" hidden>Маршрутизация, сверка и расчёты между клиентом, агентством и поставщиками.</p>
+        <div class="service-panel">
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Multi-currency settlement and reconciliation.</li>
+              <li data-lang="ru" hidden>Мультивалютные расчёты и сверка.</li>
+              <li data-lang="en">Virtual accounts per deal.</li>
+              <li data-lang="ru" hidden>Виртуальные счета по каждой сделке.</li>
+              <li data-lang="en">Automatic payment assignment.</li>
+              <li data-lang="ru" hidden>Автоматическое назначение платежа.</li>
+              <li data-lang="en">Refund and chargeback control.</li>
+              <li data-lang="ru" hidden>Контроль возвратов и chargeback.</li>
+            </ul>
+          </div>
+          <div class="service-main">
+            <div class="flow-row">
+              <div class="flow-node"><strong data-lang="en">Card · bank · wallet</strong><strong data-lang="ru" hidden>Карта · банк · кошелёк</strong></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong>KHATT Payments</strong></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong data-lang="en">Hotel · transport · investor</strong><strong data-lang="ru" hidden>Отель · транспорт · инвестор</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">an agency collects payments in GBP, the supplier is paid in SAR, and Khatt automatically reconciles rate, invoice, commission and remaining limit.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>агентство собирает платежи в GBP, поставщик получает SAR, а KHATT автоматически сверяет курс, счёт, комиссию и остаток лимита.</span>
+        </div>
+      </div>
+
+      <!-- 04 · Wallet -->
+      <div class="service-block" style="--svc-c: var(--acc-teal);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v3h-5a2 2 0 0 0 0 4h5v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 04</span><span class="service-tag" data-lang="ru" hidden>Сервис 04</span><h3 style="margin:0;">KHATT Wallet</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">The agency's treasury cabinet: limits, money, documents, calendar and margin per trip.</p>
+        <p class="section-lead" data-lang="ru" hidden>Казначейский кабинет агентства: лимиты, деньги, документы, календарь и прибыль по каждой поездке.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="card-grid" style="grid-template-columns: repeat(3,1fr); margin-top:0;">
+              <div class="flow-node"><strong data-lang="en">Available limit</strong><strong data-lang="ru" hidden>Доступный лимит</strong><span>SAR 3.8M</span></div>
+              <div class="flow-node"><strong data-lang="en">In progress</strong><strong data-lang="ru" hidden>В работе</strong><span>SAR 2.1M</span></div>
+              <div class="flow-node"><strong data-lang="en">Expected profit</strong><strong data-lang="ru" hidden>Ожидаемая прибыль</strong><span>SAR 420k</span></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Limit and usage in one screen.</li>
+              <li data-lang="ru" hidden>Лимит и использование.</li>
+              <li data-lang="en">Payments and virtual accounts.</li>
+              <li data-lang="ru" hidden>Платежи и виртуальные счета.</li>
+              <li data-lang="en">Documents and contracts.</li>
+              <li data-lang="ru" hidden>Документы и договоры.</li>
+              <li data-lang="en">Obligation calendar and AI notifications.</li>
+              <li data-lang="ru" hidden>Календарь обязательств и уведомления ИИ.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">the agency director sees which trip is profitable, which suppliers need payment, and how much limit frees up after the next client instalment.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>директор агентства видит, какая поездка приносит прибыль, каким поставщикам нужно платить и сколько лимита освободится после следующего клиентского взноса.</span>
+        </div>
+      </div>
+
+      <!-- 05 · Supplier Pay -->
+      <div class="service-block" style="--svc-c: var(--acc-orange);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="4" width="14" height="16" rx="1"/><path d="M9 9h1M14 9h1M9 13h1M14 13h1M9 20v-4h6v4"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 05</span><span class="service-tag" data-lang="ru" hidden>Сервис 05</span><h3 style="margin:0;">KHATT Supplier Pay</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">The supplier gets paid earlier; the agency keeps its payment terms and access to better inventory.</p>
+        <p class="section-lead" data-lang="ru" hidden>Поставщик получает деньги раньше; агентство сохраняет отсрочку и доступ к лучшему инвентарю.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="flow-row">
+              <div class="flow-node"><strong data-lang="en">Agency</strong><strong data-lang="ru" hidden>Агентство</strong><span data-lang="en">60–120 days to settle</span><span data-lang="ru" hidden>60–120 дней на расчёт</span></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong>KHATT</strong></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong data-lang="en">Supplier</strong><strong data-lang="ru" hidden>Поставщик</strong><span data-lang="en">100% now</span><span data-lang="ru" hidden>100% сейчас</span></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Agency financing margin.</li>
+              <li data-lang="ru" hidden>Маржа финансирования агентства.</li>
+              <li data-lang="en">Supplier's early-payment discount.</li>
+              <li data-lang="ru" hidden>Скидка поставщика за раннюю оплату.</li>
+              <li data-lang="en">Processing and reconciliation fee.</li>
+              <li data-lang="ru" hidden>Комиссия за обработку и сверку.</li>
+              <li data-lang="en">Better pricing and performance data.</li>
+              <li data-lang="ru" hidden>Лучшие данные о ценах и исполнении.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">a hotel discounts 2% for same-day payment; Khatt passes part of the benefit to the agency and keeps part as extra margin.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>отель снижает цену на 2% за оплату сегодня; KHATT передаёт агентству часть выгоды и сохраняет часть как дополнительную маржу.</span>
+        </div>
+      </div>
+
+      <!-- 06 · Takaful -->
+      <div class="service-block" style="--svc-c: var(--acc-green);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9z"/><path d="M12 12v7a2 2 0 0 1-4 0"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 06</span><span class="service-tag" data-lang="ru" hidden>Сервис 06</span><h3 style="margin:0;">KHATT Takaful</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Embedded Islamic protection for the traveller, the agency and the financed deal — three layers of cover, not an insurance company.</p>
+        <p class="section-lead" data-lang="ru" hidden>Встроенное исламское страхование для путешественника, агентства и финансируемой сделки — три уровня защиты, а не страховая компания.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="flow-row">
+              <div class="flow-node"><strong data-lang="en">Traveller</strong><strong data-lang="ru" hidden>Путешественник</strong><span data-lang="en">medical, delay, baggage</span><span data-lang="ru" hidden>медицина, задержка, багаж</span></div>
+              <div class="flow-node"><strong data-lang="en">Agency</strong><strong data-lang="ru" hidden>Агентство</strong><span data-lang="en">cancellation, liability, cyber</span><span data-lang="ru" hidden>отмена, ответственность, киберриск</span></div>
+              <div class="flow-node"><strong data-lang="en">KHATT deal</strong><strong data-lang="ru" hidden>Сделка KHATT</strong><span data-lang="en">supplier default, force majeure</span><span data-lang="ru" hidden>банкротство поставщика, форс-мажор</span></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <p style="font-weight:700; color:var(--white); margin-bottom:6px;" data-lang="en">Not an insurance company.</p>
+            <p style="font-weight:700; color:var(--white); margin-bottom:6px;" data-lang="ru" hidden>Не страховая компания.</p>
+            <ul class="dot-list">
+              <li data-lang="en">Khatt connects licensed takaful partners and earns a fee, without taking insurance risk.</li>
+              <li data-lang="ru" hidden>KHATT подключает лицензированных takaful-партнёров и получает комиссию без принятия страхового риска.</li>
+              <li data-lang="en">Offered at the moment of booking; premium bundled into one payment.</li>
+              <li data-lang="ru" hidden>Предложение в момент бронирования; премия включается в общую оплату.</li>
+              <li data-lang="en">Coverage lowers the credit risk of the financed deal.</li>
+              <li data-lang="ru" hidden>Страховое покрытие снижает кредитный риск.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">an Umrah package automatically offers takaful for flight delay and medical costs; the agency earns commission, Khatt carries less payment-default risk.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>Umrah-пакет автоматически предлагает takaful от задержки рейса и медицинских расходов; агентство получает комиссию, а KHATT — меньший риск срыва платежа.</span>
+        </div>
+      </div>
+
+      <!-- 07 · Marketplace -->
+      <div class="service-block" style="--svc-c: var(--acc-orange);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 9l1-5h14l1 5"/><path d="M4 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"/><path d="M5 9v10h14V9"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 07</span><span class="service-tag" data-lang="ru" hidden>Сервис 07</span><h3 style="margin:0;">KHATT Marketplace</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Verified B2B halal-travel inventory with payment and financing in one flow.</p>
+        <p class="section-lead" data-lang="ru" hidden>Проверенный B2B-инвентарь халяльного туризма с оплатой и финансированием в одном потоке.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="card-grid" style="grid-template-columns: repeat(2,1fr); margin-top:0;">
+              <div class="flow-node"><strong data-lang="en">Hotel 5★</strong><strong data-lang="ru" hidden>Отель 5★</strong><span>SAR 420 / night</span></div>
+              <div class="flow-node"><strong data-lang="en">Bus, 50 seats</strong><strong data-lang="ru" hidden>Автобус 50 мест</strong><span>SAR 6,800</span></div>
+              <div class="flow-node"><strong data-lang="en">Group air block</strong><strong data-lang="ru" hidden>Групповой блок</strong><span>SAR 1,250 / seat</span></div>
+              <div class="flow-node"><strong data-lang="en">Pay via KHATT</strong><strong data-lang="ru" hidden>Оплатить через KHATT</strong><span data-lang="en">decision in 12 min</span><span data-lang="ru" hidden>решение за 12 мин</span></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Supplier gains new buyers.</li>
+              <li data-lang="ru" hidden>Поставщик получает новых покупателей.</li>
+              <li data-lang="en">Agency gets inventory and capital together.</li>
+              <li data-lang="ru" hidden>Агентство получает инвентарь и капитал.</li>
+              <li data-lang="en">Khatt sees price, availability and delivery quality.</li>
+              <li data-lang="ru" hidden>KHATT видит цену, доступность и качество исполнения.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">the agency picks a hotel and transport, sees the supplier rating, taps "pay via KHATT" and gets financing without re-entering any documents.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>агентство выбирает отель и транспорт, видит рейтинг поставщика, нажимает «оплатить через KHATT» и получает финансирование без повторного ввода документов.</span>
+        </div>
+      </div>
+
+      <!-- 08 · Travel Score -->
+      <div class="service-block" style="--svc-c: var(--acc-purple);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4M8 13h.01"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 08</span><span class="service-tag" data-lang="ru" hidden>Сервис 08</span><h3 style="margin:0;">KHATT Travel Score</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">An industry credit passport for the agency and the supplier, built from actual travel deals.</p>
+        <p class="section-lead" data-lang="ru" hidden>Отраслевой кредитный паспорт агентства и поставщика на основе фактических travel-сделок.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="card-grid" style="grid-template-columns:1fr; margin-top:0; gap:8px;">
+              <div class="flow-node" style="text-align:left;"><span data-lang="en">Payment discipline</span><span data-lang="ru" hidden>Платёжная дисциплина</span> — <strong>94</strong></div>
+              <div class="flow-node" style="text-align:left;"><span data-lang="en">Booking quality</span><span data-lang="ru" hidden>Качество бронирований</span> — <strong>88</strong></div>
+              <div class="flow-node" style="text-align:left;"><span data-lang="en">Supplier reliability</span><span data-lang="ru" hidden>Надёжность поставщиков</span> — <strong>81</strong></div>
+              <div class="flow-node" style="text-align:left;"><span data-lang="en">Cash-flow stability</span><span data-lang="ru" hidden>Стабильность cash-flow</span> — <strong>76</strong></div>
+              <div class="flow-node" style="text-align:left;"><span data-lang="en">Refunds &amp; cancellations</span><span data-lang="ru" hidden>Возвраты и отмены</span> — <strong>69</strong></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Bank: limit decision without real-estate collateral.</li>
+              <li data-lang="ru" hidden>Банк: решение по лимиту без недвижимости.</li>
+              <li data-lang="en">Supplier: credit limit to the agency.</li>
+              <li data-lang="ru" hidden>Поставщик: кредитный лимит агентству.</li>
+              <li data-lang="en">Takaful: price of cover.</li>
+              <li data-lang="ru" hidden>Takaful: цена страхового покрытия.</li>
+              <li data-lang="en">Investor: portfolio filter and monitoring.</li>
+              <li data-lang="ru" hidden>Инвестор: фильтр портфеля и мониторинг.</li>
+            </ul>
+            <p class="cost-note" style="margin-top:8px;" data-lang="en">Score 847 — strong profile, +31 over two cycles. Not a public rating.</p>
+            <p class="cost-note" style="margin-top:8px;" data-lang="ru" hidden>Score 847 — сильный профиль, +31 за 2 цикла. Скоринг не является публичным рейтингом.</p>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">after two clean cycles, an agency's Travel Score rises, unlocking a higher limit and a lower margin; a bank uses the same profile for co-financing.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>после двух чистых циклов агентство повышает Travel Score, получает больший лимит и меньшую маржу; банк использует тот же профиль для совместного финансирования.</span>
+        </div>
+      </div>
+
+      <!-- 09 · Risk Graph -->
+      <div class="service-block" style="--svc-c: var(--acc-pink);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7.5 7.5L11 16M16.5 7.5L13 16M8 6h8"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 09</span><span class="service-tag" data-lang="ru" hidden>Сервис 09</span><h3 style="margin:0;">KHATT Risk Graph</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">The connections graph surfaces double financing, linked suppliers and anomalous payment routes.</p>
+        <p class="section-lead" data-lang="ru" hidden>Граф связей выявляет двойное финансирование, связанных поставщиков и аномальные платёжные маршруты.</p>
+        <div class="service-panel">
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">One account used by different suppliers.</li>
+              <li data-lang="ru" hidden>Один счёт у разных поставщиков.</li>
+              <li data-lang="en">Shared owners or contacts.</li>
+              <li data-lang="ru" hidden>Одинаковые владельцы или контакты.</li>
+              <li data-lang="en">Duplicate invoice / booking ID.</li>
+              <li data-lang="ru" hidden>Повторный invoice / booking ID.</li>
+              <li data-lang="en">Anomalous price spike before financing.</li>
+              <li data-lang="ru" hidden>Аномальный рост цены перед финансированием.</li>
+            </ul>
+          </div>
+          <div class="service-main">
+            <p style="font-weight:700; color:var(--white);" data-lang="en">AI flags · a human decides.</p>
+            <p style="font-weight:700; color:var(--white);" data-lang="ru" hidden>ИИ флагирует · человек решает.</p>
+            <p class="cost-note" data-lang="en">Every flagged deal goes to manual review before payment.</p>
+            <p class="cost-note" data-lang="ru" hidden>Каждая сделка с флагом переводится в ручную проверку до оплаты.</p>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">the system detects that two "different" carriers share one bank account and one phone number; the deal is moved to manual review before payment.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>система обнаруживает, что два «разных» перевозчика используют один банковский счёт и один телефон. Сделка переводится в ручную проверку до оплаты.</span>
+        </div>
+      </div>
+
+      <!-- 10 · Intelligence -->
+      <div class="service-block" style="--svc-c: var(--acc-blue);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 2 4-6"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 10</span><span class="service-tag" data-lang="ru" hidden>Сервис 10</span><h3 style="margin:0;">KHATT Intelligence</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Aggregated analytics on demand, price, suppliers and risk for agencies, capital and the industry.</p>
+        <p class="section-lead" data-lang="ru" hidden>Агрегированная аналитика спроса, цен, поставщиков и риска для агентств, капитала и отрасли.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="card-grid" style="grid-template-columns: repeat(3,1fr); margin-top:0;">
+              <div class="flow-node"><strong>+18%</strong><span data-lang="en">demand for Madinah</span><span data-lang="ru" hidden>спрос на Мадину</span></div>
+              <div class="flow-node"><strong>−6%</strong><span data-lang="en">average bus price</span><span data-lang="ru" hidden>средняя цена автобуса</span></div>
+              <div class="flow-node"><strong>2.1%</strong><span data-lang="en">cancellation risk</span><span data-lang="ru" hidden>риск отмены</span></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Agencies: when to buy.</li>
+              <li data-lang="ru" hidden>Агентства: когда покупать.</li>
+              <li data-lang="en">Hotels: where demand is growing.</li>
+              <li data-lang="ru" hidden>Отели: где растёт спрос.</li>
+              <li data-lang="en">Banks: portfolio quality.</li>
+              <li data-lang="ru" hidden>Банки: качество портфеля.</li>
+              <li data-lang="en">Anonymised data only.</li>
+              <li data-lang="ru" hidden>Только обезличенные данные.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">Khatt notices accelerating demand for Madinah and rising room rates; the agency gets a recommendation to lock inventory two weeks earlier.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>KHATT замечает ускорение спроса на Мадину и рост стоимости номеров. Агентство получает рекомендацию закрепить инвентарь на две недели раньше.</span>
+        </div>
+      </div>
+
+      <!-- 11 · AI Concierge -->
+      <div class="service-block" style="--svc-c: var(--acc-cyan);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="8" width="14" height="10" rx="2"/><circle cx="9" cy="13" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1" fill="currentColor" stroke="none"/><path d="M12 8V5M9 5h6"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 11</span><span class="service-tag" data-lang="ru" hidden>Сервис 11</span><h3 style="margin:0;">KHATT AI Concierge</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">An AI assistant that turns platform data into concrete actions for the agency director and the risk team.</p>
+        <p class="section-lead" data-lang="ru" hidden>ИИ-помощник превращает данные платформы в конкретные действия для директора агентства и риск-команды.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <ul class="dot-list">
+              <li data-lang="en"><strong style="color:var(--white);">Lock 40 rooms now</strong> — the hotel price rose 6% in 7 days; SAR 780k financing is available.</li>
+              <li data-lang="ru" hidden><strong style="color:var(--white);">Закрепите 40 номеров сейчас</strong> — цена отеля выросла на 6% за 7 дней; доступно финансирование SAR 780k.</li>
+              <li data-lang="en"><strong style="color:var(--white);">Review supplier Transport Z</strong> — new bank account doesn't match history; payment paused.</li>
+              <li data-lang="ru" hidden><strong style="color:var(--white);">Проверьте поставщика Transport Z</strong> — новый счёт не совпадает с историей; платёж приостановлен.</li>
+            </ul>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Collects deals, payments, prices, documents.</li>
+              <li data-lang="ru" hidden>Собирает сделки, платежи, цены, документы.</li>
+              <li data-lang="en">Understands risk, margin, deadlines.</li>
+              <li data-lang="ru" hidden>Понимает риск, маржу, сроки.</li>
+              <li data-lang="en">Recommends the next best action.</li>
+              <li data-lang="ru" hidden>Рекомендует следующее лучшее действие.</li>
+              <li data-lang="en">Escalates every critical call to a human.</li>
+              <li data-lang="ru" hidden>Передаёт все критические решения человеку.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">the AI suggests paying the hotel early because it sees a rising price, free limit and confirmed client deposits; the director confirms the action.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>ИИ предлагает оплатить отель раньше, потому что видит рост цены, свободный лимит и подтверждённые клиентские депозиты. Директор подтверждает действие.</span>
+        </div>
+      </div>
+
+      <!-- 12 · Sharia Engine -->
+      <div class="service-block" style="--svc-c: var(--bronze-500);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M6 7l-3 6a3 3 0 0 0 6 0l-3-6zM18 7l-3 6a3 3 0 0 0 6 0l-3-6zM6 7h12"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 12</span><span class="service-tag" data-lang="ru" hidden>Сервис 12</span><h3 style="margin:0;">KHATT Sharia Engine</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">The system selects the contract structure, verifies the evidence and prepares the package for sharia review.</p>
+        <p class="section-lead" data-lang="ru" hidden>Система подбирает договорную структуру, проверяет доказательства и готовит пакет для шариатского контроля.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="flow-row">
+              <div class="flow-node"><strong data-lang="en">Goods</strong><strong data-lang="ru" hidden>Товар</strong><span data-lang="en">real purchase</span><span data-lang="ru" hidden>реальная покупка</span></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong>Murabaha</strong><span data-lang="en">cost + markup</span><span data-lang="ru" hidden>покупка + наценка</span></div>
+            </div>
+            <div class="flow-row" style="margin-top:8px;">
+              <div class="flow-node"><strong data-lang="en">Service</strong><strong data-lang="ru" hidden>Услуга</strong><span data-lang="en">room / transfer</span><span data-lang="ru" hidden>номер / перевозка</span></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong data-lang="en">Ijara mawsufa fi al-dhimma</strong><strong data-lang="ru" hidden>Иджара мавсуфа фи-з-зимма</strong><span data-lang="en">forward lease</span><span data-lang="ru" hidden>форвардная аренда</span></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Classifies the asset or service.</li>
+              <li data-lang="ru" hidden>Классификация актива или услуги.</li>
+              <li data-lang="en">Checks required documents.</li>
+              <li data-lang="ru" hidden>Проверка обязательных документов.</li>
+              <li data-lang="en">Versions every contract.</li>
+              <li data-lang="ru" hidden>Версионирование договоров.</li>
+              <li data-lang="en">Links every payment to a real deal.</li>
+              <li data-lang="ru" hidden>Связь каждой выплаты с реальной сделкой.</li>
+            </ul>
+            <p class="cost-note" style="margin-top:8px;" data-lang="en">An advisor, not a substitute for the scholar.</p>
+            <p class="cost-note" style="margin-top:8px;" data-lang="ru" hidden>Советник, не замена учёному.</p>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">the system determines that hotel nights require an ijara structure, collects the booking and supplier confirmation, then routes the package to the sharia advisor for approval.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>система определяет, что гостиничные ночи требуют структуры иджара, собирает бронь и подтверждение поставщика, затем передаёт пакет на утверждение шариатскому советнику.</span>
+        </div>
+      </div>
+
+      <!-- 13 · Capital Marketplace -->
+      <div class="service-block" style="--svc-c: var(--acc-green);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 4h6l1 3a5 5 0 1 1-8 0l1-3z"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 13</span><span class="service-tag" data-lang="ru" hidden>Сервис 13</span><h3 style="margin:0;">KHATT Capital Marketplace</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Pools of verified travel deals for banks, Islamic funds and professional investors.</p>
+        <p class="section-lead" data-lang="ru" hidden>Пулы проверенных travel-сделок для банков, исламских фондов и профессиональных инвесторов.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="card-grid" style="grid-template-columns: repeat(3,1fr); margin-top:0;">
+              <div class="flow-node"><strong>Umrah Core</strong><span>90 days · rating A</span><span style="color:var(--acc-blue); font-weight:700;">7–9%</span></div>
+              <div class="flow-node"><strong>Hajj Peak</strong><span data-lang="en">180 days · secured</span><span data-lang="ru" hidden>180 дней · обеспеченный</span><span style="color:var(--bronze-500); font-weight:700;">9–12%</span></div>
+              <div class="flow-node"><strong>Halal Leisure</strong><span data-lang="en">60 days · diversified</span><span data-lang="ru" hidden>60 дней · диверсификация</span><span style="color:var(--acc-teal); font-weight:700;">8–10%</span></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Only verified assets and limits.</li>
+              <li data-lang="ru" hidden>Только проверенные активы и лимиты.</li>
+              <li data-lang="en">Diversified by country and supplier.</li>
+              <li data-lang="ru" hidden>Диверсификация по странам и поставщикам.</li>
+              <li data-lang="en">Daily portfolio monitoring.</li>
+              <li data-lang="ru" hidden>Ежедневный мониторинг портфеля.</li>
+              <li data-lang="en">Khatt = originator + servicer.</li>
+              <li data-lang="ru" hidden>KHATT = originator + servicer.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">an Islamic bank allocates a line to an A-rated Umrah portfolio; Khatt selects the deals, services payments and provides daily reporting.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>исламский банк выделяет линию на Umrah-портфель рейтинга A. KHATT отбирает сделки, обслуживает платежи и предоставляет ежедневную отчётность.</span>
+        </div>
+      </div>
+
+      <!-- 14 · APIs -->
+      <div class="service-block" style="--svc-c: var(--acc-blue);">
+        <div class="service-head">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></span>
+          <div><span class="service-tag" data-lang="en">Service 14</span><span class="service-tag" data-lang="ru" hidden>Сервис 14</span><h3 style="margin:0;">KHATT APIs</h3></div>
+        </div>
+        <p class="section-lead" data-lang="en">Banks, travel platforms and suppliers embed financing and risk modules under their own brand.</p>
+        <p class="section-lead" data-lang="ru" hidden>Банки, travel-платформы и поставщики встраивают финансирование и риск-модули под своим брендом.</p>
+        <div class="service-panel">
+          <div class="service-main">
+            <div class="flow-row">
+              <div class="flow-node"><strong data-lang="en">Bank / Travel ERP / Supplier</strong><strong data-lang="ru" hidden>Банк / Travel ERP / Поставщик</strong></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong>KHATT API Gateway</strong><span>REST · webhooks</span></div>
+              <svg class="flow-arrow" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h18M15 3l5 5-5 5"/></svg>
+              <div class="flow-node"><strong data-lang="en">Verify · score · pay · contract · monitor</strong><strong data-lang="ru" hidden>Проверка · скоринг · оплата · договор · мониторинг</strong></div>
+            </div>
+          </div>
+          <div class="service-side">
+            <ul class="dot-list">
+              <li data-lang="en">Connection fee.</li>
+              <li data-lang="ru" hidden>Плата за подключение.</li>
+              <li data-lang="en">Platform subscription.</li>
+              <li data-lang="ru" hidden>Подписка за платформу.</li>
+              <li data-lang="en">Commission per deal.</li>
+              <li data-lang="ru" hidden>Комиссия за каждую сделку.</li>
+              <li data-lang="en">Risk-model licensing.</li>
+              <li data-lang="ru" hidden>Лицензирование риск-модели.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-example">
+          <strong data-lang="en">Example: </strong><span data-lang="en">an Islamic bank shows its own interface to the client, while Khatt verifies the travel asset, prices the risk, prepares documents and services the deal.</span>
+          <strong data-lang="ru" hidden>Пример: </strong><span data-lang="ru" hidden>исламский банк показывает клиенту свой интерфейс, но KHATT проверяет travel-актив, рассчитывает риск, готовит документы и обслуживает сделку.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================== TECHNOLOGY =========================== -->
+  <section class="section" id="technology">
+    <div class="container">
+      <h2>
+        <span data-lang="en">The AI architecture behind every deal</span>
+        <span data-lang="ru" hidden>ИИ-архитектура за каждой сделкой</span>
+      </h2>
+      <p class="section-lead">
+        <span data-lang="en">Data becomes a verified travel asset, a risk decision and an automated workflow.</span>
+        <span data-lang="ru" hidden>Данные превращаются в проверенный туристический актив, решение по риску и автоматизированный рабочий процесс.</span>
+      </p>
+
+      <div class="layer-row" style="--layer-c: var(--acc-blue);">
+        <div class="layer-label"><span class="layer-dot">1</span><span data-lang="en">Data sources</span><span data-lang="ru" hidden>Источники данных</span></div>
+        <div class="layer-pills"><span class="layer-pill">Nusuk / GDS / OTA</span><span class="layer-pill" data-lang="en">Open banking</span><span class="layer-pill" data-lang="ru" hidden>Открытый банкинг</span><span class="layer-pill" data-lang="en">Documents · suppliers · payments</span><span class="layer-pill" data-lang="ru" hidden>Документы · поставщики · платежи</span></div>
+      </div>
+      <div class="layer-row" style="--layer-c: var(--acc-teal);">
+        <div class="layer-label"><span class="layer-dot">2</span><span data-lang="en">Travel-asset registry</span><span data-lang="ru" hidden>Реестр туристических активов</span></div>
+        <div class="layer-pills"><span class="layer-pill" data-lang="en">Booking · PNR · invoice</span><span class="layer-pill" data-lang="ru" hidden>Бронь · PNR · invoice</span><span class="layer-pill" data-lang="en">Client deposits · cancellation terms · evidence</span><span class="layer-pill" data-lang="ru" hidden>Клиентские депозиты · условия отмены · доказательства</span></div>
+      </div>
+      <div class="layer-row" style="--layer-c: var(--acc-purple);">
+        <div class="layer-label"><span class="layer-dot">3</span><span data-lang="en">AI models &amp; agents</span><span data-lang="ru" hidden>Модели и агенты ИИ</span></div>
+        <div class="layer-pills"><span class="layer-pill">OCR · LLM</span><span class="layer-pill" data-lang="en">Cash-flow forecast</span><span class="layer-pill" data-lang="ru" hidden>Прогноз cash-flow</span><span class="layer-pill" data-lang="en">Scoring · anomalies · recommendations</span><span class="layer-pill" data-lang="ru" hidden>Скоринг · аномалии · рекомендации</span></div>
+      </div>
+      <div class="layer-row" style="--layer-c: var(--bronze-500);">
+        <div class="layer-label"><span class="layer-dot">4</span><span data-lang="en">Controls &amp; rules</span><span data-lang="ru" hidden>Контроль и правила</span></div>
+        <div class="layer-pills"><span class="layer-pill" data-lang="en">Limits</span><span class="layer-pill" data-lang="ru" hidden>Лимиты</span><span class="layer-pill" data-lang="en">Human in the loop</span><span class="layer-pill" data-lang="ru" hidden>Человек в контуре</span><span class="layer-pill">AML / KYB</span><span class="layer-pill" data-lang="en">Data policy</span><span class="layer-pill" data-lang="ru" hidden>Политика данных</span></div>
+      </div>
+      <div class="layer-row" style="--layer-c: var(--acc-green);">
+        <div class="layer-label"><span class="layer-dot">5</span><span data-lang="en">Applications</span><span data-lang="ru" hidden>Приложения</span></div>
+        <div class="layer-pills"><span class="layer-pill">Finance · Payments · Takaful · Marketplace · Intelligence · APIs</span></div>
+      </div>
+
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        <p data-lang="en">AI does not replace the risk committee, the lawyer or the sharia advisor. It reduces manual work and escalates exceptions to a human. Human-in-the-loop · audit by design · privacy by design.</p>
+        <p data-lang="ru" hidden>ИИ не заменяет риск-комитет, юриста или шариатского советника. Он сокращает ручную работу и передаёт исключения человеку. Human-in-the-loop · audit by design · privacy by design.</p>
+      </div>
+
+      <h3 style="margin-top: var(--space-6);">
+        <span data-lang="en">Travel Asset Passport</span>
+        <span data-lang="ru" hidden>Паспорт туристического актива</span>
+      </h3>
+      <p class="section-lead" data-lang="en">Every financed trip becomes a digital object with evidence, risk and a money route.</p>
+      <p class="section-lead" data-lang="ru" hidden>Каждая финансируемая поездка становится цифровым объектом с доказательствами, риском и денежным маршрутом.</p>
+
+      <div class="service-main" style="margin-top: var(--space-3);">
+        <div class="card-grid" style="grid-template-columns: 1fr 1fr; margin-top:0;">
+          <div>
+            <p class="cost-note" data-lang="en">Agency</p><p class="cost-note" data-lang="ru" hidden>Агентство</p>
+            <p style="color:var(--white); font-weight:700;">Aisha Travel LLC</p>
+            <p class="cost-note" data-lang="en">Supplier</p><p class="cost-note" data-lang="ru" hidden>Поставщик</p>
+            <p style="color:var(--white); font-weight:700;">Hilton Makkah + BusCo</p>
+            <p class="cost-note" data-lang="en">Group</p><p class="cost-note" data-lang="ru" hidden>Группа</p>
+            <p style="color:var(--white); font-weight:700;">40 <span data-lang="en">travellers</span><span data-lang="ru" hidden>путешественников</span></p>
+            <p class="cost-note" data-lang="en">Dates</p><p class="cost-note" data-lang="ru" hidden>Даты</p>
+            <p style="color:var(--white); font-weight:700;">14–20 <span data-lang="en">August</span><span data-lang="ru" hidden>августа</span></p>
+          </div>
+          <div>
+            <p class="cost-note" data-lang="en">Cost</p><p class="cost-note" data-lang="ru" hidden>Стоимость</p>
+            <p style="color:var(--white); font-weight:700;">SAR 1,180,000</p>
+            <p class="cost-note" data-lang="en">Client instalments</p><p class="cost-note" data-lang="ru" hidden>Взносы клиентов</p>
+            <p style="color:var(--white); font-weight:700;">SAR 420,000 <span data-lang="en">confirmed</span><span data-lang="ru" hidden>подтверждено</span></p>
+            <p class="cost-note" data-lang="en">Cancellation terms</p><p class="cost-note" data-lang="ru" hidden>Условия отмены</p>
+            <p style="color:var(--white); font-weight:700;">20% / 50% / 100%</p>
+            <p class="cost-note" data-lang="en">Contract</p><p class="cost-note" data-lang="ru" hidden>Договор</p>
+            <p style="color:var(--white); font-weight:700;">Ijara + wakala + wa'd</p>
+          </div>
+        </div>
+        <p class="cost-note" style="margin-top:var(--space-2);" data-lang="en">Evidence: booking · invoice · hotel confirmation · bank cash-flow · client payment. Not a token, not a crypto-asset.</p>
+        <p class="cost-note" style="margin-top:var(--space-2);" data-lang="ru" hidden>Доказательства: бронь · invoice · подтверждение отеля · банковский cash-flow · платёж клиента. Не токен, не криптоактив.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== MOAT / FLYWHEEL =========================== -->
+  <section class="section section-alt" id="flywheel">
+    <div class="container">
+      <h2 class="text-center">
+        <span data-lang="en">The data flywheel</span>
+        <span data-lang="ru" hidden>Маховик данных</span>
+      </h2>
+      <p class="section-lead text-center" style="margin-left:auto; margin-right:auto;">
+        <span data-lang="en">Every completed deal makes the next one faster, safer and cheaper to fund.</span>
+        <span data-lang="ru" hidden>Каждая завершённая сделка делает следующую быстрее, безопаснее и дешевле в финансировании.</span>
+      </p>
+
+      <div class="moat-grid">
+        <div class="moat-card" style="--m-c: var(--acc-blue);"><span class="moat-num">1</span><strong data-lang="en">More data</strong><strong data-lang="ru" hidden>Больше данных</strong><span data-lang="en">prices, cancellations, performance</span><span data-lang="ru" hidden>цены, отмены, исполнение</span></div>
+        <div class="moat-card" style="--m-c: var(--acc-purple);"><span class="moat-num">2</span><strong data-lang="en">Better models</strong><strong data-lang="ru" hidden>Лучше модели</strong><span data-lang="en">sharper risk and forecasting</span><span data-lang="ru" hidden>точнее риск и прогноз</span></div>
+        <div class="moat-card" style="--m-c: var(--acc-green);"><span class="moat-num">3</span><strong data-lang="en">Lower losses</strong><strong data-lang="ru" hidden>Ниже потери</strong><span data-lang="en">fraud and defaults</span><span data-lang="ru" hidden>fraud и дефолты</span></div>
+        <div class="moat-card" style="--m-c: var(--bronze-500);"><span class="moat-num">4</span><strong data-lang="en">Cheaper capital</strong><strong data-lang="ru" hidden>Дешевле капитал</strong><span data-lang="en">bank and investor trust</span><span data-lang="ru" hidden>доверие банков и инвесторов</span></div>
+        <div class="moat-card" style="--m-c: var(--acc-orange);"><span class="moat-num">5</span><strong data-lang="en">Better terms</strong><strong data-lang="ru" hidden>Лучше условия</strong><span data-lang="en">more clients and volume</span><span data-lang="ru" hidden>больше клиентов и объёма</span></div>
+        <div class="moat-card" style="--m-c: var(--acc-teal);"><span class="moat-num">6</span><strong data-lang="en">More deals</strong><strong data-lang="ru" hidden>Больше сделок</strong><span data-lang="en">bookings and payments</span><span data-lang="ru" hidden>бронирования и платежи</span></div>
+      </div>
+
+      <div class="disclaimer" style="margin-top: var(--space-4);">
+        <p data-lang="en">A competitor can copy the interface. It cannot quickly copy the history of suppliers, repayments, cancellations and risk decisions.</p>
+        <p data-lang="ru" hidden>Конкурент может скопировать интерфейс. Он не может быстро скопировать историю поставщиков, погашений, отмен и решений по риску.</p>
       </div>
     </div>
   </section>
 
   <!-- =========================== ECOSYSTEM CTA =========================== -->
-  <section class="section section--sand100" id="ecosystem-cta">
+  <section class="section" id="ecosystem-cta">
     <div class="container text-center">
       <h2>
-        <span data-lang="en">Want to be first on a new facility, or fund the roadmap?</span>
-        <span data-lang="ru" hidden>Хотите быть первым на новом продукте — или профинансировать дорожную карту?</span>
+        <span data-lang="en">Want early access to a new service, or to fund the platform?</span>
+        <span data-lang="ru" hidden>Хотите ранний доступ к новому сервису — или профинансировать платформу?</span>
       </h2>
       <div class="hero-ctas" style="justify-content:center;">
         <a class="btn btn--primary" href="index.html#hero">
@@ -252,8 +1001,8 @@
       <p data-lang="en">These materials are for informational and analytical purposes only. They do not constitute a legal or sharia opinion, an investment recommendation, or an offer, and are subject to review by licensed legal counsel in the relevant jurisdictions and by an authorized sharia board.</p>
       <p data-lang="ru" hidden>Настоящие материалы носят информационно-аналитический характер, не являются юридическим или шариатским заключением, инвестиционной рекомендацией либо офертой и подлежат проверке лицензированными юридическими консультантами в соответствующих юрисдикциях и уполномоченным шариатским советом.</p>
 
-      <p data-lang="en">Roadmap items are indicative and require confirmation by a licensed sharia board and legal counsel before launch.</p>
-      <p data-lang="ru" hidden>Пункты дорожной карты носят индикативный характер и требуют подтверждения лицензированным шариатским советом и юристом перед запуском.</p>
+      <p data-lang="en">The full KHATT OS catalogue is a product roadmap; several services are in design or pilot, not all are live for every market.</p>
+      <p data-lang="ru" hidden>Полный каталог KHATT OS — продуктовая дорожная карта; часть сервисов находится в разработке или пилоте, не все доступны на каждом рынке.</p>
     </div>
 
     <div class="footer-bottom">
