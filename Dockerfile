@@ -1,8 +1,12 @@
 # Khatt Capital marketing website — статика, контейнер для Spaceship Hyperlift.
 #
-# Чистый nginx, без своего кода: index.html/styles.css/script.js/assets/
+# Чистый nginx, без своего кода: HTML-страницы/styles.css/script.js/assets/
 # копируются как есть и раздаются напрямую. Порт 8080 — по умолчанию для
 # приложений на Hyperlift Micro (см. APPLICATION_PORT в настройках сервиса).
+#
+# ВАЖНО: COPY ниже перечисляет файлы явно (не COPY . .) — при добавлении
+# новой HTML-страницы её нужно дописать в список, иначе сборка пройдёт
+# успешно, но страница будет отдавать 404 на проде.
 
 FROM nginx:alpine
 
@@ -14,7 +18,7 @@ FROM nginx:alpine
 RUN sed -i 's/worker_processes.*;/worker_processes 1;/' /etc/nginx/nginx.conf
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html styles.css script.js /usr/share/nginx/html/
+COPY index.html ecosystem.html investors.html styles.css script.js /usr/share/nginx/html/
 COPY assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 8080
