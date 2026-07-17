@@ -3,16 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Khatt Capital — Sharia-compliant financial infrastructure for halal tourism</title>
-<meta name="description" content="Khatt Capital pays your hotels, transport and travel suppliers today — you repay after your travellers pay you. Umrah, Hajj, Ramadan &amp; Eid travel, halal family holidays, business travel and medical travel. 100% sharia-compliant, fixed transparent cost, no cash loans.">
+<meta name="theme-color" content="#10243E">
+<meta name="color-scheme" content="light">
+<title>KHATT Capital — The Financial Operating System for Global Halal Travel</title>
+<meta name="description" content="KHATT helps travel agencies pay verified suppliers today and settle after customer collections — without unrestricted cash loans.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="styles.css">
-<!--
-  No external network dependencies on purpose: no Google Fonts / icon CDN,
-  no analytics beacons. Font stack falls back to system fonts (see styles.css
-  header comment + engineer's report) because no local Inter/IBM Plex webfont
-  binaries were available to self-host for this pass.
--->
 </head>
 <body>
 
@@ -24,31 +20,20 @@
 <!-- =========================== HEADER =========================== -->
 <header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#hero">
+    <a class="brand" href="/">
       <img class="brand-mark" src="assets/favicon.svg" alt="" width="32" height="32">
       <span data-lang="en">KHATT CAPITAL</span>
       <span data-lang="ru" hidden>KHATT CAPITAL</span>
     </a>
 
     <nav class="main-nav" aria-label="Primary">
-      <a href="#hero" data-nav>
-        <span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span>
-      </a>
-      <a href="#how-it-works" data-nav>
-        <span data-lang="en">How it works</span><span data-lang="ru" hidden>Как это работает</span>
-      </a>
-      <a href="#sharia" data-nav>
-        <span data-lang="en">Sharia compliance</span><span data-lang="ru" hidden>Шариат-комплаенс</span>
-      </a>
-      <a href="ecosystem.html">
-        <span data-lang="en">Khatt Ecosystem</span><span data-lang="ru" hidden>Экосистема Khatt</span>
-      </a>
-      <a href="investors.html">
-        <span data-lang="en">For Investors</span><span data-lang="ru" hidden>Инвесторам</span>
-      </a>
-      <a href="#contact" data-nav>
-        <span data-lang="en">Contacts</span><span data-lang="ru" hidden>Контакты</span>
-      </a>
+      <a href="/" class="is-active" aria-current="page"><span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span></a>
+      <a href="/platform"><span data-lang="en">Platform</span><span data-lang="ru" hidden>Платформа</span></a>
+      <a href="/for-agencies"><span data-lang="en">Agencies</span><span data-lang="ru" hidden>Агентствам</span></a>
+      <a href="/for-suppliers"><span data-lang="en">Suppliers</span><span data-lang="ru" hidden>Поставщикам</span></a>
+      <a href="/for-banks-capital"><span data-lang="en">Banks &amp; Capital</span><span data-lang="ru" hidden>Банкам и капиталу</span></a>
+      <a href="/sharia-governance"><span data-lang="en">Sharia &amp; Governance</span><span data-lang="ru" hidden>Шариат и управление</span></a>
+      <a href="/contact"><span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span></a>
     </nav>
 
     <div class="header-actions">
@@ -56,10 +41,10 @@
         <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
         <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
       </div>
-      <button type="button" class="btn btn--primary btn--sm" data-open-dialog>
-        <span data-lang="en">Apply now</span>
-        <span data-lang="ru" hidden>Подать заявку</span>
-      </button>
+      <a class="btn btn--primary btn--sm" href="/for-agencies#apply">
+        <span data-lang="en">Apply for a pilot facility</span>
+        <span data-lang="ru" hidden>Подать заявку на пилот</span>
+      </a>
       <button type="button" class="hamburger" id="hamburger-btn" aria-haspopup="true" aria-expanded="false" aria-controls="mobile-nav">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         <span class="visually-hidden" data-lang="en">Open menu</span>
@@ -69,10 +54,9 @@
   </div>
 </header>
 
-<!-- Mobile full-screen nav overlay -->
 <div class="mobile-nav" id="mobile-nav" hidden role="dialog" aria-modal="true" aria-label="Menu">
   <div class="mobile-nav-top">
-    <a class="brand" href="#hero">
+    <a class="brand" href="/">
       <img class="brand-mark" src="assets/favicon.svg" alt="" width="32" height="32">
       <span data-lang="en">KHATT CAPITAL</span>
       <span data-lang="ru" hidden>KHATT CAPITAL</span>
@@ -84,18 +68,22 @@
     </button>
   </div>
   <ul class="mobile-nav-list">
-    <li><a href="#hero" data-nav data-mobile-link><span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span></a></li>
-    <li><a href="#how-it-works" data-nav data-mobile-link><span data-lang="en">How it works</span><span data-lang="ru" hidden>Как это работает</span></a></li>
-    <li><a href="#sharia" data-nav data-mobile-link><span data-lang="en">Sharia compliance</span><span data-lang="ru" hidden>Шариат-комплаенс</span></a></li>
-    <li><a href="ecosystem.html" data-mobile-link><span data-lang="en">Khatt Ecosystem</span><span data-lang="ru" hidden>Экосистема Khatt</span></a></li>
-    <li><a href="investors.html" data-mobile-link><span data-lang="en">For Investors</span><span data-lang="ru" hidden>Инвесторам</span></a></li>
-    <li><a href="#contact" data-nav data-mobile-link><span data-lang="en">Contacts</span><span data-lang="ru" hidden>Контакты</span></a></li>
+    <li><a href="/" data-mobile-link><span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span></a></li>
+    <li><a href="/platform" data-mobile-link><span data-lang="en">Platform</span><span data-lang="ru" hidden>Платформа</span></a></li>
+    <li><a href="/for-agencies" data-mobile-link><span data-lang="en">Agencies</span><span data-lang="ru" hidden>Агентствам</span></a></li>
+    <li><a href="/for-suppliers" data-mobile-link><span data-lang="en">Suppliers</span><span data-lang="ru" hidden>Поставщикам</span></a></li>
+    <li><a href="/for-banks-capital" data-mobile-link><span data-lang="en">Banks &amp; Capital</span><span data-lang="ru" hidden>Банкам и капиталу</span></a></li>
+    <li><a href="/sharia-governance" data-mobile-link><span data-lang="en">Sharia &amp; Governance</span><span data-lang="ru" hidden>Шариат и управление</span></a></li>
+    <li><a href="/technology" data-mobile-link><span data-lang="en">Technology</span><span data-lang="ru" hidden>Технологии</span></a></li>
+    <li><a href="/about" data-mobile-link><span data-lang="en">About</span><span data-lang="ru" hidden>О компании</span></a></li>
+    <li><a href="/faq" data-mobile-link><span data-lang="en">FAQ</span><span data-lang="ru" hidden>Вопросы и ответы</span></a></li>
+    <li><a href="/contact" data-mobile-link><span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span></a></li>
   </ul>
   <div class="mobile-nav-cta">
-    <button type="button" class="btn btn--primary" data-open-dialog data-mobile-link>
-      <span data-lang="en">Apply now</span>
-      <span data-lang="ru" hidden>Подать заявку</span>
-    </button>
+    <a class="btn btn--primary" href="/for-agencies#apply" data-mobile-link>
+      <span data-lang="en">Apply for a pilot facility</span>
+      <span data-lang="ru" hidden>Подать заявку на пилот</span>
+    </a>
   </div>
 </div>
 
@@ -111,133 +99,49 @@
     </div>
     <div class="container hero-inner">
       <span class="section-kicker">
-        <span data-lang="en">خط — "a single line of capital between an operator and the season."</span>
-        <span data-lang="ru" hidden>خط (хатт) — «линия» на арабском. Одна линия капитала между оператором и сезоном.</span>
+        <span data-lang="en">AI-powered · Sharia-by-design · Travel-backed</span>
+        <span data-lang="ru" hidden>ИИ · Halal by design · Обеспечено travel-активами</span>
       </span>
       <h1>
-        <span data-lang="en">Fund your season. Serve more travellers.</span>
-        <span data-lang="ru" hidden>Профинансируйте свой сезон. Обслужите больше путешественников.</span>
+        <span data-lang="en">The Financial Operating System for Global Halal Travel.</span>
+        <span data-lang="ru" hidden>Финансовая операционная система глобального халяльного туризма.</span>
       </h1>
       <p class="subhead">
-        <span data-lang="en">Khatt Capital pays your hotels, transport and travel suppliers today — you repay us after your travellers pay you.</span>
-        <span data-lang="ru" hidden>Khatt Capital оплачивает ваши отели, транспорт и других туристических поставщиков сегодня — вы возвращаете средства после того, как с вами расплатятся ваши клиенты.</span>
+        <span data-lang="en">Pay verified suppliers today. Settle after your customers pay — never with cash loans.</span>
+        <span data-lang="ru" hidden>Платите проверенным поставщикам сегодня. Рассчитывайтесь после оплаты клиентами — без денежных кредитов.</span>
       </p>
-      <p class="section-lead" style="margin: 0 auto var(--space-3); text-align: center;">
-        <span data-lang="en">Financial infrastructure for halal tourism — Umrah, Hajj, Ramadan &amp; Eid travel, halal family holidays, business &amp; MICE travel, medical travel and diaspora travel.</span>
-        <span data-lang="ru" hidden>Финансовая инфраструктура халяльного туризма — Умра, Хадж, поездки на Рамадан и Ид, семейный халяль-отдых, деловые поездки и MICE, медицинский туризм и поездки диаспоры.</span>
-      </p>
-
-      <ul class="trust-pills">
-        <li><span data-lang="en">100% sharia-compliant</span><span data-lang="ru" hidden>100% шариат-комплаенс</span></li>
-        <li><span data-lang="en">Fixed transparent cost</span><span data-lang="ru" hidden>Фиксированная прозрачная стоимость</span></li>
-        <li><span data-lang="en">No cash loans, ever.</span><span data-lang="ru" hidden>Никогда — денежные кредиты</span></li>
-      </ul>
 
       <div class="hero-ctas">
-        <button type="button" class="btn btn--primary" data-open-dialog>
-          <span data-lang="en">Apply now</span>
-          <span data-lang="ru" hidden>Подать заявку</span>
-        </button>
-        <a class="btn btn--ghost" href="#how-it-works">
-          <span data-lang="en">See how it works</span>
-          <span data-lang="ru" hidden>Как это работает</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        <a class="btn btn--primary" href="/for-agencies#apply">
+          <span data-lang="en">Apply for a pilot facility</span>
+          <span data-lang="ru" hidden>Подать заявку на пилот</span>
+        </a>
+        <a class="btn btn--ghost" href="/for-banks-capital">
+          <span data-lang="en">Partner with KHATT</span>
+          <span data-lang="ru" hidden>Стать партнёром KHATT</span>
+        </a>
+        <a class="btn btn--text" href="/platform">
+          <span data-lang="en">Explore the platform</span>
+          <span data-lang="ru" hidden>Изучить платформу</span>
         </a>
       </div>
-
-      <p class="cost-note" style="margin-top: var(--space-3);">
-        <span data-lang="en">Finance halal travel. Not cash loans.</span>
-        <span data-lang="ru" hidden>Финансируем халяльный туризм — не выдаём денежные кредиты.</span>
-      </p>
-
-      <p class="cost-note" style="margin-top: var(--space-4);">
-        <span data-lang="en">Part of <strong>KHATT OS</strong> — the financial operating system for global halal travel. <a href="ecosystem.html" style="text-decoration:underline;">See the full ecosystem →</a></span>
-        <span data-lang="ru" hidden>Часть <strong>KHATT OS</strong> — финансовой операционной системы глобального халяльного туризма. <a href="ecosystem.html" style="text-decoration:underline;">Смотреть всю экосистему →</a></span>
-      </p>
     </div>
   </section>
 
-  <!-- =========================== MARKET / WHY NOW =========================== -->
-  <!-- Not a nav item, same as #problem below — folded under "Home" in the sitemap.
-       Figures are third-party market projections (external sources cited), not
-       Khatt Capital's own forecasts — see report / footer disclaimers. -->
-  <section class="section" id="market">
+  <!-- =========================== TRUST STRIP =========================== -->
+  <section class="section section--sand100" id="trust-strip">
     <div class="container">
-      <h2>
-        <span data-lang="en">Halal tourism is one of the fastest-growing travel categories — and it needs capital</span>
-        <span data-lang="ru" hidden>Халяльный туризм — одна из самых быстрорастущих категорий туризма, и ей не хватает капитала</span>
-      </h2>
-      <p class="section-lead">
-        <span data-lang="en">Pilgrimage is only the starting point. Muslim travellers increasingly book family holidays, Ramadan &amp; Eid trips, business, heritage and medical travel around the world — and agencies across the whole halal-travel value chain face the same prepayment gap.</span>
-        <span data-lang="ru" hidden>Паломничество — лишь отправная точка. Мусульманские путешественники всё активнее бронируют семейный отдых, поездки на Рамадан и Ид, деловые, heritage- и медицинские туры по всему миру — и агентства по всей цепочке халяльного туризма сталкиваются с тем же разрывом предоплаты.</span>
-      </p>
-      <p class="section-lead">
-        <span data-lang="en">Saudi Arabia is scaling tourism toward its 150-million-visit target for 2030, with religious tourism approaching 30 million pilgrimage visits to Mecca and Medina — and Umrah has become a year-round flow rather than a single season. Banks still under-serve travel agencies with real, verifiable travel assets, and AI is now making that verification affordable — which is why Khatt aims to be the most specialised financial layer for halal tourism, competing on speed, trust and industry data, not on rate alone.</span>
-        <span data-lang="ru" hidden>Саудовская Аравия наращивает туризм к цели в 150 млн визитов в год к 2030 году, а религиозный туризм приближается к 30 млн паломнических визитов в Мекку и Медину — при этом Умра стала постоянным потоком, а не одним сезоном. Банки по-прежнему плохо обслуживают туристические агентства с реальными, проверяемыми travel-активами, а ИИ делает такую проверку доступной по стоимости — поэтому Khatt стремится быть самым специализированным финансовым слоем для халяльного туризма, конкурируя скоростью, доверием и отраслевой аналитикой, а не только ставкой.</span>
-      </p>
-
-      <div class="market-grid" data-lang="en">
-        <div class="market-card">
-          <strong class="market-number">$225B</strong>
-          <span>projected annual Muslim travel spend by 2028</span>
-          <span class="market-source">Source: Mastercard–CrescentRating Global Muslim Travel Index (GMTI)</span>
-        </div>
-        <div class="market-card">
-          <strong class="market-number">150M</strong>
-          <span>annual visits Saudi Arabia targets by 2030</span>
-          <span class="market-source">Source: Saudi Arabia National Tourism Strategy, Vision 2030</span>
-        </div>
-        <div class="market-card">
-          <strong class="market-number">30M</strong>
-          <span>annual Umrah pilgrims Saudi Arabia aims to host by 2030</span>
-          <span class="market-source">Source: Saudi Vision 2030, Pilgrim Experience Program</span>
-        </div>
+      <div class="product-grid" data-lang="en">
+        <div class="product-card"><strong>Verified travel assets</strong><span>Bookings, invoices, suppliers and customer deposits are checked before payment.</span></div>
+        <div class="product-card"><strong>Direct supplier payments</strong><span>Funds move to hotels, transport providers, airlines and DMCs.</span></div>
+        <div class="product-card"><strong>Transparent economics</strong><span>A fixed transaction cost is agreed upfront.</span></div>
+        <div class="product-card"><strong>Sharia-by-design</strong><span>Real goods and services, governed contracts and an auditable evidence trail.</span></div>
       </div>
-      <div class="market-grid" data-lang="ru" hidden>
-        <div class="market-card">
-          <strong class="market-number">$225 млрд</strong>
-          <span>прогноз годовых расходов мусульманских туристов к 2028 году</span>
-          <span class="market-source">Источник: Mastercard–CrescentRating Global Muslim Travel Index (GMTI)</span>
-        </div>
-        <div class="market-card">
-          <strong class="market-number">150 млн</strong>
-          <span>цель Саудовской Аравии по годовым визитам к 2030 году</span>
-          <span class="market-source">Источник: национальная туристическая стратегия Саудовской Аравии, Vision 2030</span>
-        </div>
-        <div class="market-card">
-          <strong class="market-number">30 млн</strong>
-          <span>цель Саудовской Аравии по числу паломников Умры в год к 2030 году</span>
-          <span class="market-source">Источник: Saudi Vision 2030, программа Pilgrim Experience Program</span>
-        </div>
-      </div>
-
-      <p class="cost-note">
-        <span data-lang="en">Where the demand is: Umrah (year-round) · Hajj (annual peak) · Ramadan &amp; Eid travel · halal family holidays · business &amp; MICE travel · medical travel · heritage tours · diaspora travel (Europe/US → Gulf/Asia).</span>
-        <span data-lang="ru" hidden>Где сосредоточен спрос: Умра (круглый год) · Хадж (годовой пик) · поездки на Рамадан и Ид · семейный халяль-отдых · деловые поездки и MICE · медицинский туризм · heritage-туры · поездки диаспоры (Европа/США → Залив/Азия).</span>
-      </p>
-
-      <div class="problem-card" style="flex-direction:column; background:var(--ink-900); color:var(--sand-100); margin-top: var(--space-4);">
-        <strong style="font-family:var(--font-head); color:var(--white);" data-lang="en">Not one season — several overlapping cycles</strong>
-        <strong style="font-family:var(--font-head); color:var(--white);" data-lang="ru" hidden>Не один сезон — несколько циклов</strong>
-        <svg viewBox="0 0 480 160" style="width:100%; height:auto; margin-top:12px;" role="img" aria-label="Relative monthly demand for Hajj, Umrah, halal leisure and groups">
-          <polyline points="0,150 44,148 87,146 131,140 175,120 218,40 262,110 306,148 349,150 393,150 436,150 480,150" fill="none" stroke="var(--bronze-500)" stroke-width="2.5"/>
-          <polyline points="0,95 44,88 87,80 131,70 175,90 218,100 262,85 306,90 349,78 393,70 436,80 480,72" fill="none" stroke="var(--acc-blue)" stroke-width="2.5"/>
-          <polyline points="0,115 44,112 87,108 131,100 175,60 218,50 262,58 306,95 349,100 393,105 436,90 480,60" fill="none" stroke="var(--acc-teal)" stroke-width="2.5"/>
-          <polyline points="0,80 44,70 87,90 131,55 175,85 218,95 262,60 306,75 349,90 393,85 436,100 480,88" fill="none" stroke="var(--acc-purple)" stroke-width="2"/>
-        </svg>
-        <div class="cycle-chart-legend">
-          <span class="cycle-legend-item"><span class="dot" style="background:var(--bronze-500);"></span><span data-lang="en">Hajj — one big peak</span><span data-lang="ru" hidden>Хадж — один большой пик</span></span>
-          <span class="cycle-legend-item"><span class="dot" style="background:var(--acc-blue);"></span><span data-lang="en">Umrah — steady flow + peaks</span><span data-lang="ru" hidden>Умра — постоянный поток + пики</span></span>
-          <span class="cycle-legend-item"><span class="dot" style="background:var(--acc-teal);"></span><span data-lang="en">Halal leisure — holidays, summer, Eid</span><span data-lang="ru" hidden>Халяльный отдых — каникулы, лето, Eid</span></span>
-          <span class="cycle-legend-item"><span class="dot" style="background:var(--acc-purple);"></span><span data-lang="en">Groups / business — recurring projects</span><span data-lang="ru" hidden>Группы / деловые — повторяющиеся проекты</span></span>
-        </div>
-        <p class="cost-note" style="color:var(--sand-100); margin-top:8px;" data-lang="en">A renewable limit that adapts to several overlapping demand cycles — a portfolio, not a single season.</p>
-        <p class="cost-note" style="color:var(--sand-100); margin-top:8px;" data-lang="ru" hidden>Возобновляемый лимит, который адаптируется под несколько циклов спроса — портфель, а не один сезон.</p>
-      </div>
-
-      <div class="disclaimer">
-        <p data-lang="en">These are third-party market projections, not Khatt Capital's own forecasts or commitments; figures require validation against Khatt's own pilot data.</p>
-        <p data-lang="ru" hidden>Это прогнозы рынка от независимых источников, а не собственные прогнозы или обязательства Khatt Capital; цифры требуют проверки на основе собственных пилотных данных Khatt.</p>
+      <div class="product-grid" data-lang="ru" hidden>
+        <div class="product-card"><strong>Проверенные туристические активы</strong><span>Бронирования, счета, поставщики и клиентские депозиты проверяются до оплаты.</span></div>
+        <div class="product-card"><strong>Прямые платежи поставщикам</strong><span>Средства направляются отелям, перевозчикам, авиакомпаниям и DMC.</span></div>
+        <div class="product-card"><strong>Прозрачная экономика</strong><span>Фиксированная стоимость сделки согласуется заранее.</span></div>
+        <div class="product-card"><strong>Halal by design</strong><span>Реальные товары и услуги, регулируемые контракты и проверяемый след доказательств.</span></div>
       </div>
     </div>
   </section>
@@ -246,455 +150,135 @@
   <section class="section" id="problem">
     <div class="container">
       <h2>
-        <span data-lang="en">Your business needs capital before your travellers pay</span>
-        <span data-lang="ru" hidden>Ваш бизнес нуждается в капитале до того, как заплатят ваши путешественники</span>
+        <span data-lang="en">Demand is not the constraint. Working capital is.</span>
+        <span data-lang="ru" hidden>Проблема не в спросе. Проблема в оборотном капитале.</span>
       </h2>
       <p class="section-lead">
-        <span data-lang="en">Agencies aren't turning away demand — they're turning away sales they can't afford to prepay for.</span>
-        <span data-lang="ru" hidden>Агентства отказываются не от спроса — а от продаж, которые не могут предоплатить.</span>
+        <span data-lang="en">Suppliers want deposits months before customers finish paying. Banks are too slow and collateral-heavy for perishable travel inventory.</span>
+        <span data-lang="ru" hidden>Поставщики требуют депозиты за месяцы до полной оплаты клиентами. Банки слишком медленны и требуют залога для скоропортящегося инвентаря.</span>
       </p>
 
       <div class="card-grid" data-lang="en">
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="28" height="20" rx="2"/><path d="M4 16h28M11 10V6M25 10V6"/></svg>
-          <p>Hotels, transport, airlines and other travel suppliers demand prepayment weeks to months ahead of departure — typically 20–50% upfront — across Umrah, Hajj, Ramadan &amp; Eid travel, family holidays and business groups.</p>
-        </div>
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 26c6-14 18-14 24 0" /><path d="M6 26h24"/><circle cx="18" cy="14" r="4"/></svg>
-          <p>Client payments often arrive only during or after the trip itself — in instalments or on delivery — creating a structural cash-flow gap for the agency.</p>
-        </div>
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="6" width="24" height="24" rx="3"/><path d="M13 22l5-6 4 4 5-8"/></svg>
-          <p>Banks are largely closed to travel agencies: real-estate collateral is required, and decisions take 4–8 weeks.</p>
-        </div>
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v7l5 3"/></svg>
-          <p>Informal capital fills the gap today — but costs 12–20% per cycle (in some cases quoted at 30–50% annualized), is opaque and can disappear right when it's needed most.</p>
-        </div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="28" height="20" rx="2"/><path d="M4 16h28M11 10V6M25 10V6"/></svg><p>Hotels, transport and group inventory require early deposits.</p></div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 26c6-14 18-14 24 0"/><path d="M6 26h24"/><circle cx="18" cy="14" r="4"/></svg><p>Customer cash arrives in instalments.</p></div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="6" width="24" height="24" rx="3"/><path d="M13 22l5-6 4 4 5-8"/></svg><p>Agencies lose rooms, allocations and margin when capital is late.</p></div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v7l5 3"/></svg><p>Informal capital is expensive, opaque and unreliable.</p></div>
       </div>
-
       <div class="card-grid" data-lang="ru" hidden>
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="28" height="20" rx="2"/><path d="M4 16h28M11 10V6M25 10V6"/></svg>
-          <p>Отели, транспорт, авиаперевозчики и другие туристические поставщики требуют предоплату за недели или месяцы до поездки — как правило, 20–50% суммы вперёд — будь то Умра, Хадж, поездки на Рамадан и Ид, семейный отдых или деловые группы.</p>
-        </div>
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 26c6-14 18-14 24 0" /><path d="M6 26h24"/><circle cx="18" cy="14" r="4"/></svg>
-          <p>Платежи от клиентов часто поступают только во время поездки или после неё — частями или по факту оказания услуги — это создаёт структурный разрыв в денежном потоке агентства.</p>
-        </div>
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="6" width="24" height="24" rx="3"/><path d="M13 22l5-6 4 4 5-8"/></svg>
-          <p>Банки в большинстве случаев закрыты для туристических агентств: требуется залог недвижимости, а решение занимает 4–8 недель.</p>
-        </div>
-        <div class="problem-card">
-          <svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v7l5 3"/></svg>
-          <p>Разрыв закрывается неформальным капиталом — но он стоит 12–20% за цикл (по отдельным данным — 30–50% годовых), непрозрачен и может исчезнуть именно тогда, когда нужен больше всего.</p>
-        </div>
-      </div>
-
-      <div class="card-grid" style="grid-template-columns: 2fr 1fr; margin-top: var(--space-5);">
-        <div class="problem-card" style="flex-direction:column; background:var(--ink-900); color:var(--sand-100);">
-          <span class="section-kicker" style="margin-bottom:0; color:var(--sand-100);" data-lang="en">Typical cash cycle</span>
-          <span class="section-kicker" style="margin-bottom:0; color:var(--sand-100);" data-lang="ru" hidden>Типичный денежный цикл</span>
-          <div class="timeline">
-            <div class="timeline-bars">
-              <div class="timeline-bar" style="flex:1; background:var(--bronze-500);" data-lang="en">20–50% deposit</div>
-              <div class="timeline-bar" style="flex:1; background:var(--bronze-700); color:var(--white);" data-lang="en">balance / guarantee</div>
-              <div class="timeline-bar" style="flex:1; background:var(--bronze-500);" data-lang="ru" hidden>20–50% депозит</div>
-              <div class="timeline-bar" style="flex:1; background:var(--bronze-700); color:var(--white);" data-lang="ru" hidden>остаток / гарантия</div>
-            </div>
-            <p class="timeline-gap" data-lang="en">GAP · 60–180 DAYS</p>
-            <p class="timeline-gap" data-lang="ru" hidden>РАЗРЫВ · 60–180 ДНЕЙ</p>
-            <div class="timeline-track">
-              <div class="timeline-point" style="left:0%;"></div>
-              <div class="timeline-point" style="left:25%;"></div>
-              <div class="timeline-point" style="left:50%;"></div>
-              <div class="timeline-point" style="left:75%;"></div>
-              <div class="timeline-point" style="left:100%;"></div>
-            </div>
-            <div class="timeline-labels">
-              <div><strong>T-180</strong><span data-lang="en">contract</span><span data-lang="ru" hidden>контракт</span></div>
-              <div><strong>T-120</strong><span data-lang="en">deposit</span><span data-lang="ru" hidden>депозит</span></div>
-              <div><strong>T-60</strong><span data-lang="en">top-up</span><span data-lang="ru" hidden>доплата</span></div>
-              <div><strong>T0</strong><span data-lang="en">trip</span><span data-lang="ru" hidden>поездка</span></div>
-              <div><strong>T+30</strong><span data-lang="en">settlement</span><span data-lang="ru" hidden>расчёт</span></div>
-            </div>
-            <div class="timeline-bars" style="margin-top:var(--space-2);">
-              <div class="timeline-bar" style="flex:1; background:var(--line-teal); color:var(--white);" data-lang="en">first instalment</div>
-              <div class="timeline-bar" style="flex:1; background:var(--line-teal); color:var(--white);" data-lang="en">payment plan</div>
-              <div class="timeline-bar" style="flex:1; background:var(--line-teal); color:var(--white);" data-lang="en">final payment</div>
-              <div class="timeline-bar" style="flex:1; background:var(--line-teal); color:var(--white);" data-lang="ru" hidden>первый взнос</div>
-              <div class="timeline-bar" style="flex:1; background:var(--line-teal); color:var(--white);" data-lang="ru" hidden>рассрочка</div>
-              <div class="timeline-bar" style="flex:1; background:var(--line-teal); color:var(--white);" data-lang="ru" hidden>финальный платёж</div>
-            </div>
-          </div>
-        </div>
-        <div class="problem-card" style="flex-direction:column; justify-content:center;">
-          <strong style="font-family:var(--font-head); color:var(--ink-900);" data-lang="en">The core pain</strong>
-          <strong style="font-family:var(--font-head); color:var(--ink-900);" data-lang="ru" hidden>Главная боль</strong>
-          <p data-lang="en">Not a lack of demand — a lack of working capital on the right day. Banks score the balance sheet, not the trip; informal capital is expensive and can vanish at peak season.</p>
-          <p data-lang="ru" hidden>Не отсутствие спроса, а отсутствие оборотного капитала в нужный день. Банк оценивает баланс, а не поездку; неформальный капитал дорог и может исчезнуть в пик.</p>
-        </div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="28" height="20" rx="2"/><path d="M4 16h28M11 10V6M25 10V6"/></svg><p>Отели, транспорт и групповой инвентарь требуют ранних депозитов.</p></div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 26c6-14 18-14 24 0"/><path d="M6 26h24"/><circle cx="18" cy="14" r="4"/></svg><p>Деньги клиентов поступают частями.</p></div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="6" y="6" width="24" height="24" rx="3"/><path d="M13 22l5-6 4 4 5-8"/></svg><p>Агентства теряют номера, квоты и маржу, когда капитал опаздывает.</p></div>
+        <div class="problem-card"><svg class="icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="18" r="12"/><path d="M18 11v7l5 3"/></svg><p>Неформальный капитал дорог, непрозрачен и ненадёжен.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- =========================== SOLUTION / HOW IT WORKS =========================== -->
-  <section class="section section--sand100" id="how-it-works">
+  <!-- =========================== SOLUTION =========================== -->
+  <section class="section section--sand100" id="solution">
     <div class="container">
       <h2>
-        <span data-lang="en">One line of capital. Five simple steps.</span>
-        <span data-lang="ru" hidden>Одна линия капитала. Пять простых шагов.</span>
+        <span data-lang="en">Finance the transaction — not only the balance sheet.</span>
+        <span data-lang="ru" hidden>Финансируем сделку — а не только баланс.</span>
       </h2>
-      <p class="section-lead">
-        <span data-lang="en">A hybrid sharia-compliant structure — murabaha for goods, ijara mawsufa fi al-dhimma (forward lease) for hotel nights, transport and flights, wa'd mulzim (binding promise) and wakala (agency as purchasing agent). Tawarruq is fully excluded. The same structure covers Umrah, Hajj, Ramadan &amp; Eid travel, halal family holidays, business groups and medical travel.</span>
-        <span data-lang="ru" hidden>Гибридная шариатская структура: мурабаха — для товарной части, иджара мавсуфа фи-з-зимма (форвардная аренда) — для гостиничных ночей, транспорта и авиаперелётов, ва'д мульзим (обязывающее обещание) и вакала (агентство как закупочный агент). Таваррук полностью исключён. Та же структура покрывает Умру, Хадж, поездки на Рамадан и Ид, семейный халяль-отдых, деловые группы и медицинский туризм.</span>
-      </p>
 
-      <ol class="stepper" data-lang="en">
-        <li><span class="step-badge" aria-hidden="true">1</span><h3>Talk</h3><p>A 20-minute call: your licence/accreditation (Nusuk/Maqam for Hajj &amp; Umrah, or the relevant local tourism licence for other halal-travel segments) and your booking plan.</p></li>
-        <li><span class="step-badge" aria-hidden="true">2</span><h3>Verify</h3><p>We verify your confirmed bookings — hotel, transport, flight or package (BRN for Hajj/Umrah) — this is the collateral, not real estate.</p></li>
-        <li><span class="step-badge" aria-hidden="true">3</span><h3>Agree</h3><p>AI risk scoring, one framework agreement, price known upfront, contracts structured to AAOIFI standards, pending sharia certification.</p></li>
-        <li><span class="step-badge" aria-hidden="true">4</span><h3>We pay</h3><p>Direct payment to suppliers on your schedule.</p></li>
-        <li><span class="step-badge" aria-hidden="true">5</span><h3>You repay</h3><p>One payment after the trip; a clean repayment builds your credit file and renews your limit for the next cycle in 48 hours.</p></li>
+      <ol class="mini-steps" data-lang="en">
+        <li><p>The agency submits a booking, supplier invoice and supporting evidence.</p></li>
+        <li><p>KHATT verifies the agency, supplier, asset and cash-flow profile.</p></li>
+        <li><p>The transaction is structured through an approved Sharia workflow.</p></li>
+        <li><p>The supplier is paid directly through a licensed partner.</p></li>
+        <li><p>Customer collections and trip events are monitored until settlement.</p></li>
+        <li><p>Successful performance increases the agency's future limit.</p></li>
       </ol>
-      <ol class="stepper" data-lang="ru" hidden>
-        <li><span class="step-badge" aria-hidden="true">1</span><h3>Разговор</h3><p>20-минутный звонок: ваша лицензия/аккредитация (Nusuk/Maqam — для Хаджа и Умры, либо соответствующая местная туристическая лицензия — для других направлений халяльного туризма) и план бронирований.</p></li>
-        <li><span class="step-badge" aria-hidden="true">2</span><h3>Верификация</h3><p>Проверка подтверждённых бронирований — отеля, транспорта, перелёта или пакета (BRN — для Хаджа/Умры) — именно они выступают залогом, а не недвижимость.</p></li>
-        <li><span class="step-badge" aria-hidden="true">3</span><h3>Согласование</h3><p>ИИ-скоринг риска, одно рамочное соглашение, цена известна заранее, контракты структурированы по стандартам AAOIFI, сертификация в процессе.</p></li>
-        <li><span class="step-badge" aria-hidden="true">4</span><h3>Мы платим</h3><p>Прямая оплата поставщикам по графику, который задаёт агентство.</p></li>
-        <li><span class="step-badge" aria-hidden="true">5</span><h3>Вы возвращаете</h3><p>Один платёж после поездки; чистое погашение пополняет вашу кредитную историю и продлевает лимит на следующий цикл за 48 часов.</p></li>
+      <ol class="mini-steps" data-lang="ru" hidden>
+        <li><p>Агентство подаёт бронирование, счёт поставщика и подтверждающие документы.</p></li>
+        <li><p>KHATT проверяет агентство, поставщика, актив и профиль cash-flow.</p></li>
+        <li><p>Сделка структурируется через утверждённый шариатский workflow.</p></li>
+        <li><p>Поставщику платят напрямую через лицензированного партнёра.</p></li>
+        <li><p>Платежи клиентов и события поездки отслеживаются до полного расчёта.</p></li>
+        <li><p>Успешная история повышает будущий лимит агентства.</p></li>
       </ol>
+    </div>
+  </section>
 
-      <p class="stepper-summary" data-lang="en">From first call to funding: 7 days.</p>
-      <p class="stepper-summary" data-lang="ru" hidden>От первого звонка до финансирования — 7 дней.</p>
-
-      <h3 style="margin-top: var(--space-6);">
-        <span data-lang="en">One product architecture, seven facilities</span>
-        <span data-lang="ru" hidden>Одна продуктовая архитектура — семь видов финансирования</span>
-      </h3>
-      <p class="section-lead">
-        <span data-lang="en">We start with Hajj and Umrah as our beachhead, but the product architecture is built for the whole of halal tourism from day one.</span>
-        <span data-lang="ru" hidden>Мы начинаем с Хаджа и Умры как с плацдарма, но продуктовая архитектура с самого начала строится для всего халяльного туризма.</span>
-      </p>
+  <!-- =========================== ECOSYSTEM =========================== -->
+  <section class="section" id="ecosystem">
+    <div class="container">
+      <h2>
+        <span data-lang="en">One platform. Twelve connected services.</span>
+        <span data-lang="ru" hidden>Одна платформа. Двенадцать связанных сервисов.</span>
+      </h2>
+      <p class="section-lead"><a href="/platform"><span data-lang="en">See how the platform fits together →</span><span data-lang="ru" hidden>Как платформа работает вместе →</span></a></p>
 
       <div class="product-grid" data-lang="en">
-        <div class="product-card"><strong>Umrah Rolling Facility</strong><span>a standing limit for regular Umrah bookings, renewed year-round</span></div>
-        <div class="product-card"><strong>Hajj Peak Facility</strong><span>a large limit for the high annual Hajj peak</span></div>
-        <div class="product-card"><strong>Halal Travel Supplier Pay</strong><span>payment to hotels, transport, DMCs and halal-leisure suppliers</span></div>
-        <div class="product-card"><strong>Hotel Allotment Finance</strong><span>financing for room-block deposits</span></div>
-        <div class="product-card"><strong>Air Block Finance</strong><span>financing for airline seat blocks and group PNRs</span></div>
-        <div class="product-card"><strong>Ramadan / Eid Facility</strong><span>a short-term limit for holiday peaks</span></div>
-        <div class="product-card"><strong>MICE &amp; Group Travel Finance</strong><span>financing for corporate and group travel</span></div>
+        <div class="product-card"><strong>KHATT Finance</strong><span>Revolving finance for verified travel obligations.</span></div>
+        <div class="product-card"><strong>KHATT Escrow</strong><span>Safeguarded and rule-based allocation of customer funds.</span></div>
+        <div class="product-card"><strong>KHATT Payments</strong><span>Multi-currency collection, settlement and reconciliation.</span></div>
+        <div class="product-card"><strong>KHATT Wallet</strong><span>A treasury and control workspace for agencies.</span></div>
+        <div class="product-card"><strong>KHATT Supplier Pay</strong><span>Early payment for suppliers and flexible terms for agencies.</span></div>
+        <div class="product-card"><strong>KHATT Takaful</strong><span>Embedded protection from licensed partners.</span></div>
+        <div class="product-card"><strong>KHATT Marketplace</strong><span>Verified B2B halal travel inventory.</span></div>
+        <div class="product-card"><strong>KHATT Travel Score</strong><span>A travel-native agency and supplier risk profile.</span></div>
+        <div class="product-card"><strong>KHATT Risk Graph</strong><span>Relationship intelligence for fraud and concentration.</span></div>
+        <div class="product-card"><strong>KHATT Intelligence</strong><span>Demand, pricing, supplier and portfolio analytics.</span></div>
+        <div class="product-card"><strong>KHATT AI Concierge</strong><span>Operational agents for documents, cases and alerts.</span></div>
+        <div class="product-card"><strong>KHATT Capital</strong><span>Institutional capital matched to verified asset pools.</span></div>
       </div>
       <div class="product-grid" data-lang="ru" hidden>
-        <div class="product-card"><strong>Umrah Rolling Facility</strong><span>постоянный лимит под регулярные бронирования Умры, круглый год</span></div>
-        <div class="product-card"><strong>Hajj Peak Facility</strong><span>крупный лимит под высокий ежегодный пик Хаджа</span></div>
-        <div class="product-card"><strong>Halal Travel Supplier Pay</strong><span>оплата отелей, транспорта, DMC и поставщиков halal leisure</span></div>
-        <div class="product-card"><strong>Hotel Allotment Finance</strong><span>финансирование депозитов за блоки номеров</span></div>
-        <div class="product-card"><strong>Air Block Finance</strong><span>финансирование авиаблоков и групповых PNR</span></div>
-        <div class="product-card"><strong>Ramadan / Eid Facility</strong><span>краткосрочный лимит под праздничные пики</span></div>
-        <div class="product-card"><strong>MICE &amp; Group Travel Finance</strong><span>финансирование корпоративных и групповых поездок</span></div>
+        <div class="product-card"><strong>KHATT Finance</strong><span>Возобновляемое финансирование под проверенные туристические обязательства.</span></div>
+        <div class="product-card"><strong>KHATT Escrow</strong><span>Защищённое, основанное на правилах распределение клиентских средств.</span></div>
+        <div class="product-card"><strong>KHATT Payments</strong><span>Мультивалютный сбор, расчёты и сверка.</span></div>
+        <div class="product-card"><strong>KHATT Wallet</strong><span>Казначейское рабочее пространство и контроль для агентств.</span></div>
+        <div class="product-card"><strong>KHATT Supplier Pay</strong><span>Ранняя оплата поставщикам и гибкие условия для агентств.</span></div>
+        <div class="product-card"><strong>KHATT Takaful</strong><span>Встроенная защита от лицензированных партнёров.</span></div>
+        <div class="product-card"><strong>KHATT Marketplace</strong><span>Проверенный B2B-инвентарь халяльного туризма.</span></div>
+        <div class="product-card"><strong>KHATT Travel Score</strong><span>Отраслевой риск-профиль агентства и поставщика.</span></div>
+        <div class="product-card"><strong>KHATT Risk Graph</strong><span>Анализ связей для выявления мошенничества и концентрации риска.</span></div>
+        <div class="product-card"><strong>KHATT Intelligence</strong><span>Аналитика спроса, цен, поставщиков и портфеля.</span></div>
+        <div class="product-card"><strong>KHATT AI Concierge</strong><span>Операционные ИИ-агенты для документов, кейсов и уведомлений.</span></div>
+        <div class="product-card"><strong>KHATT Capital</strong><span>Институциональный капитал, сопоставленный с проверенными пулами активов.</span></div>
       </div>
-
-      <p class="product-evidence">
-        <span data-lang="en">Evidence base: verified booking · invoice · supplier confirmation · client deposit · payment flow · repayment history.</span>
-        <span data-lang="ru" hidden>Доказательная база: подтверждённое бронирование · счёт · подтверждение поставщика · депозит клиента · платёжный поток · история погашений.</span>
-      </p>
     </div>
   </section>
 
-  <!-- =========================== ELIGIBILITY =========================== -->
-  <section class="section" id="eligibility">
+  <!-- =========================== WHY NOW =========================== -->
+  <section class="section section--sand100" id="why-now">
     <div class="container">
-      <h2>
-        <span data-lang="en">Is Khatt Capital right for your travel business?</span>
-        <span data-lang="ru" hidden>Подходит ли Khatt Capital вашему туристическому бизнесу?</span>
-      </h2>
-
-      <div class="eligibility-card">
-        <ul class="eligibility-list" data-lang="en">
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Licensed travel/tourism agency — Nusuk/Maqam accreditation for Hajj &amp; Umrah operators, or the equivalent local tourism licence for other halal-travel segments</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Minimum 2 completed booking cycles/seasons of operation</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Confirmed bookings for the trips you want to finance (BRN for Hajj/Umrah, or the equivalent supplier confirmation for other segments)</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Facility from SAR 500,000 per cycle</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Willingness to route supplier payments through Khatt (we pay suppliers directly)</span></li>
-        </ul>
-        <ul class="eligibility-list" data-lang="ru" hidden>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Лицензированное туристическое агентство — аккредитация Nusuk/Maqam для операторов Хаджа и Умры, либо соответствующая местная туристическая лицензия для других направлений халяльного туризма</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Минимум 2 завершённых цикла/сезона работы</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Подтверждённые бронирования на поездки, которые нужно профинансировать (BRN — для Хаджа/Умры, либо аналогичное подтверждение поставщика — для других направлений)</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Facility от SAR 500&nbsp;000 за цикл</span></li>
-          <li><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Готовность проводить оплату поставщикам через Khatt (мы платим поставщикам напрямую)</span></li>
-        </ul>
-
-        <!-- Draft copy, marked in DESIGN_SPEC.md section 1.2 / 4.3 as requiring marketer/founder approval before publication; implemented as-is per spec, not authored here. -->
-        <p class="soft-gate-note" data-lang="en">Don't meet every point? Get in touch — terms are discussed individually.</p>
-        <p class="soft-gate-note" data-lang="ru" hidden>Не соответствуете всем пунктам? Свяжитесь с нами — условия обсуждаются индивидуально.</p>
-
-        <div class="levels" data-lang="en">
-          <div class="level-badge" tabindex="0">
-            <strong>Standard</strong>
-            <span class="level-desc">first cycle</span>
-            <span class="tooltip" role="tooltip">Available from your first financed cycle with Khatt.</span>
-          </div>
-          <div class="level-badge" tabindex="0">
-            <strong>Preferred</strong>
-            <span class="level-desc">2 clean cycles: better rate, higher limit</span>
-            <span class="tooltip" role="tooltip">Unlocked after 2 consecutive on-time repayment cycles.</span>
-          </div>
-          <div class="level-badge" tabindex="0">
-            <strong>Strategic</strong>
-            <span class="level-desc">4+ cycles: priority capital at peak season</span>
-            <span class="tooltip" role="tooltip">Unlocked after 4+ cycles; priority access during peak seasonal demand (e.g. Hajj, Ramadan &amp; Eid).</span>
-          </div>
-        </div>
-        <div class="levels" data-lang="ru" hidden>
-          <div class="level-badge" tabindex="0">
-            <strong>Standard</strong>
-            <span class="level-desc">первый цикл</span>
-            <span class="tooltip" role="tooltip">Доступен уже с первого профинансированного цикла с Khatt.</span>
-          </div>
-          <div class="level-badge" tabindex="0">
-            <strong>Preferred</strong>
-            <span class="level-desc">2 чистых цикла: более выгодная ставка, выше лимит</span>
-            <span class="tooltip" role="tooltip">Открывается после 2 подряд циклов без просрочек.</span>
-          </div>
-          <div class="level-badge" tabindex="0">
-            <strong>Strategic</strong>
-            <span class="level-desc">4+ цикла: приоритетный капитал в пиковый сезон</span>
-            <span class="tooltip" role="tooltip">Открывается после 4+ циклов; приоритетный доступ к капиталу в пиковый сезон (например, Хадж, Рамадан и Ид).</span>
-          </div>
-        </div>
+      <h2><span data-lang="en">Why now</span><span data-lang="ru" hidden>Почему сейчас</span></h2>
+      <div class="market-grid" data-lang="en">
+        <div class="market-card"><strong class="market-number">$225B</strong><span>Muslim travel opportunity</span><span class="market-source">A large, growing global spend category.</span></div>
+        <div class="market-card"><strong class="market-number">Year-round</strong><span>demand</span><span class="market-source">Umrah, Hajj, Ramadan, Eid, leisure and groups.</span></div>
+        <div class="market-card"><strong class="market-number">Growth</strong><span>Saudi tourism</span><span class="market-source">Heavy investment in pilgrimage and tourism capacity.</span></div>
+        <div class="market-card"><strong class="market-number">AI</strong><span>and open finance</span><span class="market-source">Documents, cash flow and risk assessed faster and cheaper.</span></div>
+      </div>
+      <div class="market-grid" data-lang="ru" hidden>
+        <div class="market-card"><strong class="market-number">$225 млрд</strong><span>возможность мусульманского туризма</span><span class="market-source">Крупная и растущая категория глобальных расходов.</span></div>
+        <div class="market-card"><strong class="market-number">Круглогодичный</strong><span>спрос</span><span class="market-source">Умра, Хадж, Рамадан, Ид, отдых и группы.</span></div>
+        <div class="market-card"><strong class="market-number">Рост</strong><span>туризма Саудовской Аравии</span><span class="market-source">Крупные инвестиции в паломничество и туризм.</span></div>
+        <div class="market-card"><strong class="market-number">ИИ</strong><span>и открытые финансы</span><span class="market-source">Документы, cash flow и риск оцениваются быстрее и дешевле.</span></div>
       </div>
     </div>
   </section>
 
-  <!-- =========================== COST EXAMPLE =========================== -->
-  <section class="section section--sand100" id="pricing">
-    <div class="container">
-      <h2>
-        <span data-lang="en">A fixed, transparent cost — known before you sign</span>
-        <span data-lang="ru" hidden>Фиксированная и прозрачная стоимость — известна заранее</span>
-      </h2>
-
-      <div class="cost-card">
-        <span class="badge-illustrative" data-lang="en">Illustrative example</span>
-        <span class="badge-illustrative" data-lang="ru" hidden>Иллюстративный пример</span>
-
-        <table class="cost-table tabular-nums" data-lang="en">
-          <caption class="visually-hidden">Illustrative cost example for a SAR 2,000,000 facility</caption>
-          <thead>
-            <tr><th scope="col">Line item</th><th scope="col">Amount</th></tr>
-          </thead>
-          <tbody>
-            <tr><td data-label="Line item">Facility</td><td data-label="Amount">SAR 2,000,000</td></tr>
-            <tr><td data-label="Line item">Arrangement fee</td><td data-label="Amount">SAR 50,000</td></tr>
-            <tr><td data-label="Line item">Fixed markup (4-month cycle)</td><td data-label="Amount">SAR 100,000</td></tr>
-            <tr class="total-row"><td data-label="Total cost"><strong>Total cost</strong></td><td data-label="Total cost"><strong>SAR 150,000</strong></td></tr>
-          </tbody>
-        </table>
-        <table class="cost-table tabular-nums" data-lang="ru" hidden>
-          <caption class="visually-hidden">Иллюстративный пример стоимости для facility SAR 2 000 000</caption>
-          <thead>
-            <tr><th scope="col">Строка</th><th scope="col">Сумма</th></tr>
-          </thead>
-          <tbody>
-            <tr><td data-label="Строка">Facility</td><td data-label="Сумма">SAR 2&nbsp;000&nbsp;000</td></tr>
-            <tr><td data-label="Строка">Arrangement fee</td><td data-label="Сумма">SAR 50&nbsp;000</td></tr>
-            <tr><td data-label="Строка">Fixed markup (4-month cycle)</td><td data-label="Сумма">SAR 100&nbsp;000</td></tr>
-            <tr class="total-row"><td data-label="Итого"><strong>Total cost</strong></td><td data-label="Итого"><strong>SAR 150&nbsp;000</strong></td></tr>
-          </tbody>
-        </table>
-
-        <p class="cost-note" data-lang="en">For comparison: informal capital costs 12–20% per cycle with no contract. Bank murabaha can be cheaper on paper, but requires real-estate collateral and 4–8 weeks — and most travel agencies are declined.</p>
-        <p class="cost-note" data-lang="ru" hidden>Для сравнения: неформальный капитал стоит 12–20% за цикл без контракта. Банковская мурабаха может быть дешевле на бумаге, но требует залога недвижимости и 4–8 недель на решение — большинству туристических агентств отказывают.</p>
-
-        <div class="disclaimer">
-          <p data-lang="en">Financing is subject to eligibility, verification of bookings and final sharia-certified documentation.</p>
-          <p data-lang="ru" hidden>Финансирование предоставляется на условиях соответствия критериям отбора, верификации бронирований и подготовки итоговой шариат-сертифицированной документации; предоставление финансирования не гарантируется до завершения всех проверок.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================== SHARIA COMPLIANCE =========================== -->
-  <section class="section section--dark" id="sharia">
-    <div class="container">
-      <h2>
-        <span data-lang="en">Halal by design — not by disclaimer</span>
-        <span data-lang="ru" hidden>Halal by design — не по формальной оговорке</span>
-      </h2>
-
-      <div class="sharia-grid">
-        <div>
-          <p class="section-lead" data-lang="en">Khatt Capital is built on real trade, not disguised lending. Every contract is approved by an independent sharia supervisory board under AAOIFI standards, with an annual audit. Funds are paid only to suppliers against real, verified bookings. A late payment triggers a charitable contribution — never interest or penalty charges.</p>
-          <p class="section-lead" data-lang="ru" hidden>Khatt Capital построена на реальной торговле, а не на замаскированном кредитовании. Каждый контракт утверждён независимым шариатским наблюдательным советом по стандартам AAOIFI, ежегодно проходит аудит. Средства направляются только поставщикам под реальные, верифицированные бронирования. Просрочка платежа влечёт благотворительный взнос — никогда не начисление процентов или штрафов.</p>
-
-          <div class="disclaimer">
-            <p data-lang="en">These materials are for informational and analytical purposes only. They do not constitute a legal or sharia opinion, an investment recommendation, or an offer, and are subject to review by licensed legal counsel in the relevant jurisdictions and by an authorized sharia board.</p>
-            <p data-lang="ru" hidden>Настоящие материалы носят информационно-аналитический характер, не являются юридическим или шариатским заключением, инвестиционной рекомендацией либо офертой и подлежат проверке лицензированными юридическими консультантами в соответствующих юрисдикциях и уполномоченным шариатским советом.</p>
-          </div>
-        </div>
-
-        <div class="sharia-diagram" role="group" aria-label="Structure diagram: Agency to Khatt to Suppliers">
-          <div class="sharia-flow">
-            <div class="sharia-node" data-lang="en">Agency</div>
-            <div class="sharia-node" data-lang="ru" hidden>Агентство</div>
-            <svg class="sharia-arrow" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h26M22 4l6 6-6 6"/></svg>
-            <div class="sharia-node">Khatt</div>
-            <svg class="sharia-arrow" viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 10h26M22 4l6 6-6 6"/></svg>
-            <div class="sharia-node" data-lang="en">Suppliers</div>
-            <div class="sharia-node" data-lang="ru" hidden>Поставщики</div>
-          </div>
-          <div class="sharia-tags">
-            <span class="sharia-tag">murabaha</span>
-            <span class="sharia-tag">ijara mawsufa fi al-dhimma</span>
-            <span class="sharia-tag">wa'd mulzim</span>
-            <span class="sharia-tag">wakala</span>
-          </div>
-          <p class="sharia-caption" data-lang="en">Hybrid structure: murabaha + ijara mawsufa fi al-dhimma + wa'd mulzim + wakala. Tawarruq is fully excluded.</p>
-          <p class="sharia-caption" data-lang="ru" hidden>Гибридная структура: мурабаха + иджара мавсуфа фи-з-зимма + ва'д мульзим + вакала. Таваррук полностью исключён.</p>
-        </div>
-      </div>
-
-      <div class="tech-section">
-        <h3>
-          <span data-lang="en">Technology and risk control behind every limit</span>
-          <span data-lang="ru" hidden>Технологии и контроль риска за каждым лимитом</span>
-        </h3>
-        <p class="section-lead">
-          <span data-lang="en">Every booking that Khatt finances goes through the same verification and risk architecture, whatever the halal-travel segment.</span>
-          <span data-lang="ru" hidden>Каждое бронирование, которое финансирует Khatt, проходит одну и ту же архитектуру проверки и контроля риска — независимо от направления халяльного туризма.</span>
-        </p>
-
-        <div class="tech-grid" data-lang="en">
-          <div class="tech-card"><strong>Document verification</strong><span>AI verifies invoices, bookings, licences and contracts.</span></div>
-          <div class="tech-card"><strong>Deal scoring</strong><span>Scores the risk of the agency, the supplier, the route and the client.</span></div>
-          <div class="tech-card"><strong>Connections map</strong><span>Flags linked companies, duplicate invoices and signs of fraud.</span></div>
-          <div class="tech-card"><strong>Bank data, with consent</strong><span>Verifies turnover and cash flow via client-consented open-banking data.</span></div>
-          <div class="tech-card"><strong>Travel-system integrations</strong><span>Connects to bookings, PNRs, suppliers and payment links.</span></div>
-          <div class="tech-card"><strong>AI assistant &amp; evidence log</strong><span>An AI operator assistant and a digital evidence log for every deal.</span></div>
-        </div>
-        <div class="tech-grid" data-lang="ru" hidden>
-          <div class="tech-card"><strong>Проверка документов</strong><span>ИИ проверяет счета, бронирования, лицензии и договоры.</span></div>
-          <div class="tech-card"><strong>Скоринг сделки</strong><span>Оценка риска агентства, поставщика, маршрута и клиента.</span></div>
-          <div class="tech-card"><strong>Карта связей</strong><span>Выявляет связанные компании, дублирующиеся счета и признаки мошенничества.</span></div>
-          <div class="tech-card"><strong>Банковские данные с согласия клиента</strong><span>Проверка оборотов и cash-flow через открытый банкинг.</span></div>
-          <div class="tech-card"><strong>Интеграции с travel-системами</strong><span>Связь с бронированиями, PNR, поставщиками и платёжными ссылками.</span></div>
-          <div class="tech-card"><strong>ИИ-помощник и журнал доказательств</strong><span>ИИ-помощник оператора и цифровой журнал доказательств по каждой сделке.</span></div>
-        </div>
-
-        <div class="tech-card" style="margin-top: var(--space-3);">
-          <span data-lang="en">Every financed booking adds to this data set — deeper repayment history sharpens scoring, which supports lower-cost capital and more agencies served over time.</span>
-          <span data-lang="ru" hidden>Каждая профинансированная сделка пополняет эту базу данных — более глубокая история погашений уточняет скоринг, что поддерживает более дешёвый капитал и позволяет обслуживать больше агентств со временем.</span>
-        </div>
-
-        <div class="disclaimer">
-          <p data-lang="en">This describes Khatt Capital's risk and technology architecture; it does not guarantee approval, pricing or portfolio performance for any individual case.</p>
-          <p data-lang="ru" hidden>Здесь описана архитектура риск-менеджмента и технологий Khatt Capital; она не гарантирует одобрение, условия или результаты портфеля по конкретной сделке.</p>
-        </div>
-      </div>
-
-      <!-- =================== CONTRACT SAMPLES =================== -->
-      <div class="tech-section">
-        <h3>
-          <span data-lang="en">Contract samples</span>
-          <span data-lang="ru" hidden>Образцы контрактов</span>
-        </h3>
-        <p class="section-lead">
-          <span data-lang="en">Every facility is documented under one framework agreement, built from the same four sharia-compliant contract instruments. Full templates are shared with applicants after the initial call, ahead of sharia board sign-off.</span>
-          <span data-lang="ru" hidden>Каждое facility оформляется по единому рамочному соглашению, построенному на одних и тех же четырёх шариат-комплаенс инструментах. Полные шаблоны предоставляются заявителям после первого звонка, до финального утверждения шариатским советом.</span>
-        </p>
-
-        <div class="tech-grid" data-lang="en">
-          <div class="tech-card"><strong>Master Framework Agreement</strong><span>Governs the relationship, limits, repayment cycle and default/late-payment (sadaqah) terms across all facilities.</span></div>
-          <div class="tech-card"><strong>Murabaha Purchase Agreement</strong><span>Cost-plus sale contract for goods and disclosed-margin components of a facility.</span></div>
-          <div class="tech-card"><strong>Ijara Mawsufa fi al-Dhimma Lease</strong><span>Forward lease contract for hotel nights, transport and flight capacity described by specification, not by physical possession.</span></div>
-          <div class="tech-card"><strong>Wakala Agency Agreement</strong><span>Appoints Khatt as purchasing agent so supplier payment is a real agency transaction, not a cash advance.</span></div>
-        </div>
-        <div class="tech-grid" data-lang="ru" hidden>
-          <div class="tech-card"><strong>Master Framework Agreement</strong><span>Регулирует отношения, лимиты, цикл погашения и условия просрочки (садака) по всем видам финансирования.</span></div>
-          <div class="tech-card"><strong>Murabaha Purchase Agreement</strong><span>Договор купли-продажи по себестоимости плюс наценка — для товарной части facility.</span></div>
-          <div class="tech-card"><strong>Ijara Mawsufa fi al-Dhimma Lease</strong><span>Форвардный договор аренды гостиничных ночей, транспорта и авиаперевозок, описанных спецификацией, а не физическим владением.</span></div>
-          <div class="tech-card"><strong>Wakala Agency Agreement</strong><span>Назначает Khatt закупочным агентом — оплата поставщику становится реальной агентской операцией, а не денежным авансом.</span></div>
-        </div>
-
-        <div class="disclaimer">
-          <p data-lang="en">Sample contracts are provided for structural review only; they are not legal advice and require confirmation by a licensed sharia board and legal counsel in the applicant's jurisdiction before signature.</p>
-          <p data-lang="ru" hidden>Образцы контрактов предоставляются исключительно для структурного ознакомления, не являются юридической консультацией и требуют подтверждения лицензированным шариатским советом и юристом в юрисдикции заявителя перед подписанием.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================== TEAM STUB =========================== -->
-  <section class="section" id="team">
+  <!-- =========================== CLOSING CTA =========================== -->
+  <section class="section section--dark" id="closing-cta">
     <div class="container text-center">
-      <h2><span data-lang="en">Team</span><span data-lang="ru" hidden>Команда</span></h2>
-      <div class="team-card">
-        <p class="mt-0" data-lang="en">Team page coming soon.</p>
-        <p class="mt-0" data-lang="ru" hidden>Команда формируется.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================== CONTACT =========================== -->
-  <section class="section section--sand100" id="contact">
-    <div class="container">
-      <h2><span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span></h2>
-
-      <div class="contact-grid">
-        <div>
-          <ul class="contact-list">
-            <li>
-              <a href="https://khattcapital.com">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
-                <span>khattcapital.com</span>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:info@khattcapital.com">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-                <span>info@khattcapital.com</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+97431097714">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-3 2c1 3 3 5 6 6l2-3 5 2v4c0 1-1 2-2 2C10 22 2 14 2 6c0-1 1-2 2-2z"/></svg>
-                <span>+974 3109 7714</span>
-              </a>
-            </li>
-          </ul>
-
-          <div class="contact-cta">
-            <button type="button" class="btn btn--primary" data-open-dialog>
-              <span data-lang="en">Apply now</span>
-              <span data-lang="ru" hidden>Подать заявку</span>
-            </button>
-          </div>
-        </div>
-
-        <div>
-          <!-- Social URLs built from the @khattcapital handle per each platform's standard profile URL pattern. Brand name confirmed final by founder; profiles activated. -->
-          <div class="social-row">
-            <a class="social-item" href="https://linkedin.com/company/khattcapital" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7.5v.01M12 17v-4.5c0-1.5 1.2-2.5 2.5-2.5s2.5 1 2.5 2.5V17"/></svg>
-              <span class="visually-hidden">LinkedIn</span>
-              <span class="handle" aria-hidden="true">@khattcapital</span>
-            </a>
-            <a class="social-item" href="https://x.com/khattcapital" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
-              <span class="visually-hidden">X (Twitter)</span>
-              <span class="handle" aria-hidden="true">@khattcapital</span>
-            </a>
-            <a class="social-item" href="https://instagram.com/khattcapital" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
-              <span class="visually-hidden">Instagram</span>
-              <span class="handle" aria-hidden="true">@khattcapital</span>
-            </a>
-          </div>
-        </div>
+      <h2>
+        <span data-lang="en">Build more travel with the capital, control and trust your business needs.</span>
+        <span data-lang="ru" hidden>Финансируйте больше поездок с капиталом, контролем и доверием, которые нужны вашему бизнесу.</span>
+      </h2>
+      <div class="hero-ctas" style="justify-content:center;">
+        <a class="btn btn--primary" href="/for-agencies#apply">
+          <span data-lang="en">Join the pilot</span>
+          <span data-lang="ru" hidden>Присоединиться к пилоту</span>
+        </a>
+        <a class="btn btn--ghost" href="/for-suppliers#apply">
+          <span data-lang="en">Become a verified supplier</span>
+          <span data-lang="ru" hidden>Стать проверенным поставщиком</span>
+        </a>
+        <a class="btn btn--ghost" href="/for-banks-capital#apply">
+          <span data-lang="en">Explore a partnership</span>
+          <span data-lang="ru" hidden>Обсудить партнёрство</span>
+        </a>
       </div>
     </div>
   </section>
@@ -705,25 +289,37 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col">
-      <h4 data-lang="en">Sitemap</h4>
-      <h4 data-lang="ru" hidden>Карта сайта</h4>
+      <h4 data-lang="en">Platform</h4>
+      <h4 data-lang="ru" hidden>Платформа</h4>
       <ul>
-        <li><a href="#hero" data-nav><span data-lang="en">Home</span><span data-lang="ru" hidden>Главная</span></a></li>
-        <li><a href="#how-it-works" data-nav><span data-lang="en">How it works</span><span data-lang="ru" hidden>Как это работает</span></a></li>
-        <li><a href="#sharia" data-nav><span data-lang="en">Sharia compliance</span><span data-lang="ru" hidden>Шариат-комплаенс</span></a></li>
-        <li><a href="ecosystem.html"><span data-lang="en">Khatt Ecosystem</span><span data-lang="ru" hidden>Экосистема Khatt</span></a></li>
-        <li><a href="investors.html"><span data-lang="en">For Investors</span><span data-lang="ru" hidden>Инвесторам</span></a></li>
-        <li><a href="#contact" data-nav><span data-lang="en">Contacts</span><span data-lang="ru" hidden>Контакты</span></a></li>
+        <li><a href="/platform"><span data-lang="en">Platform overview</span><span data-lang="ru" hidden>Обзор платформы</span></a></li>
+        <li><a href="/finance"><span data-lang="en">Finance</span><span data-lang="ru" hidden>Finance</span></a></li>
+        <li><a href="/payments-escrow"><span data-lang="en">Payments &amp; Escrow</span><span data-lang="ru" hidden>Платежи и эскроу</span></a></li>
+        <li><a href="/supplier-pay"><span data-lang="en">Supplier Pay</span><span data-lang="ru" hidden>Supplier Pay</span></a></li>
+        <li><a href="/takaful"><span data-lang="en">Takaful</span><span data-lang="ru" hidden>Такафул</span></a></li>
+        <li><a href="/intelligence"><span data-lang="en">Intelligence</span><span data-lang="ru" hidden>Intelligence</span></a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4 data-lang="en">Contact</h4>
-      <h4 data-lang="ru" hidden>Контакты</h4>
+      <h4 data-lang="en">Audiences</h4>
+      <h4 data-lang="ru" hidden>Аудитории</h4>
       <ul>
-        <li><a href="mailto:info@khattcapital.com">info@khattcapital.com</a></li>
-        <li><a href="tel:+97431097714">+974 3109 7714</a></li>
-        <li><a href="https://khattcapital.com">khattcapital.com</a></li>
+        <li><a href="/for-agencies"><span data-lang="en">For Agencies</span><span data-lang="ru" hidden>Агентствам</span></a></li>
+        <li><a href="/for-suppliers"><span data-lang="en">For Suppliers</span><span data-lang="ru" hidden>Поставщикам</span></a></li>
+        <li><a href="/for-banks-capital"><span data-lang="en">For Banks &amp; Capital</span><span data-lang="ru" hidden>Банкам и капиталу</span></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-lang="en">Company</h4>
+      <h4 data-lang="ru" hidden>Компания</h4>
+      <ul>
+        <li><a href="/sharia-governance"><span data-lang="en">Sharia &amp; Governance</span><span data-lang="ru" hidden>Шариат и управление</span></a></li>
+        <li><a href="/technology"><span data-lang="en">Technology</span><span data-lang="ru" hidden>Технологии</span></a></li>
+        <li><a href="/about"><span data-lang="en">About</span><span data-lang="ru" hidden>О компании</span></a></li>
+        <li><a href="/faq"><span data-lang="en">FAQ</span><span data-lang="ru" hidden>Вопросы и ответы</span></a></li>
+        <li><a href="/contact"><span data-lang="en">Contact</span><span data-lang="ru" hidden>Контакты</span></a></li>
       </ul>
     </div>
 
@@ -736,173 +332,17 @@
       </div>
     </div>
 
-    <div class="footer-col">
-      <h4 data-lang="en">Apply now</h4>
-      <h4 data-lang="ru" hidden>Заявка</h4>
-      <button type="button" class="btn btn--ghost btn--sm" data-open-dialog>
-        <span data-lang="en">Apply now</span>
-        <span data-lang="ru" hidden>Подать заявку</span>
-      </button>
-    </div>
-
     <div class="footer-legal">
-      <p data-lang="en">These materials are for informational and analytical purposes only. They do not constitute a legal or sharia opinion, an investment recommendation, or an offer, and are subject to review by licensed legal counsel in the relevant jurisdictions and by an authorized sharia board.</p>
-      <p data-lang="ru" hidden>Настоящие материалы носят информационно-аналитический характер, не являются юридическим или шариатским заключением, инвестиционной рекомендацией либо офертой и подлежат проверке лицензированными юридическими консультантами в соответствующих юрисдикциях и уполномоченным шариатским советом.</p>
-
-      <p data-lang="en">Sharia-compliance and legal-structure conclusions on this site require confirmation by a licensed sharia board and legal counsel.</p>
-      <p data-lang="ru" hidden>Выводы о шариат-комплаенсе и юридической структуре, представленные на сайте, требуют подтверждения лицензированным шариатским советом и юристом.</p>
+      <p data-lang="en">The information on this website is for general information only and does not constitute an offer, financial advice, legal advice, Sharia advice, a commitment to provide financing or an insurance contract. Products are subject to eligibility, risk assessment, contractual documentation, regulatory requirements and independent Sharia review in the applicable jurisdiction. KHATT CAPITAL INC. may provide certain services through appropriately licensed banking, payment, financing, takaful and technology partners.</p>
+      <p data-lang="ru" hidden>Информация на этом сайте предоставлена исключительно в общих информационных целях и не является офертой, финансовой консультацией, юридической консультацией, шариатской консультацией, обязательством предоставить финансирование или договором страхования. Продукты предоставляются на условиях соответствия критериям отбора, оценки риска, договорной документации, регуляторных требований и независимого шариатского контроля в применимой юрисдикции. KHATT CAPITAL INC. может оказывать отдельные услуги через надлежащим образом лицензированных банковских, платёжных, финансовых, такафул- и технологических партнёров.</p>
     </div>
 
     <div class="footer-bottom">
-      <span data-lang="en">© 2026 Khatt Capital. All rights reserved.</span>
-      <span data-lang="ru" hidden>© 2026 Khatt Capital. Все права защищены.</span>
+      <span data-lang="en">© 2026 KHATT CAPITAL INC. All rights reserved.</span>
+      <span data-lang="ru" hidden>© 2026 KHATT CAPITAL INC. Все права защищены.</span>
     </div>
   </div>
 </footer>
-
-<!-- =========================== BOOK A CALL DIALOG =========================== -->
-<!-- No form backend yet: submit opens a pre-filled mailto: to info@khattcapital.com — replace with a real POST handler (e.g. Formspree/HubSpot) once a backend exists. -->
-<dialog id="book-call-dialog" aria-labelledby="dialog-title">
-  <div class="dialog-inner">
-    <div class="dialog-head">
-      <h2 id="dialog-title" style="margin:0;">
-        <span data-lang="en">Apply now</span>
-        <span data-lang="ru" hidden>Подать заявку</span>
-      </h2>
-      <button type="button" class="dialog-close" id="dialog-close-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-        <span class="visually-hidden" data-lang="en">Close</span>
-        <span class="visually-hidden" data-lang="ru" hidden>Закрыть</span>
-      </button>
-    </div>
-
-    <p data-lang="en" style="color:var(--ink-500); margin-top:-8px;">Apply now and we'll reach out for a 20-minute call: licence/accreditation (Nusuk/Maqam where applicable), your booking plan.</p>
-    <p data-lang="ru" hidden style="color:var(--ink-500); margin-top:-8px;">Подайте заявку — и мы свяжемся с вами для 20-минутного звонка: лицензия/аккредитация (Nusuk/Maqam — если применимо), план бронирований.</p>
-
-    <form id="book-call-form" novalidate>
-      <div class="form-grid two-col">
-
-        <div class="form-field span-2" data-field="company">
-          <label for="f-company">
-            <span data-lang="en">Company name *</span>
-            <span data-lang="ru" hidden>Название компании *</span>
-          </label>
-          <input type="text" id="f-company" name="company" required autocomplete="organization">
-          <span class="error-msg" data-error-for="company"></span>
-        </div>
-
-        <!-- Founder decision: collect the license number on the public form (kept as originally specified). -->
-        <div class="form-field" data-field="license">
-          <label for="f-license">
-            <span data-lang="en">License number *</span>
-            <span data-lang="ru" hidden>Номер лицензии *</span>
-          </label>
-          <input type="text" id="f-license" name="license" required>
-          <span class="error-msg" data-error-for="license"></span>
-        </div>
-
-        <div class="form-field" data-field="nusuk">
-          <label for="f-nusuk">
-            <span data-lang="en">Nusuk / Maqam accreditation (if applicable)</span>
-            <span data-lang="ru" hidden>Аккредитация Nusuk/Maqam (если применимо)</span>
-          </label>
-          <input type="text" id="f-nusuk" name="nusuk" placeholder="Yes / ID / —">
-          <span class="hint" data-lang="en">Yes/no or ID, optional</span>
-          <span class="hint" data-lang="ru" hidden>Да/нет или ID, опционально</span>
-        </div>
-
-        <div class="form-field" data-field="contactPerson">
-          <label for="f-contact-person">
-            <span data-lang="en">Contact person *</span>
-            <span data-lang="ru" hidden>Контактное лицо *</span>
-          </label>
-          <input type="text" id="f-contact-person" name="contactPerson" required autocomplete="name">
-          <span class="error-msg" data-error-for="contactPerson"></span>
-        </div>
-
-        <div class="form-field" data-field="email">
-          <label for="f-email">
-            <span data-lang="en">Email *</span>
-            <span data-lang="ru" hidden>Email *</span>
-          </label>
-          <input type="email" id="f-email" name="email" required autocomplete="email">
-          <span class="error-msg" data-error-for="email"></span>
-        </div>
-
-        <div class="form-field" data-field="phone">
-          <label for="f-phone">
-            <span data-lang="en">Phone *</span>
-            <span data-lang="ru" hidden>Телефон *</span>
-          </label>
-          <input type="tel" id="f-phone" name="phone" required autocomplete="tel">
-          <span class="error-msg" data-error-for="phone"></span>
-        </div>
-
-        <div class="form-field" data-field="preferredLanguage">
-          <label>
-            <span data-lang="en">Preferred language of contact</span>
-            <span data-lang="ru" hidden>Предпочитаемый язык связи</span>
-          </label>
-          <div class="radio-group">
-            <label><input type="radio" name="preferredLanguage" value="EN" checked> EN</label>
-            <label><input type="radio" name="preferredLanguage" value="RU"> RU</label>
-          </div>
-        </div>
-
-        <div class="form-field" data-field="facilitySize">
-          <label for="f-facility-size">
-            <span data-lang="en">Estimated facility size</span>
-            <span data-lang="ru" hidden>Ориентировочный размер facility</span>
-          </label>
-          <!--
-            Range bucket wording beyond "from SAR 500,000" is an engineering assumption
-            (spec gives only the first option), not a financial/product commitment — see report.
-          -->
-          <!-- Single option set; JS swaps each option's label text on language switch
-               (a <select> cannot contain nested per-language elements like the rest
-               of the page, so this one field is handled as JS-updated microcopy —
-               see script.js applyLanguageToForm). Defaults to English text with no JS. -->
-          <select id="f-facility-size" name="facilitySize">
-            <option value="" data-en="Prefer not to say" data-ru="Предпочитаю не указывать" selected>Prefer not to say</option>
-            <option value="500k-1m" data-en="From SAR 500,000" data-ru="От SAR 500&nbsp;000">From SAR 500,000</option>
-            <option value="1m-2m" data-en="SAR 1,000,000 – 2,000,000" data-ru="SAR 1&nbsp;000&nbsp;000 – 2&nbsp;000&nbsp;000">SAR 1,000,000 – 2,000,000</option>
-            <option value="2m-5m" data-en="SAR 2,000,000 – 5,000,000" data-ru="SAR 2&nbsp;000&nbsp;000 – 5&nbsp;000&nbsp;000">SAR 2,000,000 – 5,000,000</option>
-            <option value="5m-plus" data-en="SAR 5,000,000+" data-ru="SAR 5&nbsp;000&nbsp;000+">SAR 5,000,000+</option>
-          </select>
-        </div>
-
-        <div class="form-field span-2" data-field="message">
-          <label for="f-message">
-            <span data-lang="en">Message</span>
-            <span data-lang="ru" hidden>Сообщение</span>
-          </label>
-          <textarea id="f-message" name="message" rows="3"></textarea>
-          <span class="hint" data-lang="en">Optional</span>
-          <span class="hint" data-lang="ru" hidden>Опционально</span>
-        </div>
-      </div>
-
-      <p class="hint" style="margin-top: var(--space-2);" data-lang="en">This form has no server yet — submitting will open your email app with a message pre-filled to info@khattcapital.com. Please review and hit send there to submit your application.</p>
-      <p class="hint" style="margin-top: var(--space-2);" data-lang="ru" hidden>У этой формы пока нет сервера — при отправке откроется ваше почтовое приложение с предзаполненным письмом на info@khattcapital.com. Проверьте и нажмите «отправить» в приложении, чтобы отправить заявку.</p>
-
-      <div class="form-actions">
-        <button type="submit" class="btn btn--primary" id="book-call-submit">
-          <span class="btn-label">
-            <span data-lang="en">Apply now</span>
-            <span data-lang="ru" hidden>Подать заявку</span>
-          </span>
-          <span class="btn-spinner" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="btn--text" data-close-dialog>
-          <span data-lang="en">Cancel</span>
-          <span data-lang="ru" hidden>Отмена</span>
-        </button>
-      </div>
-
-      <div class="form-status" id="form-status" role="status" hidden></div>
-    </form>
-  </div>
-</dialog>
 
 <script src="script.js"></script>
 </body>

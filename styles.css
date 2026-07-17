@@ -276,7 +276,7 @@ button { font-family: inherit; }
 @media (min-width: 1024px) {
   .main-nav {
     display: flex;
-    gap: var(--space-3);
+    gap: 16px;
     list-style: none;
     margin: 0; padding: 0;
     flex: 1;
@@ -286,10 +286,11 @@ button { font-family: inherit; }
 .main-nav a {
   color: var(--sand-100);
   text-decoration: none;
-  font-size: var(--fs-small);
+  font-size: 13px;
   font-weight: 600;
   padding: 6px 2px;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
   transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 .main-nav a:hover,
@@ -1120,573 +1121,131 @@ dialog#book-call-dialog::backdrop {
   color: var(--sand-100);
 }
 
-/* ==========================================================================
-   KHATT OS — ecosystem / investor platform diagrams
-   Added for the Ecosystem + Investors rebuild (Vision Deck 2026 parity).
-   All on dark (--ink-900) grounds; module accents below, reused across
-   the hub wheel, layer stack, service panels and charts.
-   ========================================================================== */
+/* ------------------------------- Definition tables (Field/Example, Layer/Capabilities, Product/Use case, Partner/Value, Signal/Copy) ------------------------------- */
 
-:root {
-  --acc-blue: #5B8DEF;
-  --acc-teal: #34B7A0;
-  --acc-purple: #9B8CF2;
-  --acc-orange: #E8A548;
-  --acc-pink: #D66BC4;
-  --acc-cyan: #38BEC9;
-  --acc-green: #4CAF7D;
-  --acc-red: #E0665F;
+.def-table {
+  margin-top: var(--space-4);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
 }
-
-/* ---- OS hub wheel (KHATT OS: one platform, many modules) ---- */
-
-.hub-wheel {
-  position: relative;
-  width: 100%;
-  max-width: 620px;
-  aspect-ratio: 1 / 1;
-  margin: var(--space-6) auto 0;
-}
-.hub-center {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 38%; height: 38%;
-  border-radius: 50%;
-  border: 1px solid var(--bronze-500);
-  background: rgba(176,141,87,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.def-row {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 4px;
-  padding: var(--space-2);
+  background: var(--white);
+  padding: var(--space-3);
+  border-bottom: 1px solid rgba(16,36,62,0.08);
 }
-.hub-center strong { font-family: var(--font-head); color: var(--white); font-size: var(--fs-h3); }
-.hub-center span { font-size: var(--fs-small); color: var(--sand-100); }
-
-.hub-item {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 148px;
-  margin-left: -74px;
-  margin-top: -44px;
-  transform: rotate(calc(var(--i) * 30deg)) translate(0, -258px) rotate(calc(var(--i) * -30deg));
+.section--dark .def-row { background: rgba(255,255,255,0.04); border-bottom-color: rgba(255,255,255,0.1); }
+.def-row:last-child { border-bottom: none; }
+@media (min-width: 760px) {
+  .def-row { grid-template-columns: 260px 1fr; gap: var(--space-3); align-items: baseline; }
 }
-.hub-chip {
-  border: 1px solid var(--chip-c, var(--bronze-500));
-  background: rgba(255,255,255,0.04);
-  border-radius: var(--radius-sm);
-  padding: 10px 12px;
-  text-align: center;
-}
-.hub-chip strong {
-  display: block;
-  font-family: var(--font-head);
-  font-size: var(--fs-small);
-  color: var(--white);
-}
-
-@media (max-width: 900px) {
-  .hub-wheel {
-    position: static;
-    max-width: none;
-    aspect-ratio: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-2);
-  }
-  .hub-center {
-    position: static;
-    transform: none;
-    width: auto; height: auto;
-    grid-column: 1 / -1;
-    aspect-ratio: auto;
-    padding: var(--space-3);
-  }
-  .hub-item {
-    position: static;
-    width: auto;
-    margin: 0;
-    transform: none;
-  }
-}
-@media (min-width: 600px) and (max-width: 900px) {
-  .hub-wheel { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* ---- Five platform layers ---- */
-
-.layer-row {
-  border: 1px solid var(--layer-c, var(--bronze-500));
-  border-radius: var(--radius-sm);
-  padding: var(--space-2) var(--space-3);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-  margin-top: var(--space-2);
-}
-.layer-row:first-child { margin-top: var(--space-4); }
-.layer-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.def-term {
   font-family: var(--font-head);
   font-weight: 700;
-  color: var(--white);
-  min-width: 220px;
+  color: var(--ink-900);
 }
-.layer-label .layer-dot {
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  border: 1px solid var(--layer-c, var(--bronze-500));
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  font-size: 13px;
-  color: var(--layer-c, var(--bronze-500));
-  font-weight: 700;
-}
-.layer-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.layer-pill {
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.05);
-  color: var(--sand-100);
-  font-size: var(--fs-small);
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 999px;
-}
+.section--dark .def-term { color: var(--white); }
+.def-desc { color: var(--ink-500); margin: 0; }
+.section--dark .def-desc { color: var(--sand-100); }
 
-/* ---- Customer journey (8 steps) ---- */
+/* ------------------------------- FAQ ------------------------------- */
 
-.journey {
+.faq-list { margin-top: var(--space-4); display: grid; gap: var(--space-2); }
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-3) var(--space-4);
+}
+.faq-item h3 { font-size: var(--fs-body); margin-bottom: 6px; }
+.faq-item p { color: var(--ink-500); margin: 0; }
+
+/* ------------------------------- Numbered mini-steps (reuses stepper look at any length) ------------------------------- */
+
+.mini-steps {
   list-style: none;
-  margin: var(--space-5) 0 0 0;
+  margin: var(--space-4) 0 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
   gap: var(--space-2);
+  counter-reset: mini-step;
 }
-@media (min-width: 700px) { .journey { grid-template-columns: repeat(4, 1fr); } }
-@media (min-width: 1200px) { .journey { grid-template-columns: repeat(8, 1fr); } }
-.journey li {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: var(--radius-sm);
-  padding: var(--space-2);
-  text-align: center;
-}
-.journey .step-num { font-size: 12px; font-weight: 700; color: var(--bronze-500); }
-.journey strong { display: block; font-family: var(--font-head); color: var(--white); margin: 4px 0; font-size: var(--fs-small); }
-.journey span.desc { font-size: 12px; color: var(--sand-100); opacity: 0.85; }
-
-/* ---- Service panel (one per KHATT OS service) ---- */
-
-.service-block { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid rgba(255,255,255,0.12); }
-.service-block:first-of-type { margin-top: var(--space-4); padding-top: 0; border-top: none; }
-.service-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
-.service-head .service-icon {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--svc-c, var(--bronze-500));
-  color: var(--svc-c, var(--bronze-500));
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.service-head .service-icon svg { width: 20px; height: 20px; }
-.service-tag { font-size: var(--fs-small); color: var(--svc-c, var(--bronze-500)); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-
-.service-panel {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3);
-  margin-top: var(--space-3);
-}
-@media (min-width: 1024px) { .service-panel { grid-template-columns: 1.3fr 1fr; align-items: stretch; } }
-.service-main, .service-side {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
+@media (min-width: 700px) { .mini-steps { grid-template-columns: repeat(2, 1fr); } }
+.mini-steps li {
+  counter-increment: mini-step;
+  background: var(--white);
   border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
   padding: var(--space-3);
-}
-.service-example {
-  margin-top: var(--space-2);
-  border-left: 3px solid var(--svc-c, var(--bronze-500));
-  background: rgba(255,255,255,0.04);
-  padding: var(--space-2) var(--space-3);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-size: var(--fs-small);
-  color: var(--sand-100);
-}
-.service-example strong { color: var(--white); }
-
-.dot-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
-.dot-list li { display: flex; align-items: flex-start; gap: 10px; font-size: var(--fs-small); color: var(--sand-100); }
-.dot-list li::before {
-  content: "";
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--svc-c, var(--bronze-500));
-  margin-top: 7px;
-  flex-shrink: 0;
-}
-
-.flow-row { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); }
-.flow-node {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--svc-c, var(--bronze-500));
-  border-radius: var(--radius-sm);
-  padding: var(--space-2);
-  flex: 1;
-  min-width: 120px;
-  text-align: center;
-}
-.flow-node strong { display: block; font-family: var(--font-head); color: var(--white); font-size: var(--fs-small); }
-.flow-node span { font-size: 12px; color: var(--sand-100); opacity: 0.85; }
-.flow-arrow { width: 22px; height: 16px; color: var(--svc-c, var(--bronze-500)); flex-shrink: 0; }
-@media (max-width: 480px) { .flow-arrow { transform: rotate(90deg); } .flow-row { flex-direction: column; } }
-
-/* ---- Data flywheel / moat ---- */
-
-.moat-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-2);
-  margin-top: var(--space-4);
-}
-@media (min-width: 700px) { .moat-grid { grid-template-columns: repeat(3, 1fr); } }
-.moat-card {
-  border: 1px solid var(--m-c, var(--bronze-500));
-  background: rgba(255,255,255,0.04);
-  border-radius: var(--radius-sm);
-  padding: var(--space-3);
-}
-.moat-card .moat-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 28px; height: 28px; border-radius: 50%;
-  background: var(--m-c, var(--bronze-500)); color: var(--ink-900);
-  font-weight: 700; font-size: 13px; margin-bottom: 8px;
-}
-.moat-card strong { display: block; font-family: var(--font-head); color: var(--white); margin-bottom: 4px; }
-.moat-card span { font-size: var(--fs-small); color: var(--sand-100); }
-
-/* ---- GTM phase cards / roadmap ---- */
-
-.phase-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3);
-  margin-top: var(--space-4);
-}
-@media (min-width: 700px) { .phase-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1100px) { .phase-grid { grid-template-columns: repeat(4, 1fr); } }
-.phase-card {
-  border: 1px solid var(--p-c, var(--bronze-500));
-  border-radius: var(--radius);
-  padding: var(--space-3);
-  background: rgba(255,255,255,0.04);
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  gap: 12px;
+  align-items: flex-start;
 }
-.phase-card .phase-num { font-family: var(--font-head); font-size: 28px; font-weight: 700; color: var(--p-c, var(--bronze-500)); }
-.phase-card h4 { margin: 0; color: var(--white); font-family: var(--font-head); font-size: var(--fs-body); }
-.phase-card p { margin: 0; font-size: var(--fs-small); color: var(--sand-100); flex: 1; }
-.phase-badge {
-  align-self: flex-start;
-  border: 1px solid var(--p-c, var(--bronze-500));
-  color: var(--p-c, var(--bronze-500));
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 12px;
+.mini-steps li::before {
+  content: counter(mini-step);
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--ink-900);
+  color: var(--white);
   font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.phase-pills { display: flex; flex-direction: column; gap: 6px; }
-.phase-pill {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: var(--radius-sm);
-  padding: 6px 10px;
-  font-size: 12px;
-  color: var(--sand-100);
-  text-align: center;
-}
+.mini-steps p { margin: 0; color: var(--ink-500); }
 
-.roadmap-grid {
+/* ------------------------------- Two-column feature list ------------------------------- */
+
+.split-cols {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-3);
-  margin-top: var(--space-5);
-}
-@media (min-width: 900px) { .roadmap-grid { grid-template-columns: repeat(5, 1fr); } }
-.roadmap-card {
-  border: 1px solid var(--r-c, var(--bronze-500));
-  border-radius: var(--radius);
-  padding: var(--space-3);
-  background: rgba(255,255,255,0.04);
-  text-align: center;
-}
-.roadmap-year { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: var(--r-c, var(--bronze-500)); }
-.roadmap-card h4 { color: var(--white); font-family: var(--font-head); font-size: var(--fs-small); margin: 4px 0 var(--space-2); }
-.roadmap-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 36px; height: 36px; border-radius: 50%;
-  border: 1.5px solid var(--r-c, var(--bronze-500)); color: var(--r-c, var(--bronze-500));
-  font-weight: 700; margin: 0 auto var(--space-2);
-}
-.roadmap-pills { display: grid; gap: 6px; margin-bottom: var(--space-2); }
-.roadmap-pill {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: var(--radius-sm);
-  padding: 6px 8px;
-  font-size: 12px;
-  color: var(--sand-100);
-}
-.roadmap-metric { font-size: var(--fs-small); font-weight: 700; color: var(--r-c, var(--bronze-500)); }
-
-/* ---- TAM / SAM / SOM concentric rings ---- */
-
-.tam-rings {
-  position: relative;
-  width: 100%;
-  max-width: 460px;
-  aspect-ratio: 1 / 1;
-  margin: var(--space-4) auto 0;
-}
-.tam-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1.5px solid var(--ring-c);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 7%;
-  text-align: center;
-}
-.tam-ring strong { font-family: var(--font-head); font-size: clamp(18px, 4vw, 30px); color: var(--ring-c); }
-.tam-ring span { font-size: var(--fs-small); color: var(--sand-100); }
-
-/* ---- Competitive quadrant ---- */
-
-.quadrant {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-left: 2px solid rgba(255,255,255,0.25);
-  border-bottom: 2px solid rgba(255,255,255,0.25);
-  margin-top: var(--space-5);
-}
-.quadrant-axis-y {
-  position: absolute;
-  left: -28px; top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  font-size: 12px;
-  color: var(--sand-100);
-  white-space: nowrap;
-}
-.quadrant-axis-x {
-  position: absolute;
-  bottom: -28px; left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: var(--sand-100);
-  white-space: nowrap;
-}
-.quadrant-item {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border: 1px solid var(--q-c, var(--bronze-500));
-  background: rgba(16,36,62,0.9);
-  border-radius: var(--radius-sm);
-  padding: 8px 12px;
-  text-align: center;
-  min-width: 130px;
-}
-.quadrant-item strong { display: block; font-family: var(--font-head); font-size: var(--fs-small); color: var(--white); }
-.quadrant-item span { font-size: 11px; color: var(--sand-100); }
-.quadrant-item.is-khatt { background: var(--bronze-500); }
-.quadrant-item.is-khatt strong, .quadrant-item.is-khatt span { color: var(--ink-900); }
-
-@media (max-width: 700px) {
-  .quadrant { display: none; }
-  .quadrant-list-mobile { display: grid; gap: 8px; margin-top: var(--space-4); }
-}
-.quadrant-list-mobile { display: none; }
-@media (max-width: 700px) {
-  .quadrant-list-mobile { display: grid; }
-}
-.quadrant-row-mobile {
-  border: 1px solid var(--q-c, var(--bronze-500));
-  border-radius: var(--radius-sm);
-  padding: 8px 12px;
-  font-size: var(--fs-small);
-  color: var(--sand-100);
-}
-.quadrant-row-mobile strong { color: var(--white); }
-
-/* ---- Unit economics waterfall ---- */
-
-.waterfall {
-  display: flex;
-  align-items: flex-end;
-  gap: var(--space-2);
-  height: 220px;
-  margin-top: var(--space-4);
-  padding: 0 var(--space-2);
-}
-.waterfall-bar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 6px;
-  height: 100%;
-}
-.waterfall-bar .bar {
-  width: 100%;
-  max-width: 64px;
-  border-radius: 4px 4px 0 0;
-  background: var(--w-c, var(--bronze-500));
-}
-.waterfall-bar .bar-value { font-weight: 700; font-size: var(--fs-small); color: var(--w-c, var(--bronze-500)); }
-.waterfall-bar .bar-label { font-size: 12px; color: var(--sand-100); text-align: center; }
-
-/* ---- Stage / margin comparison cards ---- */
-
-.stage-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3);
+  gap: var(--space-4);
   margin-top: var(--space-4);
 }
-@media (min-width: 900px) { .stage-grid { grid-template-columns: repeat(3, 1fr); } }
-.stage-card {
-  border: 1px solid var(--s-c, var(--bronze-500));
+@media (min-width: 760px) { .split-cols { grid-template-columns: 1fr 1fr; } }
+.split-col {
+  background: var(--white);
   border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
   padding: var(--space-4);
-  background: rgba(255,255,255,0.04);
 }
-.stage-card h4 { color: var(--s-c, var(--bronze-500)); font-family: var(--font-head); margin: 0 0 4px; }
-.stage-card .stage-size { font-size: var(--fs-small); color: var(--sand-100); margin-bottom: var(--space-3); }
-.stage-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: var(--fs-small); color: var(--sand-100); }
-.stage-row strong { color: var(--white); }
-.stage-total {
-  margin-top: var(--space-2);
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  background: var(--s-c, var(--bronze-500));
-  color: var(--ink-900);
-  font-weight: 700;
-}
-
-/* ---- Risk register ---- */
-
-.risk-list { display: grid; gap: var(--space-2); margin-top: var(--space-4); }
-.risk-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-2);
-  align-items: center;
-  border-left: 4px solid var(--lvl-c, var(--bronze-500));
-  background: rgba(255,255,255,0.04);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  padding: var(--space-2) var(--space-3);
-}
-@media (min-width: 900px) { .risk-row { grid-template-columns: 200px 140px 1fr; } }
-.risk-row strong { color: var(--white); font-family: var(--font-head); font-size: var(--fs-small); }
-.risk-level {
-  justify-self: start;
-  border: 1px solid var(--lvl-c, var(--bronze-500));
-  color: var(--lvl-c, var(--bronze-500));
-  border-radius: 999px;
-  padding: 4px 12px;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.risk-row p { margin: 0; font-size: var(--fs-small); color: var(--sand-100); }
-
-/* ---- Simple line-cycle chart (demand seasonality) ---- */
-
-.cycle-chart-legend { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
-.cycle-legend-item { display: flex; align-items: center; gap: 6px; font-size: var(--fs-small); color: var(--sand-100); }
-.cycle-legend-item .dot { width: 10px; height: 10px; border-radius: 50%; }
-
-/* ---- Cash-flow timeline (T-180..T+30) ---- */
-
-.timeline { margin-top: var(--space-5); }
-.timeline-track {
-  position: relative;
-  height: 2px;
-  background: rgba(255,255,255,0.2);
-  margin: var(--space-5) 0;
-}
-.timeline-point {
-  position: absolute;
-  top: -4px;
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--sand-100);
-  transform: translateX(-50%);
-}
-.timeline-labels { display: flex; justify-content: space-between; }
-.timeline-labels > div { text-align: center; flex: 1; }
-.timeline-labels strong { display: block; color: var(--white); font-family: var(--font-head); font-size: var(--fs-small); }
-.timeline-labels span { font-size: 12px; color: var(--sand-100); }
-.timeline-bars { display: flex; justify-content: space-between; gap: var(--space-2); margin-top: var(--space-3); }
-.timeline-bar {
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  font-size: var(--fs-small);
-  font-weight: 700;
-  text-align: center;
-  color: var(--ink-900);
-}
-.timeline-gap {
-  text-align: center;
-  margin: var(--space-2) 0;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--acc-red);
-}
-
-/* ---- Funds allocation bar (the Ask) ---- */
-
-.funds-bar { display: flex; height: 14px; border-radius: 999px; overflow: hidden; margin: var(--space-3) 0 var(--space-2); }
-.funds-legend { display: grid; gap: 6px; }
-.funds-legend-item { display: flex; justify-content: space-between; font-size: var(--fs-small); color: var(--sand-100); }
-.funds-legend-item strong { color: var(--white); }
-
-/* ---- Whole-page dark theme (Ecosystem / Investors pages) ---- */
-
-body.page-dark { background: var(--ink-900); color: var(--sand-100); }
-body.page-dark h1, body.page-dark h2, body.page-dark h3 { color: var(--white); }
-body.page-dark .section-lead { color: var(--sand-100); }
-body.page-dark .section-kicker { color: var(--bronze-500); }
-body.page-dark .section-alt { background: rgba(255,255,255,0.03); }
-body.page-dark .disclaimer { background: rgba(245,240,230,0.06); border-color: var(--bronze-500); color: var(--sand-100); }
-
-/* ---- OS pillar chips (hero) ---- */
-
-.pillar-row { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2); margin: var(--space-4) 0; }
-.pillar-chip {
-  border: 1px solid var(--pc-c, var(--bronze-500));
-  color: var(--pc-c, var(--bronze-500));
-  border-radius: 999px;
-  padding: 10px 20px;
-  font-size: var(--fs-small);
-  font-weight: 700;
-}
-.pillar-chip.is-filled { background: var(--pc-c, var(--bronze-500)); color: var(--ink-900); }
+.split-col h3 { margin-bottom: var(--space-2); }
+.split-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.split-col li { display: flex; align-items: flex-start; gap: 10px; color: var(--ink-500); }
+.split-col li .tick { flex-shrink: 0; width: 20px; height: 20px; color: var(--line-teal); margin-top: 2px; }
 
 /* ------------------------------- Utility ------------------------------- */
 
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
+
+/* ------------------------------- UX polish ------------------------------- */
+
+/* Sticky header offset: anchor jumps (e.g. #apply) land below the fixed
+   header instead of being hidden underneath it. */
+:where(section[id], main [id], #apply) {
+  scroll-margin-top: 96px;
+}
+@media (max-width: 599px) {
+  :where(section[id], main [id], #apply) { scroll-margin-top: 76px; }
+}
+
+/* Calmer tap feedback on touch devices (no blue flash on iOS/Android). */
+a, button, .btn, summary, [role="button"] {
+  -webkit-tap-highlight-color: rgba(16, 36, 62, 0.12);
+}
+
+/* Balanced multi-line headings on modern browsers. */
+h1, h2, h3 { text-wrap: balance; }
+.subhead, .section-lead { text-wrap: pretty; }
+
+/* Prevent horizontal overflow / rubber-banding on small screens. */
+html, body { overflow-x: hidden; }
+
+/* Body scroll lock helper toggled by the mobile-nav script. */
+body.nav-open { overflow: hidden; }
