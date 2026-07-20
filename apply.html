@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10243E">
+<meta name="color-scheme" content="light">
+<title>Apply for a KHATT Pilot Facility — KHATT CAPITAL</title>
+<meta name="description" content="A three-minute preliminary application for licensed Hajj, Umrah and halal-group travel agencies seeking direct supplier-payment financing.">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .apply-hero { padding: clamp(7rem, 12vw, 10rem) 0 3.5rem; background: var(--ink-900, #10243e); color: #fff; }
+  .apply-hero .section-kicker { color: var(--gold-400, #c9a15c); }
+  .apply-hero h1 { max-width: 920px; margin: .8rem auto 1rem; text-align: center; color: #fff; }
+  .apply-hero .subhead { max-width: 760px; margin: 0 auto; text-align: center; color: rgba(255,255,255,.76); }
+  .source-chip { display: inline-flex; align-items: center; gap: .55rem; padding: .5rem .85rem; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(255,255,255,.06); font-size: .78rem; font-weight: 700; letter-spacing: .05em; }
+  .source-chip::before { width: .48rem; height: .48rem; border-radius: 50%; background: var(--gold-400, #c9a15c); content: ""; }
+  .apply-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem 1.5rem; margin-top: 1.4rem; color: rgba(255,255,255,.72); font-size: .9rem; }
+  .apply-meta span { display: inline-flex; align-items: center; gap: .45rem; }
+  .apply-meta strong { color: #fff; }
+  .apply-section { padding: clamp(3rem, 7vw, 6rem) 0; background: var(--sand-100, #f7f2ea); }
+  .apply-shell { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.45fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
+  .apply-aside { position: sticky; top: 7rem; }
+  .apply-aside h2 { margin-bottom: 1rem; font-size: clamp(1.65rem, 3vw, 2.45rem); }
+  .eligibility-list { display: grid; gap: .8rem; margin: 1.4rem 0 0; padding: 0; list-style: none; }
+  .eligibility-list li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .65rem; color: var(--ink-600, #516074); }
+  .eligibility-list li::before { display: grid; place-items: center; width: 1.35rem; height: 1.35rem; margin-top: .12rem; border-radius: 50%; background: rgba(201,161,92,.17); color: var(--ink-900, #10243e); content: "✓"; font-size: .78rem; font-weight: 800; }
+  .apply-note { margin-top: 1.5rem; padding: 1rem 1.05rem; border-left: 3px solid var(--gold-500, #b68a43); background: rgba(255,255,255,.65); color: var(--ink-600, #516074); font-size: .82rem; }
+  .application-card { border: 1px solid rgba(16,36,62,.12); border-radius: 18px; background: #fff; box-shadow: 0 24px 70px rgba(16,36,62,.09); overflow: hidden; }
+  .application-card__head { padding: clamp(1.4rem, 3vw, 2.15rem); border-bottom: 1px solid rgba(16,36,62,.1); background: linear-gradient(135deg, rgba(201,161,92,.12), rgba(255,255,255,0)); }
+  .application-card__head h2 { margin: 0 0 .45rem; font-size: clamp(1.45rem, 2.5vw, 2rem); }
+  .application-card__head p { margin: 0; color: var(--ink-600, #516074); }
+  .application-form-body { padding: clamp(1.25rem, 3vw, 2.15rem); }
+  .form-section-title { display: flex; align-items: center; gap: .7rem; margin: 1.35rem 0 .85rem; color: var(--ink-900, #10243e); font-size: .84rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .form-section-title:first-child { margin-top: 0; }
+  .form-section-title span:first-child { display: grid; place-items: center; width: 1.55rem; height: 1.55rem; border-radius: 50%; background: var(--ink-900, #10243e); color: #fff; font-size: .72rem; }
+  .form-field input, .form-field select, .form-field textarea { width: 100%; }
+  .form-field select { min-height: 3rem; padding: .7rem .85rem; border: 1px solid rgba(16,36,62,.2); border-radius: 8px; background: #fff; color: var(--ink-900, #10243e); }
+  .consent-row { display: grid; grid-template-columns: 1.15rem 1fr; gap: .75rem; align-items: start; margin-top: 1.35rem; }
+  .consent-row input { width: 1.05rem; height: 1.05rem; margin-top: .22rem; accent-color: var(--ink-900, #10243e); }
+  .consent-row label { color: var(--ink-600, #516074); font-size: .82rem; }
+  .honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+  .application-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.4rem; }
+  .application-actions .btn { min-width: 220px; }
+  .application-actions small { max-width: 360px; color: var(--ink-500, #6e7887); }
+  .form-status.error { margin-top: 1rem; padding: .9rem 1rem; border-radius: 8px; background: #fff2f1; color: #8b1e16; }
+  .form-status.error a { text-decoration: underline; font-weight: 700; }
+  .application-success { padding: clamp(2rem, 5vw, 4rem); text-align: center; }
+  .success-mark { display: grid; place-items: center; width: 4.5rem; height: 4.5rem; margin: 0 auto 1.2rem; border-radius: 50%; background: rgba(35,125,92,.12); color: #237d5c; font-size: 2rem; font-weight: 800; }
+  .application-success h2 { margin-bottom: .7rem; }
+  .reference-box { display: inline-flex; gap: .55rem; align-items: center; margin-top: 1.2rem; padding: .7rem 1rem; border-radius: 8px; background: var(--sand-100, #f7f2ea); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem; }
+  .prefill-note { margin: .7rem 0 0; color: rgba(255,255,255,.78); font-size: .92rem; }
+  .prefill-note[hidden] { display: none; }
+  @media (max-width: 900px) {
+    .apply-shell { grid-template-columns: 1fr; }
+    .apply-aside { position: static; }
+  }
+  @media (max-width: 640px) {
+    .apply-hero { padding-top: 6.5rem; }
+    .application-card { border-radius: 12px; }
+    .form-grid.two-col { grid-template-columns: 1fr; }
+    .form-grid.two-col .span-2 { grid-column: auto; }
+    .application-actions .btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#application-form">
+  <span data-lang="en">Skip to application</span>
+  <span data-lang="ru" hidden>Перейти к заявке</span>
+</a>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <img class="brand-mark" src="assets/favicon.svg" alt="" width="32" height="32">
+      <span>KHATT CAPITAL</span>
+    </a>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language / Язык">
+        <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      </div>
+      <a class="btn btn--outline btn--sm" href="mailto:info@khattcapital.com">info@khattcapital.com</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="apply-hero">
+    <div class="container text-center">
+      <div class="source-chip"><span data-source-label>Direct application</span></div>
+      <h1>
+        <span data-lang="en">Secure your next supplier payment.</span>
+        <span data-lang="ru" hidden>Обеспечьте следующий платёж поставщику.</span>
+      </h1>
+      <p class="subhead">
+        <span data-lang="en">A preliminary application for licensed Hajj, Umrah and halal-group travel agencies seeking controlled, direct-to-supplier transaction funding.</span>
+        <span data-lang="ru" hidden>Предварительная заявка для лицензированных агентств Хаджа, Умры и халяльных групповых поездок, которым требуется контролируемое финансирование с прямой оплатой поставщикам.</span>
+      </p>
+      <p class="prefill-note" data-prefilled-company hidden></p>
+      <div class="apply-meta">
+        <span>✓ <strong data-lang="en">About 3 minutes</strong><strong data-lang="ru" hidden>Около 3 минут</strong></span>
+        <span>✓ <strong data-lang="en">No sensitive documents</strong><strong data-lang="ru" hidden>Без чувствительных документов</strong></span>
+        <span>✓ <strong data-lang="en">Priority-scored review</strong><strong data-lang="ru" hidden>Приоритетная оценка</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply-section">
+    <div class="container apply-shell">
+      <aside class="apply-aside">
+        <span class="section-kicker"><span data-lang="en">PILOT ELIGIBILITY</span><span data-lang="ru" hidden>КРИТЕРИИ ПИЛОТА</span></span>
+        <h2>
+          <span data-lang="en">Best fit for agencies with real, near-term supplier obligations.</span>
+          <span data-lang="ru" hidden>Лучше всего подходит агентствам с реальными ближайшими обязательствами перед поставщиками.</span>
+        </h2>
+        <ul class="eligibility-list">
+          <li><span data-lang="en">Valid travel or pilgrimage operating licence.</span><span data-lang="ru" hidden>Действующая туристическая или паломническая лицензия.</span></li>
+          <li><span data-lang="en">Verifiable hotel, transport, airline or DMC obligation.</span><span data-lang="ru" hidden>Проверяемое обязательство перед отелем, перевозчиком, авиакомпанией или DMC.</span></li>
+          <li><span data-lang="en">Evidence of customer demand, bookings or deposits.</span><span data-lang="ru" hidden>Подтверждённый спрос клиентов, бронирования или депозиты.</span></li>
+          <li><span data-lang="en">Supplier payment required before customer cash is fully collected.</span><span data-lang="ru" hidden>Платёж поставщику требуется до полного сбора денег клиентов.</span></li>
+          <li><span data-lang="en">Willingness to use direct supplier payment and auditable controls.</span><span data-lang="ru" hidden>Готовность использовать прямую оплату поставщику и проверяемые контроли.</span></li>
+        </ul>
+        <div class="apply-note">
+          <span data-lang="en">Do not upload passports, customer identity documents, bank statements or payment-card data here. Qualified applicants receive a secure document request after the first review.</span>
+          <span data-lang="ru" hidden>Не загружайте здесь паспорта, документы клиентов, банковские выписки или данные платёжных карт. Квалифицированные заявители получат защищённый запрос документов после первичной проверки.</span>
+        </div>
+      </aside>
+
+      <div class="application-card">
+        <div class="application-card__head">
+          <h2>
+            <span data-lang="en">Preliminary agency application</span>
+            <span data-lang="ru" hidden>Предварительная заявка агентства</span>
+          </h2>
+          <p>
+            <span data-lang="en">Complete every required field so the application can be scored and routed immediately.</span>
+            <span data-lang="ru" hidden>Заполните все обязательные поля, чтобы заявка сразу получила оценку и была направлена на рассмотрение.</span>
+          </p>
+        </div>
+
+        <form id="application-form" class="js-lead-form" data-form-name="agency-pilot-application" data-lead-kind="agency"
+              data-endpoint="https://formsubmit.co/ajax/info@khattcapital.com"
+              data-subject-en="KHATT pilot facility application" data-subject-ru="Заявка KHATT на пилотное финансирование" novalidate>
+          <div class="application-form-body" data-form-body>
+            <div class="form-section-title"><span>1</span><span data-lang="en">Contact and company</span><span data-lang="ru" hidden>Контакт и компания</span></div>
+            <div class="form-grid two-col">
+              <div class="form-field" data-field="contactPerson">
+                <label for="app-contact"><span data-lang="en">Decision-maker name *</span><span data-lang="ru" hidden>Имя лица, принимающего решение *</span></label>
+                <input type="text" id="app-contact" name="contactPerson" required autocomplete="name" placeholder="Founder, CEO, finance director">
+                <span class="error-msg" data-error-for="contactPerson"></span>
+              </div>
+              <div class="form-field" data-field="email">
+                <label for="app-email"><span data-lang="en">Work email *</span><span data-lang="ru" hidden>Рабочий email *</span></label>
+                <input type="email" id="app-email" name="email" required autocomplete="email" placeholder="name@agency.com">
+                <span class="error-msg" data-error-for="email"></span>
+              </div>
+              <div class="form-field" data-field="whatsapp">
+                <label for="app-whatsapp"><span data-lang="en">WhatsApp / phone *</span><span data-lang="ru" hidden>WhatsApp / телефон *</span></label>
+                <input type="tel" id="app-whatsapp" name="whatsapp" required autocomplete="tel" placeholder="+ country code">
+                <span class="error-msg" data-error-for="whatsapp"></span>
+              </div>
+              <div class="form-field" data-field="companyName">
+                <label for="app-company"><span data-lang="en">Legal company name *</span><span data-lang="ru" hidden>Юридическое название компании *</span></label>
+                <input type="text" id="app-company" name="companyName" required autocomplete="organization">
+                <span class="error-msg" data-error-for="companyName"></span>
+              </div>
+              <div class="form-field" data-field="country">
+                <label for="app-country"><span data-lang="en">Country of registration *</span><span data-lang="ru" hidden>Страна регистрации *</span></label>
+                <input type="text" id="app-country" name="country" required autocomplete="country-name">
+                <span class="error-msg" data-error-for="country"></span>
+              </div>
+              <div class="form-field" data-field="website">
+                <label for="app-website"><span data-lang="en">Website</span><span data-lang="ru" hidden>Веб-сайт</span></label>
+                <input type="url" id="app-website" name="website" placeholder="https://">
+                <span class="error-msg" data-error-for="website"></span>
+              </div>
+              <div class="form-field span-2" data-field="licence">
+                <label for="app-licence"><span data-lang="en">Licence / accreditation *</span><span data-lang="ru" hidden>Лицензия / аккредитация *</span></label>
+                <input type="text" id="app-licence" name="licence" required placeholder="Licence number, issuing authority, IATA / Nusuk / national pilgrimage accreditation where applicable">
+                <span class="error-msg" data-error-for="licence"></span>
+              </div>
+            </div>
+
+            <div class="form-section-title"><span>2</span><span data-lang="en">Operating profile</span><span data-lang="ru" hidden>Операционный профиль</span></div>
+            <div class="form-grid two-col">
+              <div class="form-field" data-field="travelType">
+                <label for="app-travel-type"><span data-lang="en">Primary travel business *</span><span data-lang="ru" hidden>Основное направление *</span></label>
+                <select id="app-travel-type" name="travelType" required>
+                  <option value="" data-en="Select" data-ru="Выберите">Select</option>
+                  <option value="umrah_hajj" data-en="Hajj and / or Umrah" data-ru="Хадж и / или Умра">Hajj and / or Umrah</option>
+                  <option value="halal_groups" data-en="Halal group travel" data-ru="Халяльные групповые поездки">Halal group travel</option>
+                  <option value="mixed" data-en="Mixed pilgrimage and leisure" data-ru="Паломничество и отдых">Mixed pilgrimage and leisure</option>
+                  <option value="other" data-en="Other travel segment" data-ru="Другое направление">Other travel segment</option>
+                </select>
+                <span class="error-msg" data-error-for="travelType"></span>
+              </div>
+              <div class="form-field" data-field="yearsOperating">
+                <label for="app-years"><span data-lang="en">Years operating *</span><span data-lang="ru" hidden>Лет на рынке *</span></label>
+                <select id="app-years" name="yearsOperating" required>
+                  <option value="" data-en="Select" data-ru="Выберите">Select</option>
+                  <option value="10_plus" data-en="10+ years" data-ru="10+ лет">10+ years</option>
+                  <option value="5_9" data-en="5–9 years" data-ru="5–9 лет">5–9 years</option>
+                  <option value="2_4" data-en="2–4 years" data-ru="2–4 года">2–4 years</option>
+                  <option value="under_2" data-en="Under 2 years" data-ru="Менее 2 лет">Under 2 years</option>
+                </select>
+                <span class="error-msg" data-error-for="yearsOperating"></span>
+              </div>
+              <div class="form-field" data-field="annualGmv">
+                <label for="app-gmv"><span data-lang="en">Approximate annual travel sales *</span><span data-lang="ru" hidden>Примерный годовой объём продаж *</span></label>
+                <select id="app-gmv" name="annualGmv" required>
+                  <option value="" data-en="Select range (USD equivalent)" data-ru="Выберите диапазон (эквивалент USD)">Select range (USD equivalent)</option>
+                  <option value="5m_plus" data-en="$5M+" data-ru="$5 млн+">$5M+</option>
+                  <option value="1m_5m" data-en="$1M–$5M" data-ru="$1–5 млн">$1M–$5M</option>
+                  <option value="250k_1m" data-en="$250K–$1M" data-ru="$250 тыс.–$1 млн">$250K–$1M</option>
+                  <option value="under_250k" data-en="Under $250K" data-ru="Менее $250 тыс.">Under $250K</option>
+                </select>
+                <span class="error-msg" data-error-for="annualGmv"></span>
+              </div>
+              <div class="form-field" data-field="monthlyTravelers">
+                <label for="app-travelers"><span data-lang="en">Average monthly travellers *</span><span data-lang="ru" hidden>Среднее число путешественников в месяц *</span></label>
+                <select id="app-travelers" name="monthlyTravelers" required>
+                  <option value="" data-en="Select" data-ru="Выберите">Select</option>
+                  <option value="1000_plus" data-en="1,000+" data-ru="1 000+">1,000+</option>
+                  <option value="300_999" data-en="300–999" data-ru="300–999">300–999</option>
+                  <option value="100_299" data-en="100–299" data-ru="100–299">100–299</option>
+                  <option value="under_100" data-en="Under 100" data-ru="Менее 100">Under 100</option>
+                </select>
+                <span class="error-msg" data-error-for="monthlyTravelers"></span>
+              </div>
+            </div>
+
+            <div class="form-section-title"><span>3</span><span data-lang="en">Current funding request</span><span data-lang="ru" hidden>Текущий запрос на финансирование</span></div>
+            <div class="form-grid two-col">
+              <div class="form-field" data-field="requestedFacility">
+                <label for="app-facility"><span data-lang="en">Required facility *</span><span data-lang="ru" hidden>Требуемый лимит *</span></label>
+                <select id="app-facility" name="requestedFacility" required>
+                  <option value="" data-en="Select range (USD equivalent)" data-ru="Выберите диапазон (эквивалент USD)">Select range (USD equivalent)</option>
+                  <option value="1m_plus" data-en="$1M+" data-ru="$1 млн+">$1M+</option>
+                  <option value="250k_1m" data-en="$250K–$1M" data-ru="$250 тыс.–$1 млн">$250K–$1M</option>
+                  <option value="50k_250k" data-en="$50K–$250K" data-ru="$50–250 тыс.">$50K–$250K</option>
+                  <option value="under_50k" data-en="Under $50K" data-ru="Менее $50 тыс.">Under $50K</option>
+                </select>
+                <span class="error-msg" data-error-for="requestedFacility"></span>
+              </div>
+              <div class="form-field" data-field="fundingUse">
+                <label for="app-use"><span data-lang="en">Supplier purpose *</span><span data-lang="ru" hidden>Назначение платежа поставщику *</span></label>
+                <select id="app-use" name="fundingUse" required>
+                  <option value="" data-en="Select" data-ru="Выберите">Select</option>
+                  <option value="hotels_transport" data-en="Hotels and ground transport" data-ru="Отели и наземный транспорт">Hotels and ground transport</option>
+                  <option value="air_inventory" data-en="Airline / seat inventory" data-ru="Авиабилеты / блоки мест">Airline / seat inventory</option>
+                  <option value="packages" data-en="DMC or package supplier" data-ru="DMC или пакетный поставщик">DMC or package supplier</option>
+                  <option value="other" data-en="Other verified supplier" data-ru="Другой проверенный поставщик">Other verified supplier</option>
+                </select>
+                <span class="error-msg" data-error-for="fundingUse"></span>
+              </div>
+              <div class="form-field" data-field="supplierDeadline">
+                <label for="app-deadline"><span data-lang="en">When is supplier payment due? *</span><span data-lang="ru" hidden>Когда требуется оплатить поставщика? *</span></label>
+                <select id="app-deadline" name="supplierDeadline" required>
+                  <option value="" data-en="Select" data-ru="Выберите">Select</option>
+                  <option value="0_30" data-en="Within 30 days" data-ru="В течение 30 дней">Within 30 days</option>
+                  <option value="31_60" data-en="31–60 days" data-ru="31–60 дней">31–60 days</option>
+                  <option value="61_90" data-en="61–90 days" data-ru="61–90 дней">61–90 days</option>
+                  <option value="planning" data-en="Planning for a later season" data-ru="Планирование более позднего сезона">Planning for a later season</option>
+                </select>
+                <span class="error-msg" data-error-for="supplierDeadline"></span>
+              </div>
+              <div class="form-field" data-field="supplierEvidence">
+                <label for="app-evidence"><span data-lang="en">Supplier invoice / contract available? *</span><span data-lang="ru" hidden>Есть счёт / договор поставщика? *</span></label>
+                <select id="app-evidence" name="supplierEvidence" required>
+                  <option value="" data-en="Select" data-ru="Выберите">Select</option>
+                  <option value="yes" data-en="Yes — complete" data-ru="Да — полный комплект">Yes — complete</option>
+                  <option value="partial" data-en="Partially available" data-ru="Частично">Partially available</option>
+                  <option value="no" data-en="Not yet" data-ru="Пока нет">Not yet</option>
+                </select>
+                <span class="error-msg" data-error-for="supplierEvidence"></span>
+              </div>
+              <div class="form-field" data-field="customerDeposits">
+                <label for="app-deposits"><span data-lang="en">Customer bookings / deposits evidenced? *</span><span data-lang="ru" hidden>Есть подтверждение бронирований / депозитов клиентов? *</span></label>
+                <select id="app-deposits" name="customerDeposits" required>
+                  <option value="" data-en="Select" data-ru="Выберите">Select</option>
+                  <option value="yes" data-en="Yes — documented" data-ru="Да — документально">Yes — documented</option>
+                  <option value="partial" data-en="Partially documented" data-ru="Частично документально">Partially documented</option>
+                  <option value="no" data-en="Not yet" data-ru="Пока нет">Not yet</option>
+                </select>
+                <span class="error-msg" data-error-for="customerDeposits"></span>
+              </div>
+              <div class="form-field span-2" data-field="notes">
+                <label for="app-notes"><span data-lang="en">Brief transaction description</span><span data-lang="ru" hidden>Краткое описание сделки</span></label>
+                <textarea id="app-notes" name="notes" rows="3" placeholder="Destination, travel dates, supplier, customer payment schedule and requested tenor"></textarea>
+                <span class="error-msg" data-error-for="notes"></span>
+              </div>
+            </div>
+
+            <div class="form-field honeypot" data-field="_honey" aria-hidden="true">
+              <label for="app-company-url">Leave blank</label>
+              <input type="text" id="app-company-url" name="_honey" tabindex="-1" autocomplete="off">
+            </div>
+
+            <input type="hidden" name="utm_source">
+            <input type="hidden" name="utm_medium">
+            <input type="hidden" name="utm_campaign">
+            <input type="hidden" name="utm_content">
+            <input type="hidden" name="utm_term">
+            <input type="hidden" name="gclid">
+            <input type="hidden" name="fbclid">
+            <input type="hidden" name="ttclid">
+            <input type="hidden" name="li_fat_id">
+            <input type="hidden" name="outreach_ref">
+            <input type="hidden" name="visitor_id">
+            <input type="hidden" name="first_touch_at">
+            <input type="hidden" name="first_touch_url">
+            <input type="hidden" name="first_touch_referrer">
+            <input type="hidden" name="last_touch_at">
+            <input type="hidden" name="landing_url">
+            <input type="hidden" name="page_path">
+            <input type="hidden" name="browser_language">
+            <input type="hidden" name="form_language">
+            <input type="hidden" name="lead_score">
+            <input type="hidden" name="lead_grade">
+            <input type="hidden" name="lead_priority">
+            <input type="hidden" name="application_reference">
+
+            <div class="form-field" data-field="consent">
+              <div class="consent-row">
+                <input type="checkbox" id="app-consent" name="consent" value="Yes" required>
+                <label for="app-consent">
+                  <span data-lang="en">I confirm that the information is accurate and consent to KHATT CAPITAL using it to assess eligibility and contact the company about the pilot. I understand that this is not an offer or financing commitment. *</span>
+                  <span data-lang="ru" hidden>Подтверждаю точность информации и даю согласие KHATT CAPITAL использовать её для оценки соответствия и связи с компанией по пилоту. Понимаю, что это не оферта и не обязательство предоставить финансирование. *</span>
+                </label>
+              </div>
+              <span class="error-msg" data-error-for="consent"></span>
+            </div>
+
+            <div class="application-actions">
+              <button type="submit" class="btn btn--primary">
+                <span class="btn-label"><span data-lang="en">Submit application</span><span data-lang="ru" hidden>Отправить заявку</span></span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+              <small>
+                <span data-lang="en">Preliminary review only. Any transaction remains subject to eligibility, risk, legal, regulatory, contractual and independent Sharia review.</span>
+                <span data-lang="ru" hidden>Только предварительная проверка. Любая сделка зависит от критериев соответствия, оценки риска, юридической, регуляторной, договорной и независимой шариатской проверки.</span>
+              </small>
+            </div>
+            <div class="form-status" role="status" hidden></div>
+          </div>
+
+          <div class="application-success" data-form-success hidden>
+            <div class="success-mark">✓</div>
+            <h2><span data-lang="en">Application received.</span><span data-lang="ru" hidden>Заявка получена.</span></h2>
+            <p><span data-lang="en">KHATT CAPITAL will review the licence, transaction evidence and requested supplier payment. Qualified applications move to a secure evidence request.</span><span data-lang="ru" hidden>KHATT CAPITAL проверит лицензию, доказательства сделки и запрашиваемый платёж поставщику. Квалифицированные заявки переходят к защищённому запросу документов.</span></p>
+            <div class="reference-box"><span data-lang="en">Reference</span><span data-lang="ru" hidden>Номер</span>: <strong data-application-ref></strong></div>
+            <p style="margin-top:1.35rem;"><a class="btn btn--outline" href="/">KHATT CAPITAL</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-legal">
+      <p data-lang="en">This preliminary application does not constitute an offer, financial advice, a financing commitment or Sharia approval. Products and transactions are subject to eligibility, risk assessment, contractual documentation, regulatory requirements, licensed partners and independent Sharia review in the applicable jurisdiction.</p>
+      <p data-lang="ru" hidden>Эта предварительная заявка не является офертой, финансовой консультацией, обязательством предоставить финансирование или шариатским одобрением. Продукты и сделки зависят от критериев соответствия, оценки риска, договорной документации, регуляторных требований, лицензированных партнёров и независимой шариатской проверки в применимой юрисдикции.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 KHATT CAPITAL · info@khattcapital.com</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
