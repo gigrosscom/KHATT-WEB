@@ -284,8 +284,8 @@
           statusBox.className = "form-status success";
           statusBox.textContent =
             lang === "ru"
-              ? "Спасибо, мы свяжемся с вами в ближайшее время."
-              : "Thank you — we'll be in touch soon.";
+              ? "Откроется ваше почтовое приложение — нажмите «Отправить». Если оно не открылось, напишите на info@khattcapital.com."
+              : "Your email app should open — press Send to deliver the message. If it does not open, write to info@khattcapital.com.";
         }
       }, 500);
     });
